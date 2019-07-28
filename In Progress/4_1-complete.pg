@@ -1,0 +1,65 @@
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl",
+  "PGchoicemacros.pl",
+  "PGanswermacros.pl",
+  "PGnauGraphtheory.pl", 
+);
+
+####################
+# Header
+####################
+COMMENT();
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+Context('Numeric');
+
+  $n = random(5, 9, 1);
+  $ap1 = $n*($n - 1);
+  $ap2 = $ap1 / 2;
+  $ap3 = 2 - $n + $ap2;
+  $k = "K<sub>$n</sub>";
+####################
+# Body
+####################
+BEGIN_PGML
+How many vertices does [@ $k @]* have?
+
+[__________]{"$n"}
+
+How many edges does [@ $k @]* have?
+
+[__________]{"$ap2"}
+
+If we assumed [@ $k @]* were planar, how many faces would it have?
+
+[__________]{"$ap3"}
+
+END_PGML
+
+install_problem_grader(~~&std_problem_grader);
+
+$showPartialCorrectAnswers = 0;
+
+####################
+# Solution
+####################
+
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

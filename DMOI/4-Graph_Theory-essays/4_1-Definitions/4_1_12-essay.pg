@@ -1,0 +1,85 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:38-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.1.12)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+We often define graph theory concepts using set theory.  For example, given a graph [`G = (V, E)`] and a vertex [`v \in V\text{,}`] we define
+
+[```\newcommand{\st}{:}N(v) = \{u \in V \st \{v,u\} \in E\}\text{.}```]
+
+We define [`N[v] = N(v) \cup \{v\}\text{.}`]  The goal of this problem is to figure out what all this means.
+a.  Let [`G`] be the graph with [`V = \{a,b,c,d,e,f\}`] and [`E = \{\{a,b\}, \{a,e\},\{b, c\}, \{b,e\}, \{c,d\}, \{c, f\}, \{d, f\}, \{e,f\}\}\text{.}`]  Find [`N(a)\text{,}`] [`N[a]\text{,}`] [`N(c)\text{,}`] and [`N[c]\text{.}`]
+
+a.  What is the largest and smallest possible values for [`|N(v)|`] and [`|N[v]|`] for the graph in part (a)?  Explain.
+
+a.  Give an example of a graph [`G = (V, E)`] (probably different than the one above) for which [`N[v] = V`] for some vertex [`v \in V\text{.}`]  Is there a graph for which [`N[v] = V`] for _all_ [`v \in V\text{?}`]  Explain.
+
+a.  Give an example of a graph [`G = (V,E)`] for which [`N(v) = \emptyset`] for some [`v \in V\text{.}`]  Is there an example of such a graph for which [`N[u] = V`] for some other [`u \in V`] as well?  Explain.
+
+a.  Describe in words what [`N(v)`] and [`N[v]`] mean in general.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+You should be able to deduce everything directly from the definition.  However, perhaps it would be helpful to know that the [`N`] stands for _neighborhood_.
+
+END_PGML_HINT
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

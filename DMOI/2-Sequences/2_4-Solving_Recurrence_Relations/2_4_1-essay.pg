@@ -1,0 +1,76 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:35-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(3.4.2.1)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find the next two terms in [`(a_n)_{n\ge 0}`] beginning [`3, 5, 11, 21, 43, 85\ldots\text{.}`] Then give a recursive definition for the sequence. Finally, use the characteristic root technique to find a closed formula for the sequence.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+171 and 341. [`a_n = a_{n-1} + 2a_{n-2}`] with [`a_0 = 3`] and [`a_1 = 5\text{.}`] Closed formula: [`a_n = \frac{8}{3}2^n + \frac{1}{3}(-1)^n\text{.}`] To find this solve the characteristic equation, [`x^2 - x - 2 = 0\text{,}`] to get characteristic roots [`x = 2`] and [`x=-1\text{.}`] Then solve the system
+
+[```\newcommand{\amp}{&}\begin{aligned}
+3 \amp = a + b\\
+5 \amp = 2a - b
+\end{aligned}```]
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

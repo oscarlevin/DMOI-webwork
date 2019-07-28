@@ -1,0 +1,71 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:39-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.7.16)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Prove that [`K_{3,4}`] is not planar. Do this using Euler's formula, not just by appealing to the fact that [`K_{3,3}`] is not planar.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+We have that [`K_{3,4}`] has 7 vertices and 12 edges (each vertex in the group of 3 has degree 4). Then by Euler's formula we have that [`7 - 12 + f = 2`] so if the graph were planar, it would have [`f = 7`] faces. However, since the girth of the graph is 4 (there are no cycles of length 3) we get that [`4f \le 2e\text{.}`] But this would mean that [`28 \le 24\text{,}`] a contradiction.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

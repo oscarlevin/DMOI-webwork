@@ -1,0 +1,81 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:36-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(4.1.5.10)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the statement, "If a number is triangular or square, then it is not prime"
+a.  Make a truth table for the statement [`\newcommand{\imp}{\rightarrow}(T \vee S) \imp \neg P\text{.}`]
+
+a.  If you believed the statement was _false_, what properties would a counterexample need to possess? Explain by referencing your truth table.
+
+a.  If the statement were true, what could you conclude about the number 5657, which is definitely prime? Again, explain using the truth table.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+a.  There will be three rows in which the statement is false.
+
+a.  Consider the three rows that evaluate to false and say what the truth values of [`T\text{,}`] [`S\text{,}`] and [`P`] are there.
+
+a.  You are looking for a row in which [`P`] is true, and the whole statement is true.
+
+END_PGML_HINT
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

@@ -1,0 +1,80 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:36-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(4.1.5.16)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+We can also simplify statements in predicate logic using our rules for passing negations over quantifiers, and then applying propositional logical equivalence to the "inside" propositional part. Simplify the statements below (so negation appears only directly next to predicates).
+a.  [`\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}`]
+a.  [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\neg \forall x \neg \forall y \neg(x \lt y \wedge \exists z (x \lt z \vee y \lt z))\text{.}`]
+a.  There is a number [`n`] for which no other number is either less [`n`] than or equal to [`n\text{.}`]
+
+a.  It is false that for every number [`n`] there are two other numbers which [`n`] is between.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  [`\forall x \exists y (O(x) \wedge \neg E(y))\text{.}`]
+a.  [`\exists x \forall y (x \ge y \vee \forall z (x \ge z \wedge y \ge z))\text{.}`]
+a.  There is a number [`n`] for which every other number is strictly greater than [`n\text{.}`]
+
+a.  There is a number [`n`] which is not between any other two numbers.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

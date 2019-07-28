@@ -1,0 +1,84 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:30-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(1.2.4.16)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Translate into symbols. Use [`E(x)`] for "[`x`] is even" and [`O(x)`] for "[`x`] is odd."
+a.  No number is both even and odd.
+
+a.  One more than any even number is an odd number.
+
+a.  There is prime number that is even.
+
+a.  Between any two numbers there is a third number.
+
+a.  There is no number between a number and one more than that number.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  [`\neg \exists x (E(x) \wedge O(x))\text{.}`]
+a.  [`\newcommand{\imp}{\rightarrow}\forall x (E(x) \imp O(x+1))\text{.}`]
+a.  [`\exists x(P(x) \wedge E(x))`] (where [`P(x)`] means "[`x`] is prime").
+a.  [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\forall x \forall y \exists z(x \lt z \lt y \vee y \lt z \lt x)\text{.}`]
+a.  [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\forall x \neg \exists y (x \lt y \lt x+1)\text{.}`]   
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

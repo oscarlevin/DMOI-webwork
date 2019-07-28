@@ -1,0 +1,74 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:38-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.3.3.15)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Explain why we cannot use the same sort of proof we did in Exercise[$NBSP]*5.3.3.14 in Discrete Mathematics to prove that the graph below is not planar.  Then explain how you know the graph is not planar anyway.
+
+>> \\begin\{tikzpicture\}\[scale=0.8\] \\foreach \\x in \{0,...,4\}\{ \\draw (0,0) \\v -\- (90\+\\x\*72:1) \\v -\- (162\+\\x\*72:2) \\v -\- (90\+\\x\*72:2) -\- (162\+\\x\*72:1); \\draw\[black!80!blue\] (90\+\\x\*72:1) -\- (162\+\\x\*72:1); \} \\end\{tikzpicture\} <<
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+What has happened to the girth?  Careful: we have a different number of edges as well.  Better check Euler's formula.
+
+END_PGML_HINT
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

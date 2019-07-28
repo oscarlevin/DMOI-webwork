@@ -1,0 +1,84 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:37-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(4.3.7)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the statement: [`\newcommand{\imp}{\rightarrow}\forall x (\forall y (x + y = y) \imp \forall z (x\cdot z = 0))\text{.}`]
+a.  Explain what the statement says in words. Is this statement true? Be sure to state what you are taking the universe of discourse to be.
+
+a.  Write the converse of the statement, both in words and in symbols. Is the converse true?
+
+a.  Write the contrapositive of the statement, both in words and in symbols. Is the contrapositive true?
+
+a.  Write the negation of the statement, both in words and in symbols. Is the negation true?
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  For any number [`x\text{,}`] if it is the case that adding any number to [`x`] gives that number back, then multiplying any number by [`x`] will give 0. This is true (of the integers or the reals). The "if" part only holds if [`x = 0\text{,}`] and in that case, anything times [`x`] will be 0.
+
+a.  The converse in words is this: for any number [`x\text{,}`] if everything times [`x`] is zero, then everything added to [`x`] gives itself. Or in symbols: [`\newcommand{\imp}{\rightarrow}\forall x (\forall z (x \cdot z = 0) \imp \forall y (x + y = y))\text{.}`] The converse is true: the only number which when multiplied by any other number gives 0 is [`x = 0\text{.}`] And if [`x = 0\text{,}`] then [`x + y = y\text{.}`]
+
+a.  The contrapositive in words is: for any number [`x\text{,}`] if there is some number which when multiplied by [`x`] does not give zero, then there is some number which when added to [`x`] does not give that number. In symbols: [`\newcommand{\imp}{\rightarrow}\forall x (\exists z (x\cdot z \ne 0) \imp \exists y (x + y \ne y))\text{.}`] We know the contrapositive must be true because the original implication is true.
+
+a.  The negation: there is a number [`x`] such that any number added to [`x`] gives the number back again, but there is a number you can multiply [`x`] by and not get 0. In symbols: [`\exists x (\forall y (x + y = y) \wedge \exists z (x \cdot z \ne 0))\text{.}`] Of course since the original implication is true, the negation is false.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

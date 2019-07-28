@@ -1,0 +1,64 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:38-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.2.4.13)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find all spanning trees of the graph below. How many different spanning trees are there? How many different spanning trees are there _up to isomorphism_ (that is, if you grouped all the spanning trees by which are isomorphic, how many groups would you have)?
+
+>> \\begin\{tikzpicture\} \\footnotesize\{ \\draw (0,0) -\- (-1,.75) \\vl\{$a$\} -\- (-1,-.75) \\vl\{$b$\} -\- (0,0) \\vb\{$c$\} -\- (1,1) \\vb\{$d$\} -\- (2,0) \\vr\{$e$\} -\- (1,-1) \\va\{$f$\} -\- (0,0) -\- (2,0); \} \\end\{tikzpicture\} <<
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

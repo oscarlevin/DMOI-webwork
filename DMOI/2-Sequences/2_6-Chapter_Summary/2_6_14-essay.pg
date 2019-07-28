@@ -1,0 +1,86 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:36-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(3.6.14)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Prove the following statements by mathematical induction:
+a.  [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}n! \lt n^n`] for [`n \ge 2`]
+a.  [`\d\frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} +\frac{1}{3\cdot 4}+\cdots + \frac{1}{n\cdot(n+1)} = \d\frac{n}{n+1}`] for all [`\newcommand{\Z}{\mathbb Z}n \in \Z^+\text{.}`]
+a.  [`4^n - 1`] is a multiple of 3 for all [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}n \in \N\text{.}`]
+a.  The _greatest_ amount of postage you _cannot_ make exactly using 4 and 9 cent stamps is 23 cents.
+
+a.  Every even number squared is divisible by 4.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+a.  Hint: [`(n+1)^{n+1} > (n+1) \cdot n^{n}\text{.}`]
+
+a.  Hint: This should be similar to the other sum proofs. The last bit comes down to adding fractions.
+
+a.  Hint: Write [`4^{k+1} - 1 = 4\cdot 4^k - 4 + 3\text{.}`]
+
+a.  Hint: one 9-cent stamp is 1 more than two 4-cent stamps, and seven 4-cent stamps is 1 more than three 9-cent stamps.
+
+a.  Careful to actually use induction here. The base case: [`2^2 = 4\text{.}`] The inductive case: assume [`(2n)^2`] is divisible by 4 and consider [`(2n+2)^2 = (2n)^2 + 4n + 4\text{.}`] This is divisible by 4 because [`4n +4`] clearly is, and by our inductive hypothesis, so is [`(2n)^2\text{.}`]
+
+END_PGML_HINT
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

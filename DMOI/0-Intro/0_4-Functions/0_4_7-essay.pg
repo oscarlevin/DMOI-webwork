@@ -1,0 +1,109 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:31-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(1.4.4.7)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "niceTables.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the function [`f:\{1,2,3,4,5\} \to \{1,2,3,4\}`] given by the table below:
+
+>> [@DataTable(
+  [
+    [[PGML('[`x`]'),
+      halign  => 'c|',
+      midrule => '1',
+      rowcss  => 'border-bottom: 1px solid; ',
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('1'),],
+     [PGML('2'),],
+     [PGML('3'),],
+     [PGML('4'),],
+     [PGML('5'),],
+    ],
+    [[PGML('[`f(x)`]'),
+      halign  => 'c|',
+      cellcss => 'border-right: 1px solid; ',],
+     PGML('3'),
+     PGML('2'),
+     PGML('4'),
+     PGML('1'),
+     PGML('2'),
+    ],
+  ],
+  align => 'llllll',
+  center => 0,
+);@]* <<
+
+a.  Is [`f`] injective? Explain.
+
+a.  Is [`f`] surjective? Explain.
+
+a.  Write the function using two-line notation.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  [`f`] is not injective, since [`f(2) = f(5)\text{;}`] two different inputs have the same output.
+
+a.  [`f`] is surjective, since every element of the codomain is an element of the range.
+
+a.  [`\newcommand{\amp}{&}f=\begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \amp 5 \\ 3 \amp 2 \amp 4 \amp 1 \amp 2\end{pmatrix}\text{.}`]
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

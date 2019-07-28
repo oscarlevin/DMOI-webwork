@@ -1,0 +1,69 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:39-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.5.2.12)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the following graph:
+
+>> \\begin\{tikzpicture\}\[scale=.7\] \\foreach \\x in \{0, 45, ..., 315\} \\draw  (\\x:2) \\v -\- (\\x\+45:2); \\draw (0,0) \\v -\- (45:2) (0,0) -\- (135:2) (0,0) -\- (225:2) (0,0) -\- (315:2); \\draw (-1,0) \\v -\- (90:2) (-1,0) -\- (180:2) (-1,0) -\- (270:2); \\draw (1,0) \\v -\- (90:2) (1,0) -\- (0:2) (1,0) -\- (270:2); \\end\{tikzpicture\} <<
+
+a.  Find a Hamilton path. Can your path be extended to a Hamilton cycle?
+a.  Is the graph bipartite? If so, how many vertices are in each "part"?
+a.  Use your answer to part (b) to prove that the graph has no Hamilton cycle.
+a.  Suppose you have a bipartite graph [`G`] in which one part has at least two more vertices than the other. Prove that [`G`] does not have a Hamilton path.   
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

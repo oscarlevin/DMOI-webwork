@@ -1,0 +1,102 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2018-05-17T08:45:02-06:00    
+###                                    
+###   http://mathbook.pugetsound.edu   
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(0.4.2)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "PGcourse.pl",
+);
+
+####################
+# Header
+####################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+Context('Numeric');
+$injective = PopUp(
+["?", "Injective", "Surjective", "Bijective", "Neither"], "Injective",
+);
+$surjective = PopUp(
+["?", "Injective", "Surjective", "Bijective", "Neither"], "Surjective",
+);
+$bijective = PopUp(
+["?", "Injective", "Surjective", "Bijective", "Neither"], "Bijective",
+);
+$neither = PopUp(
+["?", "Injective", "Surjective", "Bijective", "Neither"], "Neither",
+);
+
+####################
+# Body
+####################
+BEGIN_PGML
+The following functions all have [`\{1,2,3,4,5\}`] as both their domain and codomain.  For each, determine whether it is (only) injective, (only) surjective, bijective, or neither injective nor surjective.
+
+a.  [`\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{3 \amp 3 \amp 3 \amp 3 \amp 3}\text{.}`] [_____]{$neither}
+
+
+a.  [`\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{2 \amp 3 \amp 1 \amp 5 \amp 4}\text{.}`] [_____]{$bijective}
+
+
+a.  [`f(x) = 6 - x\text{.}`]  [_____]{$bijective}
+
+
+a.  [`\newcommand{\amp}{&}f(x) = \begin{cases} x/2 \amp \text{ if } x \text{ is even} \\ (x+1)/2 \amp \text{ if } x \text{ is odd}\end{cases}\text{.}`] [_____]{$neither}   
+
+
+
+END_PGML
+
+####################
+# Solution
+####################
+BEGIN_PGML_SOLUTION
+a.  This is neither injective nor surjective.  It is not injective because more than one element from the domain has 3 as its image.  It is not surjective because there are elements of the codomain (1, 2, 4, and 5) that are not images of anything from the domain.
+
+
+a.  This is a bijection.  Every element in the codomain is the image of _exactly_ one element of the domain.
+
+
+a.  This is a bijection.  Note that we can write this function in two line notation as [`\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{5 \amp 4 \amp 3 \amp 2 \amp 1}\text{.}`]
+
+
+a.  In two line notation, this function is [`\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{1 \amp 1 \amp 2 \amp 2 \amp 3}\text{.}`]  From this we can quickly see it is neither injective (for example, 1 is the image of both 1 and 2) nor surjective (for example, 4 is not the image of anything).   
+
+
+
+END_PGML_SOLUTION
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

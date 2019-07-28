@@ -1,0 +1,82 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:39-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.5.2.2)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Which of the following graphs contain an Euler path? Which contain an Euler circuit?
+a.  [`K_4`]
+a.  [`K_5\text{.}`]
+a.  [`K_{5,7}`]
+a.  [`K_{2,7}`]
+a.  [`C_7`]
+a.  [`P_7`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  [`K_4`] does not have an Euler path or circuit.
+a.  [`K_5`] has an Euler circuit (so also an Euler path).
+a.  [`K_{5,7}`] does not have an Euler path or circuit.
+a.  [`K_{2,7}`] has an Euler path but not an Euler circuit.
+a.  [`C_7`] has an Euler circuit (it is a circuit graph!)
+a.  [`P_7`] has an Euler path but no Euler circuit.   
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

@@ -1,0 +1,115 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:36-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(4.1.5.3)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "niceTables.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Make a truth table for the statement [`\newcommand{\imp}{\rightarrow}\neg P \wedge (Q \imp P)\text{.}`] What can you conclude about [`P`] and [`Q`] if you know the statement is true?
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+>> [@DataTable(
+  [
+    [[PGML('[`P`]'),
+      midrule => '1',
+      rowcss  => 'border-bottom: 1px solid; ',
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('[`Q`]'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('[`\neg P \wedge (Q \imp P)`]'),],
+    ],
+    [[PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 2px solid; ',],
+     PGML('F'),
+    ],
+    [[PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 2px solid; ',],
+     PGML('F'),
+    ],
+    [[PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 2px solid; ',],
+     PGML('F'),
+    ],
+    [[PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 2px solid; ',],
+     PGML('T'),
+    ],
+  ],
+  align => 'c|c|c',
+  columnscss =>
+    ['border-right: 0px solid; ',
+     'border-right: 0px solid; ',
+     ' ',],
+  center => 0,
+);@]* <<
+
+If the statement is true, then both [`P`] and [`Q`] are false.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

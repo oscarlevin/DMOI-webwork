@@ -1,0 +1,66 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:39-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.6.6)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+For many applications of matchings, it makes sense to use bipartite graphs. You might wonder, however, whether there is a way to find matchings in graphs in general.
+a.  For which [`n`] does the complete graph [`K_n`] have a matching?
+a.  Prove that if a graph has a matching, then [`\renewcommand{\bar}{\overline}\newcommand{\card}[1]{\left| #1 \right|}\card{V}`] is even.
+a.  Is the converse true? That is, do all graphs with [`\renewcommand{\bar}{\overline}\newcommand{\card}[1]{\left| #1 \right|}\card{V}`] even have a matching?
+a.  What if we also require the matching condition? Prove or disprove: If a graph with an even number of vertices satisfies [`\renewcommand{\bar}{\overline}\newcommand{\card}[1]{\left| #1 \right|}\card{N(S)} \ge \card{S}`] for all [`S \subseteq V\text{,}`] then the graph has a matching.   
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

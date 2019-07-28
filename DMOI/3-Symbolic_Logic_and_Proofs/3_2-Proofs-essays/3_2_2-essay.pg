@@ -1,0 +1,80 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:37-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(4.2.6.2)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+For each of the statements below, say what method of proof you should use to prove them. Then say how the proof starts and how it ends. Bonus points for filling in the middle.
+a.  There are no integers [`x`] and [`y`] such that [`x`] is a prime greater than 5 and [`x = 6y + 3\text{.}`]
+
+a.  For all integers [`n\text{,}`] if [`n`] is a multiple of 3, then [`n`] can be written as the sum of consecutive integers.
+
+a.  For all integers [`a`] and [`b\text{,}`] if [`a^2 + b^2`] is odd, then [`a`] or [`b`] is odd.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  Proof by contradiction. Start of proof: Assume, for the sake of contradiction, that there are integers [`x`] and [`y`] such that [`x`] is a prime greater than 5 and [`x = 6y + 3\text{.}`] End of proof: ... this is a contradiction, so there are no such integers.
+
+a.  Direct proof. Start of proof: Let [`n`] be an integer. Assume [`n`] is a multiple of 3. End of proof: Therefore [`n`] can be written as the sum of consecutive integers.
+
+a.  Proof by contrapositive. Start of proof: Let [`a`] and [`b`] be integers. Assume that [`a`] and [`b`] are even. End of proof: Therefore [`a^2 + b^2`] is even.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

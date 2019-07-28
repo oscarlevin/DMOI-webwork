@@ -1,0 +1,73 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:39-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.6.4)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+The two richest families in Westeros have decided to enter into an alliance by marriage. The first family has 10 sons, the second has 10 girls. The ages of the kids in the two families match up. To avoid impropriety, the families insist that each child must marry someone either their own age, or someone one position younger or older. In fact, the graph representing agreeable marriages looks like this:
+
+>> \\begin\{tikzpicture\} \\foreach \\x in \{0,...,9\} \{ \\coordinate (a\\x) at (\\x,0); \\coordinate (b\\x) at (\\x,2); \\draw (a\\x) \\v -\- (b\\x) \\v; \} \\draw (a0) -\- (b1) -\- (a2) -\- (b3) -\- (a4) -\- (b5) -\- (a6) -\- (b7) -\- (a8) -\- (b9); \\draw (b0) -\- (a1) -\- (b2) -\- (a3) -\- (b4) -\- (a5) -\- (b6) -\- (a7) -\- (b8) -\- (a9); \\end\{tikzpicture\} <<
+
+The question: how many different acceptable marriage arrangements which marry off all 20 children are possible?
+a.  How many marriage arrangements are possible if we insist that there are exactly 6 boys marry girls not their own age?
+
+a.  Could you generalize the previous answer to arrive at the total number of marriage arrangements?
+
+a.  How do you know you are correct? Try counting in a different way. Look at smaller family sizes and get a sequence.
+
+a.  Can you give a recurrence relation that fits the problem?
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

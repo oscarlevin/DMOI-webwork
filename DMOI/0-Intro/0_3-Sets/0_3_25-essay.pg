@@ -1,0 +1,65 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:30-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(1.3.5.25)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Let [`A\text{,}`] [`B`] and [`C`] be sets.
+a.  Suppose that [`A \subseteq B`] and [`B \subseteq C\text{.}`] Does this mean that [`A \subseteq C\text{?}`] Prove your answer. Hint: to prove that [`A \subseteq C`] you must prove the implication, "for all [`x\text{,}`] if [`x \in A`] then [`x \in C\text{.}`]"
+
+a.  Suppose that [`A \in B`] and [`B \in C\text{.}`] Does this mean that [`A \in C\text{?}`] Give an example to prove that this does NOT always happen (and explain why your example works). You should be able to give an example where [`|A| = |B| = |C| = 2\text{.}`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

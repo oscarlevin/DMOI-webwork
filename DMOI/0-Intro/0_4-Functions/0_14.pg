@@ -1,0 +1,104 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2018-05-17T08:45:02-06:00    
+###                                    
+###   http://mathbook.pugetsound.edu   
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(0.4.14)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+
+####################
+# Header
+####################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+Context("Interval");
+
+####################
+# Body
+####################
+BEGIN_PGML
+Let [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}\newcommand{\st}{:}X = \{n \in \N \st 0 \le n \le 999\}`] be the set of all numbers with three or fewer digits. Define the function [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}f:X \to \N`] by [`f(abc) = a+b+c\text{,}`] where [`a\text{,}`] [`b\text{,}`] and [`c`] are the digits of the number in [`X`] (write numbers less than 100 with leading 0's to make them three digits). For example, [`f(253) = 2 + 5 + 3 =  10\text{.}`] 
+a.  Let [`\newcommand{\st}{:}A = \{n \in X \st 113 \le x \le 122\}\text{.}`]  Find [`f(A)\text{.}`]
+
+    [__]{Set(3,4,5,6,7,8,9,10,11)}{width => 15}
+
+
+a.  Find [`\newcommand{\inv}{^{-1}}f\inv(\{1,2\})`]
+
+    [__]{Set(001, 010, 100, 011, 101, 110, 002, 020, 200)}{width => 15}
+
+
+a.  Find [`\newcommand{\inv}{^{-1}}f\inv(3)\text{.}`]
+
+    [__]{Set(003, 030, 300, 012, 021, 102, 201, 120, 210, 111)}{width => 15}
+
+
+a.  Find [`\newcommand{\inv}{^{-1}}f\inv(28)\text{.}`]
+
+    [__]{Set()}{width => 15}
+
+
+a.  Is [`f`] injective. Explain.
+
+
+a.  Is [`f`] surjective. Explain.   
+
+
+
+END_PGML
+
+####################
+# Solution
+####################
+BEGIN_PGML_SOLUTION
+a.  [`f(A) = \{3,4,5,6,7,8,9,10,11\}\text{.}`]
+
+
+a.  [`\newcommand{\inv}{^{-1}}f\inv(\{1,2\}) = \{001, 010, 100, 011, 101, 110, 002, 020, 200\}\text{.}`]
+
+
+a.  [`\newcommand{\inv}{^{-1}}f\inv(3) = \{003, 030, 300, 012, 021, 102, 201, 120, 210, 111\}`]
+a.  [`\newcommand{\inv}{^{-1}}f\inv(28) = \emptyset`] (since the largest sum of three digits is [`9+9+9 = 27`])
+a.  Part (c) proves that [`f`] is not injective. The output 3 is assigned to 10 different inputs.
+
+
+a.  Part (d) proves that [`f`] is not surjective. There is an element of the codomain (28) which is not assigned to any inputs.   
+
+
+
+END_PGML_SOLUTION
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

@@ -1,0 +1,80 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:31-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(1.4.4.16)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Let [`f:X \to Y`] be some function. Suppose [`3 \in Y\text{.}`] What can you say about [`\newcommand{\inv}{^{-1}}f\inv(3)`] if you know,
+a.  [`f`] is injective? Explain.
+
+a.  [`f`] is surjective? Explain.
+
+a.  [`f`] is bijective? Explain.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  [`\newcommand{\inv}{^{-1}}|f\inv(3)| \le 1\text{.}`] In other words, either [`\newcommand{\inv}{^{-1}}f\inv(3)`] is the empty set or is a set containing exactly one element. Injective functions cannot have two elements from the domain both map to 3.
+
+a.  [`\newcommand{\inv}{^{-1}}|f\inv(3)| \ge 1\text{.}`] In other words, [`\newcommand{\inv}{^{-1}}f\inv(3)`] is a set containing at least one elements, possibly more. Surjective functions must have something map to 3.
+
+a.  [`\newcommand{\inv}{^{-1}}|f\inv(3)| = 1\text{.}`] There is exactly one element from [`X`] which gets mapped to 3, so [`\newcommand{\inv}{^{-1}}f\inv(3)`] is the set containing that one element.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

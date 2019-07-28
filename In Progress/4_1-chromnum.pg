@@ -1,0 +1,72 @@
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl",
+  "PGchoicemacros.pl",
+  "PGanswermacros.pl",
+  "PGnauGraphtheory.pl", 
+);
+
+####################
+# Header
+####################
+COMMENT();
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+Context('Numeric');
+
+  $n1 = random(5, 15, 1);
+  $n2 = random(4, 14, 2);
+  $n3 = random(5, 15, 2);
+  $n4 = random(5, 15, 1);
+  $n5 = random(5, 15, 1);
+  $n6 = random(5, 15, 1);
+  $p1 = "P<sub>$n1</sub>";
+  $c1 = "C<sub>$n2</sub>";
+  $c2 = "C<sub>$n3</sub>";
+  $k1 = "K<sub>$n4, $n5</sub>";
+  $k2 = "K<sub>$n6</sub>";
+####################
+# Body
+####################
+BEGIN_PGML
+What is the chromatic number of the following graphs?
+
+[@ $p1 @]* [__________]{"2"}
+
+[@ $c1 @]* [__________]{"2"}
+
+[@ $c2 @]* [__________]{"3"}
+
+[@ $k1 @]* [__________]{"2"}
+
+[@ $k2 @]* [__________]{"$n6"}
+
+
+END_PGML
+
+install_problem_grader(~~&std_problem_grader);
+
+$showPartialCorrectAnswers = 0;
+
+####################
+# Solution
+####################
+
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

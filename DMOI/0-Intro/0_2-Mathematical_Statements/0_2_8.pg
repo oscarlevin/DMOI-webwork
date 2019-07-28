@@ -1,0 +1,94 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2018-05-17T08:45:01-06:00    
+###                                    
+###   http://mathbook.pugetsound.edu   
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(0.2.8)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl",
+);
+
+####################
+# Header
+####################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+Context('Numeric');
+$false = PopUp(
+  ["?","True","False","Not enough information"],
+  "False",
+);
+$exists = RadioButtons(
+  ["\(\exists x P(x)\) must be true.","\(\exists x P(x)\) must be false.","\(\exists x P(x)\) could be true or could be false."],
+  "\(\exists x P(x)\) could be true or could be false.", # correct answer
+);
+$forall = RadioButtons(
+  ["\(\forall x P(x)\) must be true.","\(\forall x P(x)\) must be false.","\(\forall x P(x)\) could be true or could be false."],
+  "\(\forall x P(x)\) must be false." # correct answer
+);
+
+####################
+# Body
+####################
+BEGIN_PGML
+Let [`P(x)`] be the predicate, "[`4x+1`] is even."
+
+a.  Is [`P(5)`] true or false? [_____]{$false}
+
+
+a.  What, if anything, can you conclude about [`\exists x P(x)`] from the truth value of [`P(5)\text{?}`]
+
+    [_____]{$exists}
+
+
+a.  What, if anything, can you conclude about [`\forall x P(x)`] from the truth value of [`P(5)\text{?}`]
+
+    [_____]{$forall}   
+
+
+
+END_PGML
+
+####################
+# Solution
+####################
+BEGIN_PGML_SOLUTION
+Here [`P(5)`] is false, since it is the statement "[`4\cdot 5 + 1`] is even" (but 21 is odd).  This does not tell us anything about the statement [`\exists x P(x)\text{,}`] since there still might be some [`x`] that makes [`P(x)`] true (although in this case, if our domain of discourse is the integers, there isn't, so in fact [`\exists x P(x)`] is false).  On the other hand, [`\forall x P(x)`] is definitely false based on [`P(5)`] being false (we know that not all values of [`x`] make [`P(x)`] true).
+
+
+END_PGML_SOLUTION
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

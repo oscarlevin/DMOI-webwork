@@ -1,0 +1,81 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:39-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.7.17)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+A dodecahedron is a regular convex polyhedron made up of 12 regular pentagons.
+a.  Suppose you color each pentagon with one of three colors. Prove that there must be two adjacent pentagons colored identically.
+
+a.  What if you use four colors?
+
+a.  What if instead of a dodecahedron you colored the faces of a cube?
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+For all these questions, we are really coloring the vertices of a graph. You get the graph by first drawing a planar representation of the polyhedron and then taking its planar dual: put a vertex in the center of each face (including the outside) and connect two vertices if their faces share an edge.
+a.  Since the planar dual of a dodecahedron contains a 5-wheel, it's chromatic number is at least 4. Alternatively, suppose you could color the faces using 3 colors without any two adjacent faces colored the same. Take any face and color it blue. The 5 pentagons bordering this blue pentagon cannot be colored blue. Color the first one red. Its two neighbors (adjacent to the blue pentagon) get colored green. The remaining 2 cannot be blue or green, but also cannot both be red since they are adjacent to each other. Thus a 4th color is needed.
+
+a.  The planar dual of the dodecahedron is itself a planar graph. Thus by the 4-color theorem, it can be colored using only 4 colors without two adjacent vertices (corresponding to the faces of the polyhedron) being colored identically.
+
+a.  The cube can be properly 3-colored. Color the "top" and "bottom" red, the "front" and "back" blue, and the "left" and "right" green.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

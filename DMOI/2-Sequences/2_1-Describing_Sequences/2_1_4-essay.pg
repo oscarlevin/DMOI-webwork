@@ -1,0 +1,76 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:34-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(3.1.4)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the sequence [`(a_n)_{n \ge 1}`] that starts [`1, 3, 5, 7, 9, \ldots`] (i.e, the odd numbers in order).
+a.  Give a recursive definition and closed formula for the sequence.
+
+a.  Write out the sequence [`(b_n)_{n \ge 2}`] of partial sums of [`(a_n)\text{.}`]  Write down the recursive definition for [`(b_n)`] and guess at the closed formula.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  The recursive definition is [`a_n = a_{n-1} + 2`] with [`a_1 = 1\text{.}`]  A closed formula is [`a_n = 2n-1\text{.}`]
+
+a.  The sequence of partial sums is [`1, 4, 9, 16, 25, 36, \ldots\text{.}`]  A recursive definition is (as always) [`b_n = b_{n-1} + a_n`] which in this case is [`b_n = b_{n-1} + 2n-1\text{.}`]  It appears that the closed formula is [`b_n = n^2`]
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

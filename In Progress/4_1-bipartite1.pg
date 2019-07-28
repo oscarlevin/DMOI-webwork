@@ -1,0 +1,52 @@
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl",
+  "PGchoicemacros.pl",
+  "PGanswermacros.pl",
+  "PGnauGraphtheory.pl" 
+);
+
+####################
+# Header
+####################
+COMMENT();
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+Context('Numeric');
+
+####################
+# Body
+####################
+BEGIN_PGML
+Suppose a graph, G, is bipartite. What is G's chromatic number?
+
+[__________]{"2"}
+
+END_PGML
+
+install_problem_grader(~~&std_problem_grader);
+
+$showPartialCorrectAnswers = 0;
+
+####################
+# Solution
+####################
+
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

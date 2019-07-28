@@ -1,0 +1,81 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:38-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.3.3.8)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Prove Euler's formula using induction on the number of edges in the graph.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+Let [`P(n)`] be the statement, "every connected planar graph containing [`n`] edges satisfies [`v - n + f = 2\text{.}`]" We will show [`P(n)`] is true for all [`n \ge 0\text{.}`]
+
+Base case: there is only one graph with zero edges, namely a single isolated vertex. In this case [`v = 1\text{,}`] [`f = 1`] and [`e = 0\text{,}`] so Euler's formula holds.
+
+Inductive case: Suppose [`P(k)`] is true for some arbitrary [`k \ge 0\text{.}`] Now consider an arbitrary graph containing [`k+1`] edges (and [`v`] vertices and [`f`] faces). No matter what this graph looks like, we can remove a single edge to get a graph with [`k`] edges which we can apply the inductive hypothesis to.
+
+There are two cases: either the graph contains a cycle or it does not. If the graph contains a cycle, then pick an edge that is part of this cycle, and remove it.  This will not disconnect the graph, and will decrease the number of faces by 1 (since the edge was bordering two distinct faces).  So by the inductive hypothesis we will have [`v - k + f-1 = 2\text{.}`] Adding the edge back will give [`v - (k+1) + f = 2`] as needed.
+
+If the graph does not contain a cycle, then it is a tree, so has a vertex of degree 1.  Then we can pick the edge to remove to be incident to such a degree 1 vertex. In this case, also remove that vertex. The smaller graph will now satisfy [`v-1 - k + f = 2`] by the induction hypothesis (removing the edge and vertex did not reduce the number of faces). Adding the edge and vertex back gives [`v - (k+1) + f = 2\text{,}`] as required.
+
+Therefore, by the principle of mathematical induction, Euler's formula holds for all planar graphs.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

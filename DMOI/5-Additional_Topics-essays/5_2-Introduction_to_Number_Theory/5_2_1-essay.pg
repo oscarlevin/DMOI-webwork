@@ -1,0 +1,71 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:40-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(6.2.6.1)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Suppose [`a\text{,}`] [`b\text{,}`] and [`c`] are integers. Prove that if [`a \mid b\text{,}`] then [`a \mid bc\text{.}`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+Suppose [`a \mid b\text{.}`] Then [`b`] is a multiple of [`a\text{,}`] or in other words, [`b = ak`] for some [`k\text{.}`] But then [`bc = akc\text{,}`] and since [`kc`] is an integer, this says [`bc`] is a multiple of [`a\text{.}`] In other words, [`a \mid bc\text{.}`]
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

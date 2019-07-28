@@ -1,0 +1,154 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2018-05-17T08:45:02-06:00    
+###                                    
+###   http://mathbook.pugetsound.edu   
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(0.2.10)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "niceTables.pl",
+  "AnswerFormatHelp.pl",
+  "parserPopUp.pl",
+  "PGcourse.pl",
+);
+sub PF {PGML::Format(@_)};
+
+####################
+# Header
+####################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+Context('Numeric');
+$true = PopUp(
+  ["?","True","False","Not enough information"],
+  "True",
+);
+$false = PopUp(
+  ["?","True","False","Not enough information"],
+  "False",
+);
+$na = PopUp(
+  ["?","True","False","Not enough information"],
+  "Not enough information",
+);
+
+####################
+# Body
+####################
+BEGIN_PGML
+Suppose [`P(x,y)`] is some binary predicate defined on a very small domain of discourse: just the integers 1, 2, 3, and 4.  For each of the 16 pairs of these numbers, [`P(x,y)`] is either true or false, according to the following table ([`x`] values are rows, [`y`] values are columns).
+
+>> [@DataTable(
+  [
+    [[PF(''),
+      halign  => 'r|',
+      midrule => '1',
+      rowcss  => 'border-bottom: 1px solid; ',
+      cellcss => 'border-right: 1px solid; ',],
+     [PF('1'),],
+     [PF('2'),],
+     [PF('3'),],
+     [PF('4'),],
+    ],
+    [[PF('1'),
+      halign  => 'r|',
+      cellcss => 'border-right: 1px solid; ',],
+     PF('T'),
+     PF('F'),
+     PF('F'),
+     PF('F'),
+    ],
+    [[PF('2'),
+      halign  => 'r|',
+      cellcss => 'border-right: 1px solid; ',],
+     PF('F'),
+     PF('T'),
+     PF('T'),
+     PF('F'),
+    ],
+    [[PF('3'),
+      halign  => 'r|',
+      cellcss => 'border-right: 1px solid; ',],
+     PF('T'),
+     PF('T'),
+     PF('T'),
+     PF('T'),
+    ],
+    [[PF('4'),
+      halign  => 'r|',
+      cellcss => 'border-right: 1px solid; ',],
+     PF('F'),
+     PF('F'),
+     PF('F'),
+     PF('F'),
+    ],
+  ],
+  align => 'lllll',
+);@]* <<
+
+For example, [`P(1,3)`] is false, as indicated by the F in the first row, third column.  Use the table to decide whether the following statements are true or false.
+
+a.  [`\forall x \exists y P(x,y)\text{.}`] [_____]{$false}
+
+
+a.  [`\forall y \exists x P(x,y)\text{.}`] [_____]{$true}
+
+
+a.  [`\exists x \forall y P(x,y)\text{.}`] [_____]{$true}
+
+
+a.  [`\exists y \forall x P(x,y)\text{.}`] [_____]{$false}   
+
+
+
+END_PGML
+
+####################
+# Solution
+####################
+BEGIN_PGML_SOLUTION
+a.  [`\forall x \exists y P(x,y)`] is false because when [`x = 4\text{,}`] there is no [`y`] which makes [`P(4,y)`] true.
+
+
+a.  [`\forall y \exists x P(x,y)`] is true.  No matter what [`y`] is (i.e., no matter what column we are in) there is some [`x`] for which [`P(x,y)`] is true.  In fact, we can always take [`x`] to be [`3\text{.}`]
+
+
+a.  [`\exists x \forall y P(x,y)`] is true. In particular [`x=3`] is such a number, so that no matter what [`y`] is, [`P(x,y)`] is true.
+
+
+a.  [`\exists y \forall x P(x,y)`] is false. In fact, no matter what [`y`] (column) we look at, there is always some [`x`] (row) which makes [`P(x,y)`] false.   
+
+
+
+END_PGML_SOLUTION
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();
