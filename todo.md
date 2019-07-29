@@ -1,5 +1,10 @@
 # Todo list
 
+## 0.2:
+
+- 13 and 14 could be swapped, randomized or otherwise modified so they are not exactly as in the book.
+- 15 could be modified further.  Maybe even randomized?
+
 ## 0.3:
 * Randomize 23.
 

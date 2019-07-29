@@ -25,7 +25,7 @@ loadMacros(
 ####################
 # Header
 ####################
-COMMENT('Authored in PreTeXt');
+COMMENT('Randomized');
 TEXT(beginproblem());
 
 ####################

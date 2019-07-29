@@ -1,114 +1,84 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2018-05-17T08:45:02-06:00    
-###                                    
-###   http://mathbook.pugetsound.edu   
-###                                    
-#######################################
-## DBsubject()
-## DBchapter()
-## DBsection()
+
+## DBsubject('Set theory and logic')
+## DBchapter('Propositional logic')
+## DBsection('Operations on propositions')
 ## Level()
 ## KEYWORDS()
-## TitleText1(Discrete Mathematics: an Open Introduction)
-## EditionText1()
-## AuthorText1(Oscar Levin)
-## Section1(not reported)
-## Problem1(0.2.9)
-## Author()
-## Institution()
+## TitleText1('Discrete Mathematics: an Open Introduction')
+## EditionText1('3')
+## AuthorText1('Oscar Levin')
+## Section1(0.2)
+## Problem1(9)
+## Author('Oscar Levin')
+## Institution('University of Northern Colorado')
 ## Language(en-US)
 
 DOCUMENT();
 
-####################
+############################################################
 # Load Macros
-####################
+############################################################
 loadMacros(
   "PGstandard.pl",
   "MathObjects.pl",
   "PGML.pl",
   "AnswerFormatHelp.pl",
-  "parserRadioButtons.pl",
+  "parserPopUp.pl",
   "PGcourse.pl",
+  "PGchoicemacros.pl"
 );
 
-####################
+############################################################
 # Header
-####################
-COMMENT('Authored in PreTeXt');
+############################################################
+COMMENT('Randomized');
 TEXT(beginproblem());
 
-####################
+############################################################
 # PG Setup
-####################
-Context('Numeric');
-$foralltrue = RadioButtons(
-  ["Give an example of an element \(n\) in the domain for which \(P(n)\) is true.","Give an example of an element \(n\) in the domain for which \(P(n)\) is false.","Show for every element \(n\) in the domain, that \(P(n)\) is true.","Show for every element \(n\) in the domain, that \(P(n)\) is false."],
-  "Show for every element \(n\) in the domain, that \(P(n)\) is true.", # correct answer
-);
-$forallfalse = RadioButtons(
-  ["Give an example of an element \(n\) in the domain for which \(P(n)\) is true.","Give an example of an element \(n\) in the domain for which \(P(n)\) is false.","Show for every element \(n\) in the domain, that \(P(n)\) is true.","Show for every element \(n\) in the domain, that \(P(n)\) is false."],
-  "Give an example of an element \(n\) in the domain for which \(P(n)\) is false.", # correct answer
-);
-$existstrue = RadioButtons(
-  ["Give an example of an element \(n\) in the domain for which \(P(n)\) is true.","Give an example of an element \(n\) in the domain for which \(P(n)\) is false.","Show for every element \(n\) in the domain, that \(P(n)\) is true.","Show for every element \(n\) in the domain, that \(P(n)\) is false."],
-  "Give an example of an element \(n\) in the domain for which \(P(n)\) is true.", # correct answer
-);
-$existsfalse = RadioButtons(
-  ["Give an example of an element \(n\) in the domain for which \(P(n)\) is true.","Give an example of an element \(n\) in the domain for which \(P(n)\) is false.","Show for every element \(n\) in the domain, that \(P(n)\) is true.","Show for every element \(n\) in the domain, that \(P(n)\) is false."],
-  "Show for every element \(n\) in the domain, that \(P(n)\) is false.", # correct answer
+############################################################
+$tf = new_pop_up_select_list();
+  # Specify choices presented to students
+ $tf -> ra_pop_up_list([No_answer => "?", 
+      "Original" => "Original", 
+      "Converse" => "Converse",
+      "Neither" => "Neither",] );
+
+
+$tf -> qa(
+  "A graph is viscous only if it satisfies condition (V).", "Converse",
+  "A graph is viscous if it satisfies condition (V).", "Original",
+  "For a graph to be viscous, it is necessary that it satisfies condition (V).", "Converse",  
+  "For a graph to be viscous, it is sufficient for it to satisfy condition (V).", "Original",
+    "Satisfying condition (V) is a sufficient condition for a graph to be viscous.", "Original",
+  "Satisfying condition (V) is a necessary condition for a graph to be viscous.", "Converse",
+  "Every viscous graph satisfies condition (V).", "Converse",
+  "Only viscous graphs satisfy condition (V).", "Original",
 );
 
-####################
+$tf -> choose(5);
+
+
+
+############################################################
 # Body
-####################
+############################################################
+
 BEGIN_PGML
-For a given predicate [`P(x)\text{,}`] you might believe that the statements [`\forall x P(x)`] or [`\exists x P(x)`] are either true or false.  How would you decide if you were correct in each case?
+You have discovered an old paper on graph theory that discusses the _viscosity_ of a graph (which for all you know, is something completely made up by the author). A theorem in the paper claims that "if a graph satisfies _condition (V)_, then the graph is _viscous_." Which of the following are equivalent ways of stating this claim? Which are equivalent to the _converse_ of the claim?
 
-a.  To prove [`\forall x P(x)`] is true:
+[@ $tf -> print_q @]*
 
-    [_____]{$foralltrue}
-
-
-a.  To prove [`\forall x P(x)`] is false:
-
-    [_____]{$forallfalse}
-
-
-a.  To prove [`\exists x P(x)`] is true:
-
-    [_____]{$existstrue}
-
-
-a.  To prove [`\exists x P(x)`] is false:
-
-    [_____]{$existsfalse}   
 
 
 
 END_PGML
 
-####################
-# Solution
-####################
-BEGIN_PGML_SOLUTION
-a.  The claim that [`\forall x P(x)`] means that [`P(n)`] is true no matter what [`n`] you consider in the domain of discourse.  Thus the only way to prove that [`\forall x P(x)`] is true is to check or otherwise argue that [`P(n)`] is true for all [`n`] in the domain.
+ANS(str_cmp( $tf->ra_correct_ans )   ) ;
 
 
-a.  To prove [`\forall x P(x)`] is false all you need is one example of an element in the domain for which [`P(n)`] is false.  This is often called a counterexample.
-
-
-a.  We are simply claiming that there is some element [`n`] in the domain of discourse for which [`P(n)`] is true.  If you can find one such element, you have verified the claim.
-
-
-a.  Here we are claiming that no element we find will make [`P(n)`] true.  The only way to be sure of this is to verify that _every_ element of the domain makes [`P(n)`] false.  Note that the level of proof needed for this statement is the same as to prove that [`\forall x P(x)`] is true.   
-
-
-
-END_PGML_SOLUTION
-
-####################
+############################################################
 # End Problem
-####################
+############################################################
+
 ENDDOCUMENT();
