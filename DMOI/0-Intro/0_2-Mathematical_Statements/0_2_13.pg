@@ -8,7 +8,7 @@
 ## EditionText1('3')
 ## AuthorText1('Oscar Levin')
 ## Section1(0.2)
-## Problem1(12)
+## Problem1(13)
 ## Author('Oscar Levin')
 ## Institution('University of Northern Colorado')
 ## Language(en-US)
@@ -44,7 +44,7 @@ $x = random(1,10); #for witness (to be made odd)
 $n = random(3,20); #for coefficient.  Next problem will use n+1
 
 $x = 2*$x+1; #Make n odd.
-
+$n = $n + 1; #switch parity from previous part.
 
 $true = PopUp(
 ["?","True","False","Neither (not a statement)"],

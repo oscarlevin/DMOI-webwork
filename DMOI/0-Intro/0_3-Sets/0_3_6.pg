@@ -1,22 +1,15 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2018-05-17T08:45:02-06:00    
-###                                    
-###   http://mathbook.pugetsound.edu   
-###                                    
-#######################################
-## DBsubject()
-## DBchapter()
-## DBsection()
+## DBsubject('Set theory and logic')
+## DBchapter('Relations between sets')
+## DBsection('Subset')
 ## Level()
 ## KEYWORDS()
-## TitleText1(Discrete Mathematics: an Open Introduction)
+## TitleText1('Discrete Mathematics: an Open Introduction')
 ## EditionText1(3)
-## AuthorText1(Oscar Levin)
+## AuthorText1('Oscar Levin')
 ## Section1(0.3)
-## Problem1(6)
-## Author()
-## Institution()
+## Problem1(4)
+## Author('Oscar Levin')
+## Institution('University of Northern Colorado')
 ## Language(en-US)
 
 DOCUMENT();

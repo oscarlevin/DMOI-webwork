@@ -5,18 +5,19 @@
 ###   http://mathbook.pugetsound.edu   
 ###                                    
 #######################################
-## DBsubject()
-## DBchapter()
-## DBsection()
+
+## DBsubject('Set theory and logic')
+## DBchapter('First order logic')
+## DBsection('Predicates')
 ## Level()
 ## KEYWORDS()
-## TitleText1(Discrete Mathematics: an Open Introduction)
-## EditionText1()
-## AuthorText1(Oscar Levin)
-## Section1(not reported)
-## Problem1(0.2.9)
-## Author()
-## Institution()
+## TitleText1('Discrete Mathematics: an Open Introduction')
+## EditionText1('3')
+## AuthorText1('Oscar Levin')
+## Section1(0.2)
+## Problem1(14)
+## Author('Oscar Levin')
+## Institution('University of Northern Colorado')
 ## Language(en-US)
 
 DOCUMENT();

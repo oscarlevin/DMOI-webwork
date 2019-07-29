@@ -1,3 +1,10 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:30-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
 ## DBsubject('Set theory and logic')
 ## DBchapter('Operations on sets')
 ## DBsection('Cardinality')
@@ -7,7 +14,7 @@
 ## EditionText1(3)
 ## AuthorText1('Oscar Levin')
 ## Section1(0.3)
-## Problem1(21)
+## Problem1(23)
 ## Author('Oscar Levin')
 ## Institution('University of Northern Colorado')
 ## Language(en-US)
@@ -22,7 +29,7 @@ loadMacros(
   "MathObjects.pl",
   "PGML.pl",
   "AnswerFormatHelp.pl",
-  "PGessaymacros.pl",
+  "PCCmacros.pl",
   "PGcourse.pl",
 );
 
@@ -42,9 +49,18 @@ Context('Numeric');
 ############################################################
 
 BEGIN_PGML
-Find an example of sets [`A`] and [`B`] such that [`|A| = 3\text{,}`] [`|B| = 4\text{,}`] and [`|A \cup B| = 5\text{.}`]
+Let [`A = \{2, 4, 6, 8\}\text{.}`] Suppose [`B`] is a set with [`|B| = 5\text{.}`]
+a.  What are the smallest and largest possible values of [`|A \cup B|\text{?}`] Explain.
 
-[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+    [@KeyboardInstructions(q?[_____]{5} [` \le |A \cup B| \le `] [_____]{9}?)@]**
+
+a.  What are the smallest and largest possible values of [`|A \cap B|\text{?}`] Explain.
+
+    [@KeyboardInstructions(q?[_____]{0} [` \le |A \cap B| \le `] [_____]{4}?)@]**
+
+a.  What are the smallest and largest possible values of [`|A \times B|\text{?}`] Explain.
+
+    [@KeyboardInstructions(q?[_____]{20} [` \le |A \times B| \le `] [_____]{20}?)@]**
 
 END_PGML
 
