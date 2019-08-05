@@ -44,7 +44,7 @@ TEXT(beginproblem());
 ####################
 Context("IntegerFunctions");
 $a = random(12,19);
-do {$b = random(13,19); } until ($b > $a);
+do {$b = random(13,23); } until ($b > $a);
 $c = random(5,12);
 $d = $a-$c;
 $f = $c-4;

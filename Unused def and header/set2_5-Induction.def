@@ -1,0 +1,152 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/2_5-Induction.pg
+screenHeaderFile  = DMOI/header/2_5-Induction.pg
+description       = Induction
+problemListV2
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_1.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_2.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_3.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_4.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_5.pg
+problem_id = 5
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_6.pg
+problem_id = 6
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_7.pg
+problem_id = 7
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_8.pg
+problem_id = 8
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_9.pg
+problem_id = 9
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_10.pg
+problem_id = 10
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_11.pg
+problem_id = 11
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_12.pg
+problem_id = 12
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_13.pg
+problem_id = 13
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_14.pg
+problem_id = 14
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_15.pg
+problem_id = 15
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_16.pg
+problem_id = 16
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_17.pg
+problem_id = 17
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_18.pg
+problem_id = 18
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_19.pg
+problem_id = 19
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_20.pg
+problem_id = 20
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_21.pg
+problem_id = 21
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_22.pg
+problem_id = 22
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_23.pg
+problem_id = 23
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_24.pg
+problem_id = 24
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_25.pg
+problem_id = 25
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_26.pg
+problem_id = 26
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_27.pg
+problem_id = 27
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_28.pg
+problem_id = 28
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_5-Induction/2_5_5_29.pg
+problem_id = 29
+max_attempts = 5
+problem_end

@@ -89,12 +89,12 @@ $BCENTER
 DataTable(
   [
     [PGML(''),
-     [PGML('[`P \imp (Q \vee R)`]'),],
+     [PGML('[`P \rightarrow (Q \vee R)`]'),],
     ],
     [[PGML(''),
       midrule => '1',
       rowcss  => 'border-bottom: 1px solid; ',],
-     [PGML('[`\neg(P \imp Q)`]'),],
+     [PGML('[`\neg(P \rightarrow Q)`]'),],
     ],
     [[PGML('[`\therefore`]'),],
      [PGML('[`R`]'),],

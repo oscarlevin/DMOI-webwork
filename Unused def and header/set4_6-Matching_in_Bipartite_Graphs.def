@@ -1,0 +1,37 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/4_6-Matching_in_Bipartite_Graphs.pg
+screenHeaderFile  = DMOI/header/4_6-Matching_in_Bipartite_Graphs.pg
+description       = Matching in Bipartite Graphs
+problemListV2
+problem_start
+source_file = DMOI/4-Graph_Theory/4_6-Matching_in_Bipartite_Graphs/4_6_1.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/4-Graph_Theory/4_6-Matching_in_Bipartite_Graphs/4_6_2.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/4-Graph_Theory/4_6-Matching_in_Bipartite_Graphs/4_6_3.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/4-Graph_Theory/4_6-Matching_in_Bipartite_Graphs/4_6_4.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/4-Graph_Theory/4_6-Matching_in_Bipartite_Graphs/4_6_5.pg
+problem_id = 5
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/4-Graph_Theory/4_6-Matching_in_Bipartite_Graphs/4_6_6.pg
+problem_id = 6
+max_attempts = 5
+problem_end

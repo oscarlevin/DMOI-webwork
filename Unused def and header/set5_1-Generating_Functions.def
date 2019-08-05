@@ -1,0 +1,87 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/5_1-Generating_Functions.pg
+screenHeaderFile  = DMOI/header/5_1-Generating_Functions.pg
+description       = Generating Functions
+problemListV2
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_1.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_2.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_3.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_4.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_5.pg
+problem_id = 5
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_6.pg
+problem_id = 6
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_7.pg
+problem_id = 7
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_8.pg
+problem_id = 8
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_9.pg
+problem_id = 9
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_10.pg
+problem_id = 10
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_11.pg
+problem_id = 11
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_12.pg
+problem_id = 12
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_13.pg
+problem_id = 13
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_14.pg
+problem_id = 14
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_15.pg
+problem_id = 15
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/5-Additional_Topics/5_1-Generating_Functions/5_1_5_16.pg
+problem_id = 16
+max_attempts = 5
+problem_end
