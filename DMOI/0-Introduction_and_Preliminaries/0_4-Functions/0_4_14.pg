@@ -68,11 +68,6 @@ a.  Find [`\newcommand{\inv}{^{-1}}f\inv(28)\text{.}`]
     [__]{Set()}{width => 15}
 
 
-a.  Is [`f`] injective. Explain.
-
-
-a.  Is [`f`] surjective. Explain.   
-
 
 
 END_PGML

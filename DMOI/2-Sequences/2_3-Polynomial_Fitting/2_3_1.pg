@@ -61,9 +61,9 @@ $seq = Compute("$seq");
 BEGIN_PGML
 Use polynomial fitting to find the formula for the [`n`]th term of the sequence [`(a_n)_{n \ge 0}`] which starts,
 
-[```  
+[`  
 [$seq], \ldots
-```]
+`]
 
 [`a_n = `] [________]{$closed}
 
@@ -77,10 +77,10 @@ BEGIN_PGML_SOLUTION
 
 [`a_n = [$closed]\text{.}`] Here we know that we are looking for a quadratic because the second differences are constant. So [`a_n = an^2 + bn + c\text{.}`] Since [`a_0 = 0\text{,}`] we know [`c= 0\text{.}`] So just solve the system
 
-[```\begin{aligned}
+[`\begin{aligned}
 [$seq[1]] & = a + b\\
 [$seq[2]] & = 4a + 2b
-\end{aligned}```]
+\end{aligned}`]
 
 to find [`a = [$a]`] and [`b = [$b]`].
 

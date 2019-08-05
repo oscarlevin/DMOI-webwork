@@ -1,0 +1,63 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/2_1-Describing_Sequences.pg
+screenHeaderFile  = DMOI/header/2_1-Describing_Sequences.pg
+description       = Describing Sequences
+problemListV2
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_1.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_2.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_6_8-nr.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_extra-1.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_extra-2.pg
+problem_id = 5
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_extra-3.pg
+problem_id = 6
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_extra-5.pg
+problem_id = 7
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_extra-6.pg
+problem_id = 8
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_extra-7.pg
+problem_id = 9
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_extra-8.pg
+problem_id = 10
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_1-Describing_Sequences/2_1_extra-9.pg
+problem_id = 11
+max_attempts = 5
+problem_end
+

@@ -1,0 +1,47 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/3_1-Propositional_Logic.pg
+screenHeaderFile  = DMOI/header/3_1-Propositional_Logic.pg
+description       = Propositional Logic
+problemListV2
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_1-Propositional_Logic/3_1_2.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_1-Propositional_Logic/3_1_3.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_1-Propositional_Logic/3_1_4.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_1-Propositional_Logic/3_1_7.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_1-Propositional_Logic/3_1_12.pg
+problem_id = 5
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_1-Propositional_Logic/3_1_13.pg
+problem_id = 6
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_1-Propositional_Logic/3_1_14.pg
+problem_id = 7
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_1-Propositional_Logic/3_1_21.pg
+problem_id = 8
+max_attempts = 5
+problem_end
