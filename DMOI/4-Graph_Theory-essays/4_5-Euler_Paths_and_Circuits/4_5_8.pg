@@ -1,9 +1,0 @@
-DOCUMENT();
-loadMacros('PGstandard.pl','PGML.pl','PGcourse.pl');
-TEXT(beginproblem());
-BEGIN_PGML
-PTX:ERROR:  WeBWorK problem webwork-406 with seed 406 does not return valid XML  
-  It may not be PTX compatible  
-Use -a to halt with returned content
-END_PGML
-ENDDOCUMENT();
