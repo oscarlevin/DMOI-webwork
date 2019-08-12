@@ -1,0 +1,99 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:30-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject('Set theory and logic')
+## DBchapter('Operations on sets')
+## DBsection('Venn diagrams')
+## Level()
+## KEYWORDS()
+## TitleText1('Discrete Mathematics: an Open Introduction')
+## EditionText1(3)
+## AuthorText1('Oscar Levin')
+## Section1(0.3)
+## Problem1(15)
+## Author('Oscar Levin')
+## Institution('University of Northern Colorado')
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Draw a Venn diagram to represent each of the following:
+a.  [`A \cup \bar B`]
+a.  [`\bar{(A \cup B)}`]
+a.  [`A \cap (B \cup C)`]
+a.  [`(A \cap B) \cup C`]
+a.  [`\bar A \cap B \cap \bar C`]
+a.  [`(A \cup B) \setminus C`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  [`A \cup \bar B\text{:}`]
+
+    \\begin\{tikzpicture\}\[fill=gray!50, scale=.5\] \\fill \\circleA; \\begin\{scope\} \\clip \\circleB \\twosetbox; \\fill \\twosetbox; \\end\{scope\} \\draw\[thick\] \\circleA \\circleAlabel \\circleB \\circleBlabel \\twosetbox; \\end\{tikzpicture\}
+
+a.  [`\bar{(A \cup B)}\text{:}`]
+
+    \\begin\{tikzpicture\}\[scale=.5, fill=gray!50\] \\fill \\twosetbox; \\fill\[white\] \\circleA \\circleB; \\draw\[thick\] \\circleA \\circleAlabel \\circleB \\circleBlabel \\twosetbox; \\end\{tikzpicture\}
+
+a.  [`A \cap (B \cup C)\text{:}`]
+
+    \\begin\{tikzpicture\}\[fill=gray!50, scale=.5\] \\begin\{scope\} \\clip \\circleA; \\fill \\circleB \\circleC; \\end\{scope\} \\draw\[thick\] \\circleA \\circleAlabel \\circleB \\circleBlabel \\circleC \\circleClabel \\threesetbox; \\end\{tikzpicture\}
+
+a.  [`(A \cap B) \cup C\text{:}`]
+
+    \\begin\{tikzpicture\}\[fill=gray!50, scale=.5\] \\begin\{scope\} \\clip \\circleA; \\fill \\circleB; \\end\{scope\} \\fill \\circleC; \\draw\[thick\] \\circleA \\circleAlabel \\circleB \\circleBlabel \\circleC \\circleClabel \\threesetbox; \\end\{tikzpicture\}
+
+a.  [`\bar A \cap B \cap \bar C\text{:}`]
+
+    \\begin\{tikzpicture\}\[fill=gray!50, scale=.5\] \\fill \\circleB; \\begin\{scope\} \\clip \\circleB; \\fill\[white\] \\circleA \\circleC; \\end\{scope\} \\draw\[thick\] \\circleA \\circleAlabel \\circleB \\circleBlabel \\circleC \\circleClabel \\threesetbox; \\end\{tikzpicture\}
+
+a.  [`(A \cup B) \setminus C\text{:}`]
+
+    \\begin\{tikzpicture\}\[fill=gray!50, scale=.5\] \\fill \\circleA; \\fill \\circleB; \\fill\[white\] \\circleC; \\draw\[thick\] \\circleA \\circleAlabel \\circleB \\circleBlabel \\circleC \\circleClabel \\threesetbox; \\end\{tikzpicture\}
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

@@ -1,0 +1,72 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:30-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject('Set theory and logic')
+## DBchapter('Operations on sets')
+## DBsection('Boolean operations on sets')
+## Level()
+## KEYWORDS()
+## TitleText1('Discrete Mathematics: an Open Introduction')
+## EditionText1(3)
+## AuthorText1('Oscar Levin')
+## Section1(0.3)
+## Problem1(14)
+## Author('Oscar Levin')
+## Institution('University of Northern Colorado')
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Let [`A_2`] be the set of all multiples of 2 except for [`2\text{.}`] Let [`A_3`] be the set of all multiples of 3 except for 3. And so on, so that [`A_n`] is the set of all multiples of [`n`] except for [`n\text{,}`] for any [`n \ge 2\text{.}`] Describe (in words) the set [`\bar{A_2 \cup A_3 \cup A_4 \cup \cdots}\text{.}`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+It might help to think about what the union [`A_2 \cup A_3`] is first.  Then think about what numbers are _not_ in that union.  What will happen when you also include [`A_5\text{?}`]
+
+END_PGML_HINT
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

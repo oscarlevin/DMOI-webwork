@@ -1,0 +1,92 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/1_7-Chapter_Summary.pg
+screenHeaderFile  = DMOI/header/1_7-Chapter_Summary.pg
+description       = Chapter Summary
+problemListV2
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_1.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_3.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_5.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_6.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_7.pg
+problem_id = 5
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_8.pg
+problem_id = 6
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_9.pg
+problem_id = 7
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_10.pg
+problem_id = 8
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_11.pg
+problem_id = 9
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_12.pg
+problem_id = 10
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_13.pg
+problem_id = 11
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_14.pg
+problem_id = 12
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_16.pg
+problem_id = 13
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_17.pg
+problem_id = 14
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_18.pg
+problem_id = 15
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_19.pg
+problem_id = 16
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_7-Chapter_Summary/1_7_21.pg
+problem_id = 17
+max_attempts = 5
+problem_end

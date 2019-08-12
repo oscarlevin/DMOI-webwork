@@ -1,0 +1,81 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:34-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(3.1.9)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Show that [`a_n = 3\cdot 2^n + 7\cdot 5^n`] is a solution to the recurrence relation [`a_n = 7a_{n-1} - 10a_{n-2}\text{.}`] What would the initial conditions need to be for this to be the closed formula for the sequence?
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+This closed formula would have [`a_{n-1} = 3\cdot 2^{n-1} + 7 \cdot 5^{n-1}`] and [`a_{n-2} = 3\cdot 2^{n-2} + 7 \cdot 5^{n-2}\text{.}`] Then we would have
+
+[```\newcommand{\amp}{&}\begin{aligned}
+7a_{n-1} - 10a_{n-2} = \amp 7(3\cdot 2^{n-1} + 7 \cdot 5^{n-1}) - 10(3\cdot 2^{n-2} + 7 \cdot 5^{n-2})\\
+= \amp 21\cdot 2^{n-1} + 49 \cdot 5^{n-1} - 30\cdot 2^{n-2} - 70 \cdot 5^{n-2})\\
+= \amp 21\cdot 2^{n-1} + 49 \cdot 5^{n-1} - 15\cdot 2^{n-1} - 14 \cdot 5^{n-1})\\
+= \amp 6\cdot 2^{n-1} + 35 \cdot 5^{n-1}\\
+= \amp 3\cdot 2^{n} + 7 \cdot 5^{n} = a_n\text{.}
+\end{aligned}```]
+
+So the closed formula agrees with the recurrence relation. The closed formula has initial terms [`a_0 = 10`] and [`a_1 = 41\text{.}`]
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

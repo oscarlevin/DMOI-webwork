@@ -1,0 +1,71 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:31-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(1.4.4.26)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Let [`f:X \to Y`] be a function and [`A \subseteq X`] be a finite subset of the domain. What can you say about the relationship between [`\renewcommand{\bar}{\overline}\newcommand{\card}[1]{\left| #1 \right|}\card{A}`] and [`\renewcommand{\bar}{\overline}\newcommand{\card}[1]{\left| #1 \right|}\card{f(A)}\text{?}`] Consider both the general case and what happens when you know [`f`] is injective, surjective, or bijective.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+In general, [`\renewcommand{\bar}{\overline}\newcommand{\card}[1]{\left| #1 \right|}\card{A} \ge \card{f(A)}\text{,}`] since you cannot get more outputs than you have inputs (each input goes to exactly one output), but you could have fewer outputs if the function is not injective. If the function is injective, then [`\renewcommand{\bar}{\overline}\newcommand{\card}[1]{\left| #1 \right|}\card{A} = \card{f(A)}\text{,}`] although you can have equality even if [`f`] is not injective (it must be injective _restricted_ to [`A`]).
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

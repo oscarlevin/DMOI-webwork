@@ -1,0 +1,69 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:31-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(1.4.4.15)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the set [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}\N^2 = \N \times \N\text{,}`] the set of all ordered pairs [`(a,b)`] where [`a`] and [`b`] are natural numbers. Consider a function [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}f: \N^2 \to \N`] given by [`f((a,b)) =a+b\text{.}`]
+a.  Let [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}\newcommand{\st}{:}A = \{(a,b) \in \N^2 \st a, b \le 10\}\text{.}`] Find [`f(A)\text{.}`]
+
+a.  Find [`\newcommand{\inv}{^{-1}}f\inv(3)`] and [`\newcommand{\inv}{^{-1}}f\inv(\{0,1,2,3\})\text{.}`]
+
+a.  Give geometric descriptions of [`\newcommand{\inv}{^{-1}}f\inv(n)`] and [`\newcommand{\inv}{^{-1}}f\inv(\{0, 1, \ldots, n\})`] for any [`n \ge 1\text{.}`]
+
+a.  Find [`\newcommand{\inv}{^{-1}}\renewcommand{\bar}{\overline}\newcommand{\card}[1]{\left| #1 \right|}\card{f\inv(8)}`] and [`\newcommand{\inv}{^{-1}}\renewcommand{\bar}{\overline}\newcommand{\card}[1]{\left| #1 \right|}\card{f\inv(\{0,1, \ldots, 8\})}\text{.}`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

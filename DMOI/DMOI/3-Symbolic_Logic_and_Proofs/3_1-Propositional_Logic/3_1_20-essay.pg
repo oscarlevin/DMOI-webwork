@@ -1,0 +1,95 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:37-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(4.1.5.20)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "niceTables.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Suppose [`P_1, P_2, \ldots, P_n`] and [`Q`] are (possibly molecular) propositional statements. Suppose further that
+
+>> [@DataTable(
+  [
+    [PGML(''),
+     [PGML('[`P_1`]'),],
+    ],
+    [PGML(''),
+     [PGML('[`P_2`]'),],
+    ],
+    [PGML(''),
+     [PGML('[`\vdots`]'),],
+    ],
+    [[PGML(''),
+      midrule => '1',
+      rowcss  => 'border-bottom: 1px solid; ',],
+     [PGML('[`P_n`]'),],
+    ],
+    [[PGML('[`\therefore`]'),],
+     [PGML('[`Q`]'),],
+    ],
+  ],
+  align => 'll',
+  center => 0,
+);@]* <<
+
+is a valid deduction rule. Prove that the statement
+
+[```\newcommand{\imp}{\rightarrow}
+          (P_1 \wedge P_2 \wedge \cdots \wedge P_n) \imp Q
+        ```]
+
+is a tautology.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

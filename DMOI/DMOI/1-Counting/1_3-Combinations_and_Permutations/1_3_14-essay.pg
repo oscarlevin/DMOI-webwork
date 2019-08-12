@@ -1,0 +1,69 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:32-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(2.3.14)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+We have seen that the formula for [`P(n,k)`] is [`\dfrac{n!}{(n-k)!}\text{.}`] Your task here is to explain _why_ this is the right formula.
+a.  Suppose you have 12 chips, each a different color. How many different stacks of 5 chips can you make? Explain your answer and why it is the same as using the formula for [`P(12,5)\text{.}`]
+
+a.  Using the scenario of the 12 chips again, what does [`12!`] count? What does [`7!`] count? Explain.
+
+a.  Explain why it makes sense to divide [`12!`] by [`7!`] when computing [`P(12,5)`] (in terms of the chips).
+
+a.  Does your explanation work for numbers other than 12 and 5? Explain the formula [`P(n,k) = \frac{n!}{(n-k)!}`] using the variables [`n`] and [`k\text{.}`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

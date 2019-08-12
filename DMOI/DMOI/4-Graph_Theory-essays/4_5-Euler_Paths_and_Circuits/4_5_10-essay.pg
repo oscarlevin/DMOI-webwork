@@ -1,0 +1,74 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:39-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.5.2.10)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+On the table rest 8 dominoes, as shown below. If you were to line them up in a single row, so that any two sides touching had matching numbers, what would the sum of the two end numbers be?
+
+>> \\begin\{tikzpicture\} \\dominoborder \\draw (0,0) \\fourdots (0,1) \\twodots;; \\end\{tikzpicture\}\\begin\{tikzpicture\} \\dominoborder \\draw (0,0) \\twodots (0,1) \\sixdots; \\end\{tikzpicture\}\\begin\{tikzpicture\} \\dominoborder \\draw (0,0) \\threedots (0,1) \\onedot; \\end\{tikzpicture\}\\begin\{tikzpicture\} \\dominoborder \\draw (0,0) \\sixdots (0,1) \\fourdots; \\end\{tikzpicture\}\\begin\{tikzpicture\} \\dominoborder \\draw (0,0) \\threedots (0,1) \\fivedots; \\end\{tikzpicture\}\\begin\{tikzpicture\} \\dominoborder \\draw (0,0) \\threedots (0,1) \\fourdots; \\end\{tikzpicture\}\\begin\{tikzpicture\} \\dominoborder \\draw (0,0) \\fivedots (0,1) \\sixdots; \\end\{tikzpicture\}\\begin\{tikzpicture\} \\dominoborder \\draw (0,0) \\sixdots (0,1) \\threedots; \\end\{tikzpicture\} <<
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+Draw a graph with 6 vertices and 8 edges.  What sort of path would be appropriate?
+
+END_PGML_HINT
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

@@ -1,0 +1,67 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/1_3-Combinations_and_Permutations.pg
+screenHeaderFile  = DMOI/header/1_3-Combinations_and_Permutations.pg
+description       = Combinations and Permutations
+problemListV2
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_1.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_2.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_3.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_4.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_5.pg
+problem_id = 5
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_7.pg
+problem_id = 6
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_8.pg
+problem_id = 7
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_9.pg
+problem_id = 8
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_10.pg
+problem_id = 9
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_11.pg
+problem_id = 10
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_12.pg
+problem_id = 11
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/1_3-Combinations_and_Permutations/1_3_13.pg
+problem_id = 12
+max_attempts = 5
+problem_end

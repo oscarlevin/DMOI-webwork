@@ -1,0 +1,71 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:30-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(1.2.4.20)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the statement, "For all natural numbers [`n\text{,}`] if [`n`] is prime, then [`n`] is solitary." You do not need to know what _solitary_ means for this problem, just that it is a property that some numbers have and others do not.
+a.  Write the converse and the contrapositive of the statement, saying which is which. Note: the original statement claims that an implication is true for all [`n\text{,}`] and it is that implication that we are taking the converse and contrapositive of.
+
+a.  Write the negation of the original statement. What would you need to show to prove that the statement is false?
+
+a.  Even though you don't know whether 10 is solitary (in fact, nobody knows this), is the statement "if 10 is prime, then 10 is solitary" true or false? Explain.
+
+a.  It turns out that 8 is solitary. Does this tell you anything about the truth or falsity of the original statement, its converse or its contrapositive? Explain.
+
+a.  Assuming that the original statement is true, what can you say about the relationship between the _set_ [`P`] of prime numbers and the _set_ [`S`] of solitary numbers. Explain.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

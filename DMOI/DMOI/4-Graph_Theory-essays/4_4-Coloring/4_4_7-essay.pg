@@ -1,0 +1,113 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:39-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.4.3.7)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "niceTables.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+The two problems below can be solved using graph coloring. For each problem, represent the situation with a graph, say whether you should be coloring vertices or edges and why, and use the coloring to solve the problem.
+a.  Your Quidditch league has 5 teams. You will play a tournament next week in which every team will play every other team once. Each team can play at most one match each day, but there is plenty of time in the day for multiple matches. What is the fewest number of days over which the tournament can take place?
+
+a.  Ten members of Math Club are driving to a math conference in a neighboring state. However, some of these students have dated in the past, and things are still a little awkward. Each student lists which other students they refuse to share a car with; these conflicts are recored in the table below. What is the fewest number of cars the club needs to make the trip? Do not worry about running out of seats, just avoid the conflicts.
+
+    [@DataTable(
+      [
+        [[PGML('Student:'),
+          halign  => 'l|',
+          midrule => '1',
+          rowcss  => 'border-bottom: 2px solid; ',
+          cellcss => 'border-right: 2px solid; ',],
+         [PGML('A'),],
+         [PGML('B'),],
+         [PGML('C'),],
+         [PGML('D'),],
+         [PGML('E'),],
+         [PGML('F'),],
+         [PGML('G'),],
+         [PGML('H'),],
+         [PGML('I'),],
+         [PGML('J'),],
+        ],
+        [[PGML('Conflicts:'),
+          halign  => 'l|',
+          cellcss => 'border-right: 2px solid; ',],
+         PGML('BEJ'),
+         PGML('ADG'),
+         PGML('HJ'),
+         PGML('BF'),
+         PGML('AI'),
+         PGML('DJ'),
+         PGML('B'),
+         PGML('CI'),
+         PGML('EHJ'),
+         PGML('ACFI'),
+        ],
+      ],
+      align => 'ccccccccccc',
+      center => 0,
+    );@]*
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+For (a), you will want the teams to be vertices and games to be edges.  Which does it make sense to color?
+
+END_PGML_HINT
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

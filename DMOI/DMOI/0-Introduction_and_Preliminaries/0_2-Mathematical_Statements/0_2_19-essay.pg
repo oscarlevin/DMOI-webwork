@@ -1,0 +1,75 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:30-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(1.2.4.19)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+For each of the statements below, give a domain of discourse for which the statement is true, and a domain for which the statement is false.
+a.  [`\forall x \exists y (y^2 = x)\text{.}`]
+a.  [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\forall x \forall y (x \lt y \imp \exists z (x \lt z \lt y))\text{.}`]
+a.  [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\exists x \forall y \forall z (y \lt z \imp y \le x \le z)\text{.}`]   
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Hint
+############################################################
+#Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+
+BEGIN_PGML_HINT
+First figure out what each statement is saying.  For part (c), you don't need to assume the domain is an infinite set.
+
+END_PGML_HINT
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

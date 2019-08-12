@@ -1,0 +1,97 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2018-05-17T08:45:02-06:00    
+###                                    
+###   http://mathbook.pugetsound.edu   
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(0.4.1)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+  "parserOneOf.pl",
+);
+
+####################
+# Header
+####################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+Context('Numeric');
+
+
+####################
+# Body
+####################
+BEGIN_PGML
+Consider the function [`f:\{1,2,3,4\} \to \{1,2,3,4\}`] given by
+
+>> [``\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}
+            f(n) = \twoline{1 \amp 2 \amp 3 \amp 4}{4 \amp 1 \amp 3 \amp 4}.
+          ``] <<
+
+
+
+a.  Find [`f(1)\text{.}`] [_____]{4}
+
+
+a.  Find a [`n`] in the domain such that [`f(n) = 1\text{.}`]  [_____]{2}
+
+
+a.  Find an element [`n`] of the domain such that [`f(n) = n\text{.}`]  [_____]{OneOf(3,4)}
+
+
+a.  Find an element of the codomain that is not in the range.  [_____]{2}   
+
+
+
+END_PGML
+
+####################
+# Solution
+####################
+BEGIN_PGML_SOLUTION
+a.  [`f(1) = 4\text{,}`] since [`4`] is the number below 1 in the two-line notation.
+
+
+a.  Such an [`n`] is [`n= 2\text{,}`] since [`f(2) = 1\text{.}`]  Note that 2 is above a 1 in the notation.
+
+
+a.  [`n = 4`] has this property.  We say that 4 is a fixed point of [`f\text{.}`]  Not all functions have such a point.
+
+
+a.  Such an element is 2 (in fact, that is the only element in the codomain that is not in the range).  In other words, 2 is not the image of any element under [`f\text{;}`] nothing is sent to 2.   
+
+
+
+END_PGML_SOLUTION
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

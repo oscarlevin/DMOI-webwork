@@ -1,0 +1,55 @@
+## DBsubject('Set theory and logic')
+## DBchapter('Operations on sets')
+## DBsection('Cardinality')
+## Level()
+## KEYWORDS()
+## TitleText1('Discrete Mathematics: an Open Introduction')
+## EditionText1(3)
+## AuthorText1('Oscar Levin')
+## Section1(0.3)
+## Problem1(21)
+## Author('Oscar Levin')
+## Institution('University of Northern Colorado')
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find an example of sets [`A`] and [`B`] such that [`|A| = 3\text{,}`] [`|B| = 4\text{,}`] and [`|A \cup B| = 5\text{.}`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

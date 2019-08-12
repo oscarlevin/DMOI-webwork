@@ -1,0 +1,84 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:40-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(6.1.5.1)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find the generating function for each of the following sequences by relating them back to a sequence with known generating function.
+a.  [`4,4,4,4,4,\ldots\text{.}`]
+a.  [`2, 4, 6, 8, 10, \ldots\text{.}`]
+a.  [`0,0,0,2,4,6,8,10,\ldots\text{.}`]
+a.  [`1, 5, 25, 125, \ldots\text{.}`]
+a.  [`1, -3, 9, -27, 81, \ldots\text{.}`]
+a.  [`1, 0, 5, 0, 25, 0, 125, 0, \ldots\text{.}`]
+a.  [`0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, \ldots\text{.}`]   
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  [`\dfrac{4}{1-x}\text{.}`]
+a.  [`\dfrac{2}{(1-x)^2}\text{.}`]
+a.  [`\dfrac{2x^3}{(1-x)^2}\text{.}`]
+a.  [`\dfrac{1}{1-5x}\text{.}`]
+a.  [`\dfrac{1}{1+3x}\text{.}`]
+a.  [`\dfrac{1}{1-5x^2}\text{.}`]
+a.  [`\dfrac{x}{(1-x^3)^2}\text{.}`]   
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

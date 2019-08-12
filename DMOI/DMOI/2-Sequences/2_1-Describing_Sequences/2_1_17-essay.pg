@@ -1,0 +1,69 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:34-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(3.1.17)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider bit strings with length [`l`] and weight [`k`] (so strings of [`l`] 0's and 1's, including [`k`] 1's). We know how to count the number of these for a fixed [`l`] and [`k\text{.}`] Now, we will count the number of strings for which the _sum_ of the length and the weight is fixed. For example, let's count all the bit strings for which [`l+k = 11\text{.}`]
+a.  Find examples of these strings of different lengths. What is the longest string possible? What is the shortest?
+
+a.  How many strings are there of each of these lengths. Use this to count the total number of strings (with sum 11).
+
+a.  The other approach: Let [`n = l+p`] vary. How many strings have sum [`n = 1\text{?}`] How many have sum [`n = 2\text{?}`] And so on. Find and explain a recurrence relation for the sequence [`(a_n)`] which gives the number of strings with sum [`n\text{.}`]
+
+a.  Describe what you have found above in terms of Pascal's Triangle. What pattern have you discovered?
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

@@ -1,0 +1,96 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:37-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(4.2.6.1)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the statement "for all integers [`a`] and [`b\text{,}`] if [`a + b`] is even, then [`a`] and [`b`] are even"
+a.  Write the contrapositive of the statement.
+
+a.  Write the converse of the statement.
+
+a.  Write the negation of the statement.
+
+a.  Is the original statement true or false? Prove your answer.
+
+a.  Is the contrapositive of the original statement true or false? Prove your answer.
+
+a.  Is the converse of the original statement true or false? Prove your answer.
+
+a.  Is the negation of the original statement true or false? Prove your answer.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  For all integers [`a`] and [`b\text{,}`] if [`a`] or [`b`] is not even, then [`a+b`] is not even.
+
+a.  For all integers [`a`] and [`b\text{,}`] if [`a`] and [`b`] are even, then [`a+b`] is even.
+
+a.  There are numbers [`a`] and [`b`] such that [`a+b`] is even but [`a`] and [`b`] are not both even.
+
+a.  False. For example, [`a = 3`] and [`b = 5\text{.}`] [`a+b = 8\text{,}`] but neither [`a`] nor [`b`] are even.
+
+a.  False, since it is equivalent to the original statement.
+
+a.  True. Let [`a`] and [`b`] be integers. Assume both are even. Then [`a = 2k`] and [`b = 2j`] for some integers [`k`] and [`j\text{.}`] But then [`a+b = 2k + 2j = 2(k+j)`] which is even.
+
+a.  True, since the statement is false.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

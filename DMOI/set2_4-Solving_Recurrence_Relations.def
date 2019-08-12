@@ -1,0 +1,37 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/2_4-Solving_Recurrence_Relations.pg
+screenHeaderFile  = DMOI/header/2_4-Solving_Recurrence_Relations.pg
+description       = Solving Recurrence Relations
+problemListV2
+problem_start
+source_file = DMOI/2-Sequences/2_4-Solving_Recurrence_Relations/2_4_3.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_4-Solving_Recurrence_Relations/2_4_extra-1.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_4-Solving_Recurrence_Relations/2_6_10.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_4-Solving_Recurrence_Relations/2_4_5.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_4-Solving_Recurrence_Relations/2_4_6.pg
+problem_id = 5
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/2-Sequences/2_4-Solving_Recurrence_Relations/2_4_7.pg
+problem_id = 6
+max_attempts = 5
+problem_end

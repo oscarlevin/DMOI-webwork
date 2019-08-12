@@ -1,0 +1,71 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:30-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject('Set theory and logic')
+## DBchapter('Operations on sets')
+## DBsection('Cardinality')
+## Level()
+## KEYWORDS()
+## TitleText1('Discrete Mathematics: an Open Introduction')
+## EditionText1(3)
+## AuthorText1('Oscar Levin')
+## Section1(0.3)
+## Problem1(24)
+## Author('Oscar Levin')
+## Institution('University of Northern Colorado')
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Let [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}\newcommand{\st}{:}\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}X = \{n \in \N \st 10 \le n \lt 20\}\text{.}`] Find examples of sets with the properties below and very briefly explain why your examples work.
+a.  A set [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}A \subseteq \N`] with [`|A| = 10`] such that [`X \setminus A = \{10, 12, 14\}\text{.}`]
+
+a.  A set [`\newcommand{\pow}{\mathcal P}B \in \pow(X)`] with [`|B| = 5\text{.}`]
+
+a.  A set [`\newcommand{\pow}{\mathcal P}C \subseteq \pow(X)`] with [`|C| = 5\text{.}`]
+
+a.  A set [`D \subseteq X \times X`] with [`|D| = 5`]
+
+a.  A set [`E \subseteq X`] such that [`|E| \in E\text{.}`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

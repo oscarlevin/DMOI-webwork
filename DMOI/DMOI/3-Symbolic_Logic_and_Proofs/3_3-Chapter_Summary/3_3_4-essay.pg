@@ -1,0 +1,216 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:37-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(4.3.4)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "niceTables.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Is the following a valid deduction rule? Explain.
+
+>> [@DataTable(
+  [
+    [PGML(''),
+     [PGML('[`P \imp Q`]'),],
+    ],
+    [[PGML(''),
+      midrule => '1',
+      rowcss  => 'border-bottom: 1px solid; ',],
+     [PGML('[`P\imp R`]'),],
+    ],
+    [[PGML('[`\therefore`]'),],
+     [PGML('[`P \imp (Q \wedge R)\text{.}`]'),],
+    ],
+  ],
+  align => 'cc',
+  center => 0,
+);@]* <<
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+Make a truth table that includes all three statements in the argument:
+
+>> [@DataTable(
+  [
+    [[PGML('[`P`]'),
+      midrule => '1',
+      rowcss  => 'border-bottom: 1px solid; ',
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('[`Q`]'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('[`R`]'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('[`P \imp Q`]'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('[`P \imp R`]'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('[`P \imp (Q \wedge R)`]'),],
+    ],
+    [[PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     PGML('T'),
+    ],
+    [[PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     PGML('F'),
+    ],
+    [[PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     PGML('F'),
+    ],
+    [[PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     PGML('F'),
+    ],
+    [[PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     PGML('T'),
+    ],
+    [[PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     PGML('T'),
+    ],
+    [[PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     PGML('T'),
+    ],
+    [[PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('F'),
+      cellcss => 'border-right: 2px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     [PGML('T'),
+      cellcss => 'border-right: 1px solid; ',],
+     PGML('T'),
+    ],
+  ],
+  align => 'c|c|c|c|c|c',
+  columnscss =>
+    ['border-right: 0px solid; ',
+     'border-right: 0px solid; ',
+     'border-right: 0px solid; ',
+     'border-right: 0px solid; ',
+     'border-right: 0px solid; ',
+     ' ',],
+  center => 0,
+);@]* <<
+
+Notice that in every row for which both [`\newcommand{\imp}{\rightarrow}P \imp Q`] and [`\newcommand{\imp}{\rightarrow}P \imp R`] is true, so is [`\newcommand{\imp}{\rightarrow}P \imp (Q \wedge R)\text{.}`] Therefore, whenever the premises of the argument are true, so is the conclusion. In other words, the deduction rule is valid.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

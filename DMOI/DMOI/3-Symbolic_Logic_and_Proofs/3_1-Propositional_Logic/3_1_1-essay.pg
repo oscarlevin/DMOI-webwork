@@ -1,0 +1,87 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:36-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(4.1.5.1)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the statement about a party, "If it's your birthday or there will be cake, then there will be cake."
+a.  Translate the above statement into symbols. Clearly state which statement is [`P`] and which is [`Q\text{.}`]
+
+a.  Make a truth table for the statement.
+
+a.  Assuming the statement is true, what (if anything) can you conclude if there will be cake?
+
+a.  Assuming the statement is true, what (if anything) can you conclude if there will not be cake?
+
+a.  Suppose you found out that the statement was a lie. What can you conclude?
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  [`P\text{:}`] it's your birthday; [`Q\text{:}`] there will be cake. [`\newcommand{\imp}{\rightarrow}(P \vee Q) \imp Q`]
+a.  Hint: you should get three T's and one F.
+
+a.  Only that there will be cake.
+
+a.  It's NOT your birthday!
+
+a.  It's your birthday, but the cake is a lie.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

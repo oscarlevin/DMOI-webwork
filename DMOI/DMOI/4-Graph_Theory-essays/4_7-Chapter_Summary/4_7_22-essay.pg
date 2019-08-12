@@ -1,0 +1,92 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:40-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.7.22)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Consider the statement "If a graph is planar, then it has an Euler path."
+a.  Write the converse of the statement.
+
+a.  Write the contrapositive of the statement.
+
+a.  Write the negation of the statement.
+
+a.  Is it possible for the contrapositive to be false? If it was, what would that tell you?
+
+a.  Is the original statement true or false? Prove your answer.
+
+a.  Is the converse of the statement true or false? Prove your answer.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  If a graph has an Euler path, then it is planar.
+
+a.  If a graph does not have an Euler path, then it is not planar.
+
+a.  There is a graph which is planar and does not have an Euler path.
+
+a.  Yes. In fact, in this case it is because the original statement is false.
+
+a.  False. [`K_4`] is planar but does not have an Euler path.
+
+a.  False. [`K_5`] has an Euler path but is not planar.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

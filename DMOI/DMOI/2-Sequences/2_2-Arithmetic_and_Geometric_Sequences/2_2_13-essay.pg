@@ -1,0 +1,72 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:34-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(3.2.2.13)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+If you have enough toothpicks, you can make a large triangular grid. Below, are the triangular grids of size 1 and of size 2. The size 1 grid requires 3 toothpicks, the size 2 grid requires 9 toothpicks.
+
+>> \\begin\{tikzpicture\}\[scale=.8\] \\draw\[line width=1.8pt\] (90:1) -\- (-30:1) -\- (210:1) -\- (90:1); \\fill\[color=white\] (90:1) circle (3pt); \\fill\[color=white\] (-30:1) circle (3pt); \\fill\[color=white\] (210:1) circle (3pt); \\end\{tikzpicture\}\\begin\{tikzpicture\}\[scale=.8\] \\draw\[line width = 1.8pt\] (-90:1) -\- (210:2) -\- (150:1) -\- (-90:1) -\- (-30:2) -\- (30:1) -\- (150:1) -\- (90:2) -\- (30:1) -\- (-90:1); \\fill\[color=white\] (-90:1) circle (3pt); \\fill\[color=white\] (-30:2) circle (3pt); \\fill\[color=white\] (210:2) circle (3pt); \\fill\[color=white\] (90:2) circle (3pt); \\fill\[color=white\] (30:1) circle (3pt); \\fill\[color=white\] (150:1) circle (3pt); \\end\{tikzpicture\} <<
+
+a.  Let [`t_n`] be the number of toothpicks required to make a size [`n`] triangular grid. Write out the first 5 terms of the sequence [`t_1, t_2, \ldots\text{.}`]
+
+a.  Find a recursive definition for the sequence. Explain why you are correct.
+
+a.  Is the sequence arithmetic or geometric? If not, is it the sequence of partial sums of an arithmetic or geometric sequence? Explain why your answer is correct.
+
+a.  Use your results from part (c) to find a closed formula for the sequence. Show your work.
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

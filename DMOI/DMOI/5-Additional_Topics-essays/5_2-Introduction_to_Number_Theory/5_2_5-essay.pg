@@ -1,0 +1,77 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:40-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(6.2.6.5)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Let [`a\text{,}`] [`b\text{,}`] [`c\text{,}`] and [`n`] be integers. Prove that if [`a \equiv b \pmod{n}`] and [`c \equiv d \pmod{n}\text{,}`] then [`a-c \equiv b-d \pmod{n}\text{.}`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+Assume [`a \equiv b \pmod n`] and [`c \equiv d \pmod n\text{.}`] This means [`a = b + kn`] and [`c = d + jn`] for some integers [`k`] and [`j\text{.}`] Consider [`a-c\text{.}`] We have:
+
+[```
+            a-c = b+kn - (d+jn) = b-d + (k-j)n
+          \text{.}```]
+
+In other words, [`a-c`] is [`b-d`] more than some multiple of [`n\text{,}`] so [`a-c \equiv b-d \pmod n\text{.}`]
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

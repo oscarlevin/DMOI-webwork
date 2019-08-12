@@ -1,0 +1,85 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2018-05-17T08:45:03-06:00    
+###                                    
+###   http://mathbook.pugetsound.edu   
+###                                    
+#######################################
+## DBsubject(Combinatorics)
+## DBchapter(Counting)
+## DBsection(Principles (addition, subtraction, multiplication))
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
+## Section1(1.1)
+## Problem1(8)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+
+####################
+# Header
+####################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+$n = random(31,45); #total number of students
+$m = random(16,24); 
+do {$f = random(16,24);} until ($f !=$m);
+$t = random(10,15);
+$mf = random(10,15);
+$ft = random(5,10);
+do {$mt = random(5,10);} until ($mt != $ft);
+do {$mft = random(2,10); } until ($mft != $ft) and ($mft != $ft); #so not all are equal
+$ans = Compute("$m + $f + $t -($mf + $ft + $mt) + $mft ");
+$ans2 = $n - $ans;
+####################
+# Body
+####################
+BEGIN_PGML
+In a recent survey, [$n] students reported whether they liked their potatoes Mashed, French-fried, or Twice-baked. [$m] liked them mashed, [$f] liked French fries, and [$t] liked twice baked potatoes. Additionally, [$mf] students liked both mashed and fried potatoes, [$ft] liked French fries and twice baked potatoes, [$mt] liked mashed and baked, and [$mft] liked all three styles. How many students _hate_ potatoes? Explain why your answer is correct.
+
+[_____]{$ans}
+
+
+END_PGML
+
+####################
+# Solution
+####################
+BEGIN_PGML_SOLUTION
+Using the principle of inclusion/exclusion, the number of students who like their potatoes in at least one of the ways described is
+
+>> [``
+              [$m] + [$f] + [$t] -([$mf] + [$ft] + [$mt]) +[$mft] = [$ans].
+            ``] <<
+
+
+
+Therefore there are [`[$n] - [$ans] = [$ans2]`] students who do not like potatoes. You can also do this problem with a Venn diagram.
+
+
+END_PGML_SOLUTION
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

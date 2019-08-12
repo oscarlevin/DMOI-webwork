@@ -1,0 +1,70 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2018-05-17T08:45:05-06:00    
+###                                    
+###   http://mathbook.pugetsound.edu   
+###                                    
+#######################################
+## DBsubject(Combinatorics)
+## DBchapter(Recurrence relations)
+## DBsection(Solving homogeneous)
+## Level()
+## KEYWORDS(discrete, characteristic roots, recurrence relations)
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
+## Section1(2.4)
+## Problem1(7)
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
+## Language(en-US)
+
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+
+####################
+# Header
+####################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+Context()->variables->are(n => "Real");
+$ans = Formula("(19/7)*(-2)^n + (9/7)*5^n");
+
+####################
+# Body
+####################
+BEGIN_PGML
+Solve the recurrence relation [`a_n = 3a_{n-1} + 10a_{n-2}`] with initial terms [`a_0 = 4`] and [`a_1 = 1\text{.}`]
+
+[__________]{$ans}
+
+
+END_PGML
+
+####################
+# Solution
+####################
+BEGIN_PGML_SOLUTION
+[`a_n = \frac{19}{7}(-2)^n + \frac{9}{7}5^n\text{.}`]
+
+
+END_PGML_SOLUTION
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

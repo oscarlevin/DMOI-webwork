@@ -1,0 +1,84 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2019-03-11T13:50:38-06:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1(Discrete Mathematics)
+## EditionText1()
+## AuthorText1(Oscar Levin)
+## Section1(not reported)
+## Problem1(5.2.4.1)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Which of the following graphs are trees?
+a.  [`G = (V, E)`] with [`V = \{a, b, c, d, e\}`] and [`E = \{\{a, b\}, \{a,e\}, \{b, c\}, \{c,d\}, \{d,e\} \}`]
+
+a.  [`G = (V, E)`] with [`V = \{a, b, c, d, e\}`] and [`E = \{\{a, b\}, \{b, c\}, \{c,d\}, \{d,e\}\}`]
+
+a.  [`G = (V, E)`] with [`V = \{a, b, c, d, e\}`] and [`E = \{\{a, b\}, \{a, c\}, \{a,d\}, \{a,e\}\}`]
+
+a.  [`G = (V, E)`] with [`V = \{a, b, c, d, e\}`] and [`E = \{\{a, b\}, \{a, c\}, \{d,e\}\}`]
+
+[@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+a.  This is not a tree since it contains a cycle. Note also that there are too many edges to be a tree, since we know that all trees with [`v`] vertices have [`v-1`] edges.
+
+a.  This is a tree since it is connected and contains no cycles (which you can see by drawing the graph). All paths are trees.
+
+a.  This is a tree since it is connected and contains no cycles (draw the graph). All stars are trees.
+
+a.  This is a not a tree since it is not connected. Note that there are not enough edges to be a tree.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
