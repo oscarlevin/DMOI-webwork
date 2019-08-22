@@ -49,6 +49,7 @@ $showPartialCorrectAnswers = 0;
 
 $s1 = "P \rightarrow (Q \vee R)";
 $s2 = "\neg(P \rightarrow Q)";
+$c = "R";
 @ans = qw(
     T F
     T F 
@@ -84,28 +85,20 @@ $mc ->makeLast(
 BEGIN_TEXT
 
 Determine if the following is a valid deduction rule:
+
 $BCENTER
 \{
 DataTable(
   [
-    [PGML(''),
-     [PGML('[`P \rightarrow (Q \vee R)`]'),],
-    ],
-    [[PGML(''),
-      midrule => '1',
-      rowcss  => 'border-bottom: 1px solid; ',],
-     [PGML('[`\neg(P \rightarrow Q)`]'),],
-    ],
-    [[PGML('[`\therefore`]'),],
-     [PGML('[`R`]'),],
-    ],
+    ['','\($s1\)' ],
+    [['', midrule => '1', rowcss  => 'border-bottom: 1px solid; '], '\($s2\)' ],
+    ['\(\therefore\)', '\($c\)' ],
   ],
   align => 'cc',
   center => 0,
 );
 \}
 $ECENTER
-
 
 $PAR
 

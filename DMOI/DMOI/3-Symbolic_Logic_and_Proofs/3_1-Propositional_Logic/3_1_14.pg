@@ -89,17 +89,9 @@ $BCENTER
 \{
 DataTable(
   [
-    [PGML(''),
-     [PGML('[`[$s1]`]'),],
-    ],
-    [[PGML(''),
-      midrule => '1',
-      rowcss  => 'border-bottom: 1px solid; ',],
-     [PGML('[`[$s2]`]'),],
-    ],
-    [[PGML('[`\therefore`]'),],
-     [PGML('[`[$c]`]'),],
-    ],
+    ['','\($s1\)' ],
+    [['', midrule => '1', rowcss  => 'border-bottom: 1px solid; '], '\($s2\)' ],
+    ['\(\therefore\)', '\($c\)' ],
   ],
   align => 'cc',
   center => 0,
