@@ -54,7 +54,7 @@ $p = $m + 2;
 
 $ans1 = Compute("C([$b],[$a])");
 $ans2 = Compute("C([$c],[$n])");
-$ans3 = Compute("C(19,17)");
+$ans3 = Compute("C([$p],[$m])");
 
 ####################
 # Body
@@ -89,7 +89,7 @@ a.  [`{[$b] \choose [$a]}`] solutions. After each variable gets 1 star for free,
 a.  [`{[$c] \choose [$n]}`] solutions. We have [$n] stars and 2 bars.
 
 
-a.  [`{[$p] \choose [$m]}`] solutions. This problem is equivalent to finding the number of solutions to [`x' + y' + z' = [$m]`] where [`x'\text{,}`] [`y'`] and [`z'`] are non-negative. (In fact, we really just do a substitution. Let [`x = x'- 3\text{,}`] [`y = y' - 3`] and [`z = z' - 3`]).   
+a.  [`{[$p] \choose [$p-$m]}`] solutions. This problem is equivalent to finding the number of solutions to [`x' + y' + z' = [$m]`] where [`x'\text{,}`] [`y'`] and [`z'`] are non-negative. (In fact, we really just do a substitution. Let [`x = x'- 3\text{,}`] [`y = y' - 3`] and [`z = z' - 3`]).   
 
 
 
