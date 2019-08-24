@@ -55,12 +55,12 @@ a.  Let [`\newcommand{\st}{:}A = \{n \in X \st 113 \le x \le 122\}\text{.}`]  Fi
 
 a.  Find [`\newcommand{\inv}{^{-1}}f\inv(\{1,2\})`]
 
-    [__]{Set(001, 010, 100, 011, 101, 110, 002, 020, 200)}{width => 15}
+    [__]{Set(1, 10, 100, 11, 101, 110, 2, 20, 200)}{width => 15}
 
 
 a.  Find [`\newcommand{\inv}{^{-1}}f\inv(3)\text{.}`]
 
-    [__]{Set(003, 030, 300, 012, 021, 102, 201, 120, 210, 111)}{width => 15}
+    [__]{Set(3, 30, 300, 12, 21, 102, 201, 120, 210, 111)}{width => 15}
 
 
 a.  Find [`\newcommand{\inv}{^{-1}}f\inv(28)\text{.}`]
