@@ -52,7 +52,7 @@ $ans = Compute("C(5,2)*C(5,2)");
 BEGIN_PGML
 How many quadrilaterals can you draw using the dots below as vertices (corners)?
 
-[@ image( "135dots.png" ) @]
+[@ image( "1-3-5.png", height=>175, width=>450 ) @]*
 
 
 
