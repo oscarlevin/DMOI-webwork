@@ -51,7 +51,7 @@ Context('Numeric');
 BEGIN_PGML
 How many triangles can you draw using the dots below as vertices?
 
->> \\begin\{tikzpicture\}\[scale=.75\] \\foreach \\x in \{-3,...,3\}\{ \\draw\[fill\] (\\x,.5) circle (3pt); \} \\foreach \\x in \{-2,...,2\}\{ \\draw\[fill\] (90\+\\x\*30:3.25) circle (3pt); \} \\end\{tikzpicture\} <<
+[@ image( "1-4-3.png", height=>175, width=>340 ) @]*
 
 a.  Find an expression for the answer which is the sum of three terms involving binomial coefficients.
 

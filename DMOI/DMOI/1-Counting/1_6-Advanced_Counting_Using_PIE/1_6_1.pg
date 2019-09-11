@@ -57,7 +57,7 @@ $ans1 = Compute("C([$rt],[$rem])");
 $ans2 = Compute("C([$a],[$d])");
 $more = 0;
 for ($j = 1; $j <=$f; $j++)
-{$more =Compute("$more +(-1)^($j-1)*C($i, $j)*C(($a-3*$j),($d-3*$j))");
+{$more =Compute("$more +(-1)^($j-1)*C($i, $j)*C(($a-3*$j),$b)");
 }
  
 $ans3 = Compute("C($a,$d)-$more");

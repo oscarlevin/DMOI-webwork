@@ -51,7 +51,8 @@ Context('Numeric');
 BEGIN_PGML
 What if your [`n\times n`] chessboard is missing two opposite corners? Prove that no matter what [`n`] is, you will not be able to cover the remaining squares with dominoes.
 
->> \\begin\{tikzpicture\}\[scale=.25\] \\foreach \\x in \{0,2,...,6\}\{ \\foreach \\y in \{0,2,...,6\}\{ \\draw\[fill=white!85!black\] (\\x,\\y) rectangle (\\x\+1, \\y\+1) rectangle (\\x\+2,\\y\+2); \}\} \\draw (0,0) grid (8,8); \\draw\[white, fill=white\] (7,7) rectangle (8,8) (0,0) rectangle (1,1); \\draw\[very thick\] (0,1) -\- (1,1) -\- (1,0) -\- (8,0) --(8,7) -\- (7,7) -\- (7,8) -\- (0,8) -\- (0,1); \\end\{tikzpicture\} <<
+[@ image( "3-2-21.png", height=>150, width=>150 ) @]*
+
 
 [@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
 

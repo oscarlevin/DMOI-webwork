@@ -51,7 +51,8 @@ Context('Numeric');
 BEGIN_PGML
 If you were to shade in a [`n\times n`] square on graph paper, you could do it the boring way (with sides parallel to the edge of the paper) or the interesting way, as illustrated below:
 
->> \\begin\{tikzpicture\}\[scale=0.4\] \\draw (0,0) rectangle (1,1); \\end\{tikzpicture\}\\begin\{tikzpicture\}\[scale=0.4\] \\draw (-1,0) rectangle (2,1) (0,-1) rectangle (1,2); \\end\{tikzpicture\}\\begin\{tikzpicture\}\[scale=0.4\] \\draw (-2,0) rectangle (3,1) (0,-2) rectangle (1,3) (-1,-1) rectangle (2,2); \\end\{tikzpicture\}\\begin\{tikzpicture\}\[scale=0.4\] \\draw (-3,0) rectangle (4,1) (-2,-1) rectangle (3,2) (-1,-2) rectangle (2,3) (0,-3) rectangle (1,4); \\end\{tikzpicture\} <<
+[@ image( "2-2-14.png", height=>133, width=>426 ) @]*
+
 
 The interesting thing here, is that a [`3\times 3`] square now has area 13. Our goal is the find a formula for the area of a [`n \times n`] (diagonal) square.
 a.  Write out the first few terms of the sequence of areas (assume [`a_1 = 1\text{,}`] [`a_2 = 5\text{,}`] etc). Is the sequence arithmetic or geometric? If not, is it the sequence of partial sums of an arithmetic or geometric sequence? Explain why your answer is correct, referring to the diagonal squares.

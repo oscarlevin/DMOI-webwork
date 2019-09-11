@@ -44,16 +44,18 @@ TEXT(beginproblem());
 ####################
 Context("IntegerFunctions");
 #assign random values for set sizes so problem is different from textbook
-$a = random(26,35); 
-$j = random(15,25); 
-do {$c = random(20,30); } until ($c !=$a);
-do {$aj = random(11,20);} until ($aj != 7);
-do {$ac = random(10,20);} until ($ac != $aj) ;
-do {$cj = random(10,20);} until ($cj != $aj) and ($cj != $ac) ;
+do {
+  $a = random(26,35); 
+  $j = random(15,25); 
+  do {$c = random(20,30); } until ($c !=$a);
+  do {$aj = random(11,20);} until ($aj != 7);
+  do {$ac = random(10,20);} until ($ac != $aj) ;
+  do {$cj = random(10,20);} until ($cj != $aj) and ($cj != $ac) ;
 
-$ajc = random(5,15);
+  $ajc = random(2,9);
 
-$ans = Compute("$a + $j + $c - ($aj + $ac+$cj ) + $ajc ");
+  $ans = Compute("$a + $j + $c - ($aj + $ac+$cj ) + $ajc ");
+} until ($aj + $ac - $ajc < $a) and ($ac + $ck - $ajc < $c) and ($aj + $cj - $ajc < $j);
 
 
 

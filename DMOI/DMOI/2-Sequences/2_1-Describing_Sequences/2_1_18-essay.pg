@@ -51,7 +51,7 @@ Context('Numeric');
 BEGIN_PGML
 When bees play chess, they use a hexagonal board like the one shown below. The queen bee can move one space at a time either directly to the right or angled up-right or down-right (but can never move leftwards). How many different paths can the queen take from the top left hexagon to the bottom right hexagon? Explain your answer, and this relates to the previous question. (As an example, there are three paths to get to the second hexagon on the bottom row.)
 
->> \\def\\r\{1\} \\newcommand\{\\hexagon\}\[3\]\{ \\def\\x\{-cos\{30\}\*\\r\*\#1\+cos\{30\}\*\#2\*\\r\*2\} \\def\\y\{-\\r\*\#1-sin\{30\}\*\\r\*\#1\} \\draw\[thick\] (\\x,\\y) \+(90:\\r) -\- \+(30:\\r) -\- \+(-30:\\r) -\- \+(-90:\\r) -\- \+(-150:\\r) -\- \+(150:\\r) -\- cycle; \\draw (\\x,\\y) node\{\#3\}; \} \\begin\{tikzpicture\}\[scale=.75\] \\hexagon\{1\}\{0\}\{\\tiny start\}; \\hexagon\{2\}\{2\}\{3\} \\foreach \\i in \{1,...,5\} \{ \\foreach \\j in \{1,2\} \{ \\hexagon\{\\j\}\{\\i\}\{\}; \} \} \\hexagon\{2\}\{6\}\{\\tiny stop\}; \\end\{tikzpicture\} <<
+[@ image( "2-1-18.png", height=>165, width=>495 ) @]*
 
 [@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
 

@@ -56,7 +56,8 @@ a.  Prove your formula is correct by mathematical induction.
 
 a.  Explain what this problem has to do with the following picture:
 
-    \\begin\{tikzpicture\} \\draw (0,0) rectangle (13,8) rectangle (8,0) rectangle (13,5) rectangle (10,8) rectangle (8,6) rectangle (9,5); \\end\{tikzpicture\}
+    [@ image( "2-6-13.png", height=>244, width=>485 ) @]*
+
 
 [@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
 

@@ -43,16 +43,17 @@ TEXT(beginproblem());
 ####################
 Context("Numeric");
 #assign random values for set sizes so problem is different from textbook
-do {$W = random(25,30); } until ($W !=28); 
-$B = random(15,24); 
-do {$G = random(20,30); } until ($G !=$W);
-do {$WiB = random(10,20);} until ($WiB != 16) and ($WiB != 14);
-do {$WiG = random(10,20);} until ($WiG != $WiB) ;
-do {$BiG = random(10,20);} until ($BiG != $WiB) and ($BiG != $WiG) ;
+do {
+  do {$W = random(25,30); } until ($W !=28); 
+  $B = random(15,24); 
+  do {$G = random(20,30); } until ($G !=$W);
+  do {$WiB = random(10,20);} until ($WiB != 16) and ($WiB != 14);
+  do {$WiG = random(10,20);} until ($WiG != $WiB) ;
+  do {$BiG = random(10,20);} until ($BiG != $WiB) and ($BiG != $WiG) ;
+  $WBG = random(2,9);
+  $ans = Compute("$W + $B + $G - ($WiB + $WiG+$BiG) + $WBG ");
+} until ($WiB + $WiG - $WBG < $W) and ($WiG + $BiG - $WBG < $G) and ($WiB + $BiG - $WBG < $B);
 
-$WBG = random(5,15);
-#$Pairs = Compute("$WiB + $WiG+$BiG ");
-$ans = Compute("$W + $B + $G - ($WiB + $WiG+$BiG) + $WBG ");
 
 
 ####################
