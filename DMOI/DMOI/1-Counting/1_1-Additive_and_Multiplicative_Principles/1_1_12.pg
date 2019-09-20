@@ -55,7 +55,7 @@ $ans1 =Compute(" $n^$w");
 $ans2 = Compute("P($n,$w)");
 $ans3 = Compute ("$n^$w3");
 $ans4 = Compute ("$n^$w3 + $n^$w2 - $n^$w5");
-$ans5 = Compute("P($n,$w) - P($n3,$w3)");
+$ans5 = Compute("P($n,$w) - $w2*P($n3,$w3)");
 ####################
 # Body
 ####################

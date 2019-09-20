@@ -44,9 +44,9 @@ TEXT(beginproblem());
 # PG Setup
 ####################
 Context("IntegerFunctions");
-$n = random(4,9); #define number of possible elements in set S
+$n = random(5,10); #define number of possible elements in set S
 $S = Set(1..$n);
-do {$c = random(3,6);} until ($c <$n); #pick a value for subset cardinality
+do {$c = random(4,7);} until ($c <$n) and ($n/2 < $c); #pick a value for subset cardinality
 $n3 = $n-3; #remaining elements other than {2,3,5} for part b 
 $c3 = $c-3; #remaining elements to be chosen for subset in part b
 $ans1 = C($n,$c);
