@@ -48,8 +48,8 @@ $max = list_random(64,125,216); #choose a starting value that is a cube
 $dif = ($max-1)/3; #amount of change 
 $x = $max - $dif;
 $y = Compute("$x - $dif");
-$xmult = Compute("$max/3");
-$ymult = Compute("$xmult/3");
+$xmult = Compute("$max^(2/3)");
+$ymult = Compute("$max^(1/3)");
 ####################
 # Body
 ####################

@@ -51,10 +51,10 @@ $f = int($d/7); #how many possible bins could hold 7 or more
 
 $more = 0;
 for ($j = 1; $j <=$f; $j++)
-{$more =Compute("$more +(-1)^($j-1)*C($i, $j)*C(($a-7*$j),($d-7*$j))");
+{$more =Compute("$more +(-1)^($j-1)*C($i, $j)*C(($a-7*$j),$b)");
 }
  
-$ans = Compute("C([$a],[$d]) - $more");
+$ans = Compute("C([$a],[$b]) - $more");
 
 ####################
 # Body

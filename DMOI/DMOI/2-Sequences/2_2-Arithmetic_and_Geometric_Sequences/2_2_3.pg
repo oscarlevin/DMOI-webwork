@@ -52,7 +52,7 @@ $a3 = $start + 3*$rate;
 $end = $start+$rate*$terms;
 
 $sum = $end + $start;
-$double = $terms*$sum;
+$double = ($terms+1)*$sum;
 $ans = $double/2;
 
 
@@ -64,7 +64,7 @@ Consider the sum [`[$start] + [$a1] + [$a2] + [$a3] + \cdots + [$end]\text{.}`]
 
 a.  How many terms (summands) are in the sum?
 
-    [_____]{$terms}
+    [_____]{$terms+1}
 
 
 a.  Compute the sum using a technique discussed in this section.
@@ -79,7 +79,7 @@ END_PGML
 # Solution
 ####################
 BEGIN_PGML_SOLUTION
-a.  [$terms].
+a.  [$terms+1].
 
 
 a.  [`\frac{[$sum] \cdot [$terms]}{2} = [$ans]\text{.}`]   

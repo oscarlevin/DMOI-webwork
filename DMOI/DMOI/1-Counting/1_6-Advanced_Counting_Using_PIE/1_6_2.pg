@@ -62,9 +62,9 @@ $ans2 = Compute("C([$rt],[$rem])");
 $more = 0;
 for ($j = 1; $j <=$f; $j++)
 {
-$more =Compute("$more +(-1)^($j-1)*C($i, $j)*C(($a-5*$j),($d-5*$j))");
+$more =Compute("$more +(-1)^($j-1)*C($i, $j)*C(($a-5*$j),$b)");
 } 
-$ans3 = Compute("C($a,$d)-$more");
+$ans3 = Compute("C($a,$b)-$more");
 
 ####################
 # Body
