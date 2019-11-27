@@ -56,7 +56,7 @@ $bs = $rs + 3; #total bars and stars once first minimum are distributed
 $new = 0;
 for ($j = 1; $j <=int($rs/$ba1); $j++)
 {
-$new = Compute("$new +(-1)^($j+1)* C(4, $j)*C(($bs-$ba1*$j),($rs - $ba1*$j))");
+$new = Compute("$new +(-1)^($j+1)* C(4, $j)*C(($bs-$ba1*$j),3)");
 }
 
 $ans = Compute("C($bs,$rs) - $new");
@@ -80,12 +80,12 @@ The easiest way to solve this is to first distribute the minimum amount of units
 
 Now all the ways to distribute the [$rs] units to the four [`y_i`] variables can be found using stars and bars, specifically [$rs] stars and 3 bars, so [`{[$bs] \choose [$rs]}`] ways. But this includes the ways that one or more [`y_i`] variables can be assigned more than 3 units. So subtract using PIE to get
 >>[``
-                {[$bs] \choose [$rs]} -\left( {4\choose 1} {([$bs]-[$ba1]\cdot1) \choose ([$rs]-[$ba1]\cdot1)}-{4\choose 2} {([$bs]-[$ba1]\cdot2) \choose ([$rs]-[$ba1]\cdot2)} + \dots \right)
+                {[$bs] \choose 3} -\left( {4\choose 1} {[$bs-$ba1*1] \choose 3}-{4\choose 2} {[$bs-$ba1*2] \choose 3} + \dots \right)
               ``]<<
 
 
 
-The [`{4 \choose 1}`] counts the number of ways to pick one variable to be over-assigned, the [`{([$bs]-[$ba1]\cdot1) \choose ([$rs]-[$ba1]\cdot1)}`] is the number of ways to assign the remaining  units to the 4 variables, etc.
+The [`{4 \choose 1}`] counts the number of ways to pick one variable to be over-assigned, the [`{([$bs-$ba1] \choose 3}`] is the number of ways to assign the remaining  units to the 4 variables, etc.
 
 
 END_PGML_SOLUTION

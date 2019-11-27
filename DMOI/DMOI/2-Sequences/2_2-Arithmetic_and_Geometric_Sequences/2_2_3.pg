@@ -52,7 +52,7 @@ $a3 = $start + 3*$rate;
 $end = $start+$rate*$terms;
 
 $sum = $end + $start;
-$double = $terms*$sum;
+$double = ($terms+1)*$sum;
 $ans = $double/2;
 
 

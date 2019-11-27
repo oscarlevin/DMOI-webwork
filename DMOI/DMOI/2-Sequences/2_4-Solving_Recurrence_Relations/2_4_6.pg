@@ -59,7 +59,7 @@ do { $b = list_random(-5, -4, -3, -2, -1, 2, 3, 5, 6, 7); } until (($b != $a) an
 $ra = $a+$b;
 if ($ra == 1) {$ra = "";}
 if ($ra == -1) {$ra = "-";}
-$rb = $a*$b;
+$rb = -1*$a*$b; #-1 because put on right side of recurrence.
 
 $closed1 = Formula("($a)^n + ($b)^n")->reduce();
 $closed1->{test_points} = [[0],[1],[2],[3],[4],[5]];

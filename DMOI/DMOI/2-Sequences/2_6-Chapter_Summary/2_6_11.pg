@@ -52,7 +52,7 @@ $a1 = random($a0+1, 10);
 $ra = $a+$b;
 if ($ra == 1) {$ra = "";}
 if ($ra == -1) {$ra = "-";}
-$rb = $a*$b;
+$rb = -1*$a*$b; #-1 because put on right side of recurrence.
 
 $beta = Compute("($a1 - $a*$a0)/($b-$a)");
 $alpha = Compute("$a0 - $beta");
