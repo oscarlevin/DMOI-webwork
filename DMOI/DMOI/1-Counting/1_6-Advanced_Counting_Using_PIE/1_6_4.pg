@@ -43,9 +43,11 @@ TEXT(beginproblem());
 # PG Setup
 ####################
 Context("IntegerFunctions");
-$n = random(16, 30);
+do {
+$n = random(16,30);
 $a = random(1,3);
-$b = random(4,7);
+$b = random(5,7);
+} until ($n > 4*$a+1 && $n < 4*$b-1);
 
 
 $ba = $b-$a; #upper limit for each variable in modified problem
@@ -56,10 +58,10 @@ $bs = $rs + 3; #total bars and stars once first minimum are distributed
 $new = 0;
 for ($j = 1; $j <=int($rs/$ba1); $j++)
 {
-$new = Compute("$new +(-1)^($j+1)* C(4, $j)*C(($bs-$ba1*$j),3)");
+$new = $new +(-1)**($j+1)* C(4, $j)*C(($bs-$ba1*$j),3);
 }
 
-$ans = Compute("C($bs,$rs) - $new");
+$ans = C($bs,$rs) - $new;
 
 ####################
 # Body
@@ -85,7 +87,7 @@ Now all the ways to distribute the [$rs] units to the four [`y_i`] variables can
 
 
 
-The [`{4 \choose 1}`] counts the number of ways to pick one variable to be over-assigned, the [`{([$bs-$ba1] \choose 3}`] is the number of ways to assign the remaining  units to the 4 variables, etc.
+The [`{4 \choose 1}`] counts the number of ways to pick one variable to be over-assigned, the [`{[$bs-$ba1] \choose 3}`] is the number of ways to assign the remaining  units to the 4 variables, etc.
 
 
 END_PGML_SOLUTION

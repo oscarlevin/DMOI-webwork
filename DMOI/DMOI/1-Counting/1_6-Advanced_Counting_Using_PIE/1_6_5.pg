@@ -43,22 +43,25 @@ TEXT(beginproblem());
 # PG Setup
 ####################
 Context("IntegerFunctions");
+
 do {$k = random(12,23); } until ($n != 13); #number of students
-do {$n = random(5,15);} until ($s < $n-1); #number of gold stars 
+do {$n = random(5,15);} until ($n < $k-1); #number of gold stars 
 
 #part a
 $b = $k-1; #bars
-$t = $n+$b; #total stars (k) and bars 
-$ans1 = Compute("C([$k],[$n])");
+$t = $n+$b; #total stars (n) and bars 
+$ans1 = C($k,$n);
 
 #part b
 $next = 0;
-for ($j = 1; $j <=int($n/2); $j++)
+$j = 0;
+do
 {
-$next = Compute(" $next + (-1)^($j+1)*C($k,$j)*C(($t - 2*$j), $b)");
-}
+$next = $next + (-1)**($j)*C($k,$j)*C(($t - 2*$j), $b);
+$j = $j+1;
+} until (($t-2*$j) < $b);
 
-$ans2 = Compute("C([$t],[$n]) - $next");
+$ans2 = $next;
 
 
 ####################

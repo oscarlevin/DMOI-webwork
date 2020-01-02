@@ -53,14 +53,14 @@ $f = int($d/3); #how many possible items can we buy 3 or more
 $m = $f*3; #total number of items used if we buy 3 of the f items
 $n = $d-$m; #remaining items if we buy 3 of the f items
 
-$ans1 = Compute("C([$rt],[$rem])");
-$ans2 = Compute("C([$a],[$d])");
+$ans1 = Compute("C($rt,$b)");
+$ans2 = Compute("C($a,$b)");
 $more = 0;
 for ($j = 1; $j <=$f; $j++)
-{$more =Compute("$more +(-1)^($j-1)*C($i, $j)*C(($a-3*$j),$b)");
+{$more =$more +(-1)**($j+1)*C($i, $j)*C(($a-3*$j),$b);
 }
  
-$ans3 = Compute("C($a,$d)-$more");
+$ans3 = Compute("C($a,$b)-$more");
 ####################
 # Body
 ####################
@@ -78,7 +78,7 @@ a.  Possibly skip some items.
 
 a.  Don't get more than 2 of any particular item.
 
-    [__]{$ans3}{width => 15}   
+    [__]{$ans3}{width => 25}   
 
 
 
@@ -88,9 +88,9 @@ END_PGML
 # Solution
 ####################
 BEGIN_PGML_SOLUTION
-a.  [`{[$rt] \choose [$rem]}`] meals.  First spend \$[$i] to buy one of each item, then use [$rem] stars to select items between [$b] bars.
-a.  [`{[$a] \choose [$d]}`] meals.  Here you have [$d] stars and [$b] bars (separating the [$i] items).
-a.	[`{[$a] \choose [$d]} - \left[{[$i] \choose 1}{[$a-3] \choose [$d-3]} - {[$i] \choose 2}{[$a-6] \choose [$d-6]} + {[$i] \choose 3}{[$a-9] \choose [$d-9]}\cdots\right]`] meals.  Use PIE to subtract all the meals in which you get 3 or more of a particular item.   
+a.  [`{[$rt] \choose [$b]}`] meals.  First spend \$[$i] to buy one of each item, then use [$rem] stars to select items between [$b] bars.
+a.  [`{[$a] \choose [$b]}`] meals.  Here you have [$d] stars and [$b] bars (separating the [$i] items).
+a.	[`{[$a] \choose [$b]} - \left[{[$i] \choose 1}{[$a-3] \choose [$b]} - {[$i] \choose 2}{[$a-6] \choose [$b]} + {[$i] \choose 3}{[$a-9] \choose [$b]}\cdots\right]`] meals.  Use PIE to subtract all the meals in which you get 3 or more of a particular item.   
 
 
 

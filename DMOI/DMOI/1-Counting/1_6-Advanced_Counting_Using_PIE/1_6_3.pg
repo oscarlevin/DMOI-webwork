@@ -43,26 +43,37 @@ TEXT(beginproblem());
 # PG Setup
 ####################
 Context("IntegerFunctions");
-do {$d = random(9,20,1);} until ($d !=16); #define how many dodgeballs you have
-do {$i = random(6,10,1);} until ($i < $d-1); #define how many bins there are 
-$b = $i-1; #total bars
-$a = $d + $b;  #total bars and stars 
-$f = int($d/7); #how many possible bins could hold 7 or more
+do {
+  # subtract two or three terms:
+  $steps = random(2,3,1);
+  $cap = random(4,8,1); #bin capacity
+  $bins = random(3,10,1); #number of bins
+  $maxballs = Compute("$bins*$cap - 1");
+  $minballs = Compute("($cap+1)*$steps + 1")
+} until ($minballs < $maxballs && ($maxballs - $cap) < $minballs);
+$balls = random($minballs, $maxballs, 1);
+$bars = $bins - 1;
+$stars = $balls + $bars;
 
-$more = 0;
-for ($j = 1; $j <=$f; $j++)
-{$more =Compute("$more +(-1)^($j-1)*C($i, $j)*C(($a-7*$j),$b)");
+$fewerstars1 = $stars - ($cap + 1);
+$fewerstars2 = $stars - 2*($cap + 1);
+$fewerstars3 = $stars - 3*($cap + 1);
+
+if ($steps == 2) {
+  $ans = Compute("C($stars,$bars) - (C($bins,1)*C($fewerstars1,$bars) - C($bins,2)*C($fewerstars2,$bars))");
+  $textans = "\binom{$stars}{$bars} - \left[\binom{$bins}{1}\binom{$fewerstars1}{$bars} - \binom{$bins}{2}\binom{$fewerstars2}{$bars}\right]";
+} else {
+  $ans = Compute("C($stars,$bars) - (C($bins,1)*C($fewerstars1,$bars) - C($bins,2)*C($fewerstars2,$bars) + C($bins,3)*C($fewerstars3,$bars))");
+  $textans = "\binom{$stars}{$bars} - \left[\binom{$bins}{1}\binom{$fewerstars1}{$bars} - \binom{$bins}{2}\binom{$fewerstars2}{$bars}+ \binom{$bins}{3}\binom{$fewerstars3}{$bars}\right]";
 }
- 
-$ans = Compute("C([$a],[$b]) - $more");
 
 ####################
 # Body
 ####################
 BEGIN_PGML
-After another gym class you are tasked with putting the [$d] identical dodgeballs away into [$i] bins. This time, no bin can hold more than 6 balls. How many ways can you clean up?
+After another gym class you are tasked with putting the [$balls] identical dodgeballs away into [$bins] bins. Each bin can hold at most [$cap] balls. How many ways can you clean up?
 
-[__________]{$ans}
+[_____________________________________________]{$ans}
 
 
 END_PGML
@@ -72,7 +83,9 @@ END_PGML
 ####################
 BEGIN_PGML_SOLUTION
 
-[`{[$a] \choose [$d]} - \left[{[$i] \choose 1}{[$a-7] \choose [$d-7]} - {[$i] \choose 2}{[$a-14] \choose [$d-14]} + \cdots\right]`]  Subtract all the distributions for which one or more bins contain 7 or more balls.
+[`[$ans] = [$textans]`].
+
+Subtract all the distributions for which one or more bins contain [`[$cap+1]`] or more balls.
 
 
 END_PGML_SOLUTION
