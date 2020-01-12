@@ -1,0 +1,65 @@
+
+## DESCRIPTION
+##
+## ENDDESCRIPTION
+
+## DBsubject('')
+## DBchapter('')
+## DBsection('')
+## Date('')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('1')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('', '')
+
+##############################################################
+#  Initialization
+##############################################################
+
+DOCUMENT();      
+
+loadMacros(
+    "PGstandard.pl",
+    "MathObjects.pl",
+    "PGML.pl",
+);
+
+TEXT(beginproblem());
+
+##############################################################
+#  Problem Setup
+##############################################################
+
+$v = random(5,15,1);
+
+$ans = $v;
+
+##############################################################
+#  Text
+##############################################################
+
+
+BEGIN_PGML
+How many different spanning trees does the graph [`C_{[$v]}`] have?  Count different trees as different even if they are isomorphic.
+
+[_________]{$ans}
+
+
+END_PGML
+
+
+##############################################################
+#  Answers and Solutions
+##############################################################
+
+BEGIN_PGML_SOLUTION
+
+The graph [`C_{[$v]}`] consists of [$v] vertices and [$v] edges.  Any one edge that we remove will give us a spanning tree.
+
+END_PGML_SOLUTION
+
+ENDDOCUMENT();

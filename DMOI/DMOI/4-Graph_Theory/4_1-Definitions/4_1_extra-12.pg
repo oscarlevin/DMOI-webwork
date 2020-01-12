@@ -1,0 +1,86 @@
+#DESCRIPTION
+##  Graph theory: subgraphs
+##ENDDESCRIPTION
+
+## DBsubject(Graph Theory)
+## DBchapter(Terminology)
+## Date(13/11/2019)
+## Institution(NUI Galway)
+## Author(Niall Madden)
+## MLT(groups)
+## MLTleader(1)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory', 'isomorphic', 'subgraph')
+
+## Modified by Oscar Levin to agree with notation in Discrete Mathematics: an Open Introduction, 3rd ed.
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl", 
+  "PGML.pl",
+  "PGauxiliaryFunctions.pl",
+   "PGchoicemacros.pl"
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 1;
+
+# Create and use pop up lists 
+$tf = new_select_list();
+$tf->rf_print_q(~~&pop_up_list_print_q);
+
+# Specify choices presented to students
+$tf->ra_pop_up_list( 
+[ No_answer => "?", "T"=>"True", "F"=>"False"] );
+
+# Questions and answers
+$tf -> qa ( 
+"Every graph is a subgraph of itself.", "T",
+"Every graph is isomorphic to all of its subgraphs.", "F",
+"Every graph of order 5 or less is isomorphic to a subgraph of \( {K_{5}} \).", "T",
+"Every graph of order 6 or less is isomorphic to a subgraph of \( {K_{3,3}} \).", "F",
+"Every bipartite graph is isomorphic to \(K_{m,n}\) for some values of \(m\) and \(n\).", "F",
+"Every bipartite graph is a subgraph of \(K_{m,n}\) for some values of \(m\) and \(n\).", "T",
+"If a graph is bipartite, then so too are all of its subgraphs.", "T",
+"If a graph is contains no cycles, then none of its subgraphs contain cycles.", "T",
+"If a graph is connected, then so too are all of its subgraphs.", "F",
+"If a graph is complete, then so too are all of its subgraphs.", "F",
+"\( {C_{3}} \) is isomorphic to \(K_3\).", "T",
+"\( {C_4} \) is isomorphic to \(K_4\).", "F",
+"\(  {K_{2,2}}\) is a subgraph of \( {K_{4}} \).", "T",
+"\(  {K_{3,3}}\) is a subgraph of \( {K_{4,4}} \).", "T",
+"\(  {K_{3,3}}\) is a subgraph of \( {K_{2,2}} \).", "F",
+"\(  {K_{3}}\) is a subgraph of \( {K_{3,3}} \).", "F",
+"\(  {C_{4}}\) is a subgraph of \( {K_{4}} \).", "T",
+"\(  {C_{4}}\) is a subgraph of \( {P_{4}} \).", "F",
+"\(  {P_{4}}\) is a subgraph of \( {K_{2,2}} \).", "F",
+"\(  {P_{3}}\) is a subgraph of \( {K_{2,2}} \).", "T",
+"\(  {C_{4}}\) is a subgraph of \( {K_{2,2}} \).", "T",
+"\(  {C_{4}}\) is a subgraph of the Konigsberg Bridge multigraph.", "T",
+"\(  {K_{4}}\) is a subgraph of the Konigsberg Bridge multigraph.", "F",
+"The Konigsberg Bridge multigraph is a subgraph of  \(  {K_{4}}\) .", "F",
+);
+
+# How many questions to use
+$tf->choose(6);
+
+
+BEGIN_TEXT
+This question concerns subgraphs of graphs. In all cases, when we say \( G_1 \)  is a subgraph of \( {G_2}\), we mean that \( G_1 \) is $BBOLD isomorphic $EBOLD to some subgraph of \( {G_2}\). $BR
+Are the following statements true or false? 
+$BR
+\{ $tf-> print_q \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
+
+ANS(str_cmp($tf->ra_correct_ans));
+
+ENDDOCUMENT();

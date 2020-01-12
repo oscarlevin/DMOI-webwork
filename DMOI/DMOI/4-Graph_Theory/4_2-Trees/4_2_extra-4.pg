@@ -1,0 +1,101 @@
+##DESCRIPTION
+## DBsubject(Graph theory)
+## DBchapter(Terminology)
+## Institution(NAU)
+## Author(Edgar Fisher)
+## Level(3)
+## KEYWORDS('graph', 'degree')
+##ENDDESCRIPTION
+
+# File Created: 6/14/05 
+# Location: Northern Arizona University
+
+## Modified by Oscar Levin to be about trees and match notation of Discrete Mathematics: an Open Introduction, 3rd ed.
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "PGnauGraphtheory.pl",
+  "PGcourse.pl"
+);
+
+COMMENT('Please limit the number of trials.');
+
+
+
+$showPartialCorrectAnswers = 1;
+
+@y = ("Which of the following degree sequences could be the degree sequence of a tree?");
+@n = ();
+
+#Two valid degree sequences
+do {
+    $size1 = random(5,10,1);
+    $size2 = random(5,10,1);
+} until ($size1 != $size2);
+do {
+  $rnd = random(.3,1,.07);
+  $graph = GRgraph_size_random($size1,$rnd);
+  ($Tree, $tmp) = GRistree_graph($graph);
+} until ($Tree == 1);
+@deg = GRdegrees_graph($graph);
+@deg = PGsort( sub {$_[0] > $_[1]} , @deg );
+$A1 = join ',', @deg;
+push @y, "($A1)";
+
+do {
+  $rnd = random(.3,1,.07);
+  $graph = GRgraph_size_random($size2,$rnd);
+  ($Tree, $tmp) = GRistree_graph($graph);
+} until ($Tree == 1);
+@deg = GRdegrees_graph($graph);
+@deg = PGsort( sub {$_[0] > $_[1]} , @deg );
+$A1 = join ',', @deg;
+push @y, "($A1)";
+
+#Invalid degree sequence because of cycle
+do {
+  $size = random(6,10,1);
+  $rnd = random(.4,1,.07);
+  $graph = GRgraph_size_random($size,$rnd);
+  $comp = GRncomponents_graph($graph);
+  ($Tree, $tmp) = GRistree_graph($graph);
+} until ($Tree == 0 && $comp == 1);
+  @deg = GRdegrees_graph($graph);
+  @deg = PGsort( sub {$_[0] > $_[1]} , @deg );
+  $A1 = join ',', @deg;
+push @n, "($A1)";
+
+#invalid degree sequence because not connected
+do {
+  $size = random(6,10,1);
+  $rnd = random(.2,1,.07);
+  $graph = GRgraph_size_random($size,$rnd);
+  $comp = GRncomponents_graph($graph);
+
+  @deg = GRdegrees_graph($graph);
+  @deg = PGsort( sub {$_[0] > $_[1]} , @deg );
+} until ($comp == 2 && $deg[-1] > 0);
+  $A1 = join ',', @deg;
+push @n, "($A1)";
+
+
+
+$cmc = new_checkbox_multiple_choice();
+
+$cmc-> qa (@y);
+$cmc-> extra (@n);
+#$cmc-> makeLast (@yn);	    
+	    
+BEGIN_TEXT
+\{ $cmc -> print_q \}
+
+$BR
+\{ $cmc -> print_a \}
+	    
+END_TEXT
+	    
+ANS( checkbox_cmp( $cmc->correct_ans )   ) ;
+	    
+
+ENDDOCUMENT();

@@ -1,0 +1,92 @@
+#DESCRIPTION
+##  Combinatorics: Graph Theory
+##ENDDESCRIPTION
+
+
+## DBsubject(Combinatorics)
+## DBchapter(Graph Theory)
+## DBsection(Definitions)
+## Date(11/11/2018)
+## Institution(NUI Galway)
+## Author(Niall Madden)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory')
+
+## Modified by Oscar Levin to agree with notation in Discrete Mathematics: an Open Introduction, 3rd ed.
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl", 
+  "PGML.pl",
+  "PGauxiliaryFunctions.pl", 
+   "parserRadioButtons.pl",
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 0;
+
+
+Context("Numeric");
+
+#########################
+## Part 1 (edges in C_odd)
+$C_odd = random(5,15,2);
+
+$C_even = $C_odd+1;
+
+#########################
+## Part 2 (edges in P_k)
+$P_k = random(4,9);
+
+#########################
+## Part 3 (edges in K_k)
+$K_k = random(4,9);
+
+
+#########################
+## Part 4 (edges in K_k,j)
+$B_k = random(3,5);
+$B_j = random(2,6);
+
+Context()->texStrings;
+
+BEGIN_PGML
+Here are two new definitions about graphs.  The *distance* between two vertices in a graph is the number of edges in a shortest path connecting them.  
+The *diameter* of a graph is the greatest distance between any pair of vertices in the graph.
+
+*1.* 
+What is the diameter of the cycle [`C_{[$C_odd]}`]?
+
+[____________]{($C_odd-1)/2}
+
+What is the diameter of the cycle [`C_{[$C_even]}`]?
+
+[____________]{$C_even/2}
+
+*2.* 
+What is the diameter of the path [`P_[$P_k]`]?
+
+[____________]{$P_k}
+
+*3.* 
+What is the diameter of the compelte graph [`K_{[$K_k]}`]? 
+
+[____________]{2}
+
+*4.* 
+What is the diameter of the complete bipartite graph [`K_{[$B_k],[$B_j]}`]? 
+
+[____________]{2}
+
+END_PGML
+
+
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

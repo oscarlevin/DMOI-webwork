@@ -1,0 +1,82 @@
+#DESCRIPTION
+##  Combinatorics: Graph Theory
+##ENDDESCRIPTION
+
+
+## DBsubject(Combinatorics)
+## DBchapter(Graph Theory)
+## DBsection(Definitions)
+## Date(11/11/2018)
+## Institution(NUI Galway)
+## Author(Niall Madden)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory')
+
+## Modified by Oscar Levin to agree with notation in Discrete Mathematics: an Open Introduction, 3rd ed.
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl", 
+  "PGML.pl",
+  "PGauxiliaryFunctions.pl", 
+   "parserRadioButtons.pl",
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 0;
+
+
+Context("Numeric");
+
+#########################
+## Part 1 (edges in C_k)
+$C_k = random(5,15);
+
+#########################
+## Part 2 (edges in K_k)
+$K_k = random(4,9);
+
+#########################
+## Part 3 (edges in S_k)
+$S_k = random(10,20);
+
+#########################
+## Part 4 (edges in K_k,j)
+$B_k = random(3,5);
+$B_j = random(2,6);
+
+Context()->texStrings;
+
+BEGIN_PGML
+*1.* 
+How many edges does the cycle graph [`C_{[$C_k]}`] have?
+
+[____________]{$C_k}
+
+*2.* 
+How many edges does the star graph [`S_{[$S_k]}`] have? (Hint; the star graph [`S_k`] is the same as the complete bipartite graph [`K_{1,k}`])
+
+[____________]{$S_k}
+
+*3.* 
+How many edges does the complete graph [`K_{[$K_k]}`] have? 
+
+[____________]{$K_k*($K_k-1)/2}
+
+*4.* 
+How many edges does the complete bipartite graph [`K_{[$B_k],[$B_j]}`] have? 
+
+[____________]{$B_k*$B_j}
+
+END_PGML
+
+
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

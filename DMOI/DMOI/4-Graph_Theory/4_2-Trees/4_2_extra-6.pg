@@ -1,0 +1,62 @@
+
+## DESCRIPTION
+##
+## ENDDESCRIPTION
+
+## DBsubject('')
+## DBchapter('')
+## DBsection('')
+## Date('')
+## Author('')
+## Institution('')
+## TitleText1('')
+## EditionText1('1')
+## AuthorText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS('', '')
+
+##############################################################
+#  Initialization
+##############################################################
+
+DOCUMENT();      
+
+loadMacros(
+    "PGstandard.pl",
+    "MathObjects.pl",
+    "PGML.pl",
+);
+
+TEXT(beginproblem());
+
+##############################################################
+#  Problem Setup
+##############################################################
+
+Context("Numeric");
+
+$v = random(20,50,1);
+$comp = random(1,10);
+$e = $v-$comp;
+
+$ans = $comp;
+
+##############################################################
+#  Text
+##############################################################
+
+
+BEGIN_PGML
+A forest contains [$v] vertices and [$e] edges.  How many connected components does the graph have?
+
+[_________]{$ans}
+
+END_PGML
+
+
+##############################################################
+#  Answers and Solutions
+##############################################################
+
+ENDDOCUMENT();
