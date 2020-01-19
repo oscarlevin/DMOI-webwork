@@ -60,13 +60,13 @@ How many functions are there?
 
 [_____]{16}
 
-How many are injective?
-
-[_____]{12}
-
 How many are surjective?
 
 [_____]{0}
+
+How many are injective?
+
+[_____]{12}
 
 How many are bijective?
 
@@ -79,22 +79,27 @@ END_PGML
 # Solution
 ####################
 BEGIN_PGML_SOLUTION
-There are 9 functions: you have a choice of three outputs for [`f(1)\text{,}`] and for each, you have three choices for the output [`f(2)\text{.}`] Of these functions, 6 are injective, 0 are surjective, and 0 are both (i.e., bijective):
+There are 16 functions: you have a choice of four outputs for [`f(1)\text{,}`] and for each, you have four choices for the output [`f(2)\text{.}`] Of these functions, 12 are injective, 0 are surjective, and 0 are both (i.e., bijective):
 
 >> [``\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}
-            f = \twoline{1 \amp 2}{a\amp a} \quad f = \twoline{1 \amp 2}{b \amp b} \quad f = \twoline{1 \amp 2}{c \amp c}
+            f = \twoline{1 \amp 2}{a\amp a} \quad f = \twoline{1 \amp 2}{b \amp b} \quad f = \twoline{1 \amp 2}{c \amp c} \quad f = \twoline{1 \amp 2}{d \amp d}
           ``] <<
 
 
 
 >> [``\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}
-             f = \twoline{1 \amp 2}{a\amp b} \quad f = \twoline{1 \amp 2}{a \amp c} \quad f = \twoline{1 \amp 2}{b \amp c}
+             f = \twoline{1 \amp 2}{a\amp b} \quad f = \twoline{1 \amp 2}{a \amp c} \quad f = \twoline{1 \amp 2}{a \amp d} \quad f = \twoline{1 \amp 2}{b \amp c}
            ``] <<
 
 
 
 >> [``\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}
-             f = \twoline{1 \amp 2}{b \amp a} \quad f = \twoline{1 \amp 2}{c \amp a} \quad f = \twoline{1 \amp 2}{c \amp b}
+             f = \twoline{1 \amp 2}{b \amp a} \quad f = \twoline{1 \amp 2}{c \amp a} \quad f = \twoline{1 \amp 2}{d \amp a} \quad f = \twoline{1 \amp 2}{c \amp b}
+           ``] <<
+
+
+>> [``\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}
+             f = \twoline{1 \amp 2}{b \amp d} \quad f = \twoline{1 \amp 2}{d \amp b} \quad f = \twoline{1 \amp 2}{c \amp d} \quad f = \twoline{1 \amp 2}{d \amp c}
            ``] <<
 
 

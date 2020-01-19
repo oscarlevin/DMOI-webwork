@@ -42,19 +42,19 @@ TEXT(beginproblem());
 # Body
 ####################
 BEGIN_PGML
-Write out all functions [`f: \{1,2,3\} \to \{a,b\}`] (using two-line notation).
+Write out all functions [`f: \{1,2,3,4\} \to \{a,b\}`] (using two-line notation).
 
 How many functions are there?
 
-[_____]{8}
+[_____]{16}
+
+How many are surjective?
+
+[_____]{14}
 
 How many are injective?
 
 [_____]{0}
-
-How many are surjective?
-
-[_____]{6}
 
 How many are bijective?
 
@@ -67,21 +67,8 @@ END_PGML
 # Solution
 ####################
 BEGIN_PGML_SOLUTION
-There are 8 different functions. In two-line notation these are:
-
->> [``\newcommand{\amp}{&} f = \begin{pmatrix} 1 \amp 2 \amp 3 \\ a \amp a\amp a \end{pmatrix} \quad f = \begin{pmatrix} 1 \amp 2 \amp 3 \\ b \amp b \amp b \end{pmatrix}``] <<
-
-
-
->> [``\newcommand{\amp}{&} f = \begin{pmatrix} 1 \amp 2 \amp 3 \\ a \amp a\amp b \end{pmatrix} \quad f = \begin{pmatrix} 1 \amp 2 \amp 3 \\ a \amp b \amp a \end{pmatrix} \quad f = \begin{pmatrix} 1 \amp 2 \amp 3 \\ b \amp a\amp a \end{pmatrix}
-            ``] <<
-
-
-
->> [``\newcommand{\amp}{&}
-              \quad f = \begin{pmatrix} 1 \amp 2 \amp 3 \\ b \amp b \amp a \end{pmatrix} \quad f = \begin{pmatrix} 1 \amp 2 \amp 3 \\ b \amp a\amp b \end{pmatrix} \quad f = \begin{pmatrix} 1 \amp 2 \amp 3 \\ a \amp b \amp b \end{pmatrix} ``] <<
-
-None of the functions are injective. Exactly 6 of the functions are surjective. No functions are both (since no functions here are injective).
+There are 16 different functions. 
+None of the functions are injective. Exactly 14 of the functions are surjective (there are 2 that are not: send everything to [`a`] or everything to [`b`]. No functions are both (since no functions here are injective).
 
 
 END_PGML_SOLUTION

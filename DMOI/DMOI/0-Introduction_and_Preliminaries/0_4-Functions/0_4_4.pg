@@ -31,6 +31,8 @@ loadMacros(
   "AnswerFormatHelp.pl",
   "parserPopUp.pl",
   "PGcourse.pl",
+  "PGchoicemacros.pl"
+
 );
 
 ####################
@@ -43,52 +45,50 @@ TEXT(beginproblem());
 # PG Setup
 ####################
 Context('Numeric');
-$injective = PopUp(
-["?", "Injective", "Surjective", "Bijective", "Neither"], "Injective",
+
+
+# Create and use pop up lists 
+$functions = new_select_list();
+$functions->rf_print_q(~~&pop_up_list_print_q);
+
+# Specify choices presented to students
+$functions->ra_pop_up_list( 
+[ No_answer => "?", "I"=>"Injective", "S"=>"Surjective", "B"=>"Bijective", "N"=>"Neither"] );
+
+$functions -> qa (
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 1 & 3 & 2 & 5\end{pmatrix}\)", "I",
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 4 & 3 & 2 & 1\end{pmatrix}\)", "I",
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 2 & 3 & 4 & 5\end{pmatrix}\)", "I",
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 5 & 4 & 3 & 2\end{pmatrix}\)", "I",
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 1 & 2 & 3 & 4\end{pmatrix}\)", "I",
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 5 & 5 & 5 & 5\end{pmatrix}\)", "N",
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 1 & 4 & 4 & 3\end{pmatrix}\)", "N",
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 3 & 3 & 2 & 1\end{pmatrix}\)", "N",
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 5 & 1 & 3 & 1\end{pmatrix}\)", "N",
+"\(f = \begin{pmatrix}1 & 2 & 3 & 4 \\ 2 & 2 & 1 & 4\end{pmatrix}\)", "N",
+"\(f(x) = x\)", "I",
+"\(f(x) = 6-x\)", "I",
+"\(f(x) = x+1\)", "I",
+"\(f(x) = \begin{cases} x/2 & \text{ if } x \text{ is even} \\ (x+1)/2 & \text{ if } x \text{ is odd}\end{cases}\)", "N",
 );
-$surjective = PopUp(
-["?", "Injective", "Surjective", "Bijective", "Neither"], "Surjective",
-);
-$bijective = PopUp(
-["?", "Injective", "Surjective", "Bijective", "Neither"], "Bijective",
-);
-$neither = PopUp(
-["?", "Injective", "Surjective", "Bijective", "Neither"], "Neither",
-);
+
+$functions->choose(3);
 
 ####################
 # Body
 ####################
-BEGIN_PGML
-The following functions all have domain [`\{1,2,3,4\}`]  and codomain [`\{1,2,3,4,5\}\text{.}`]  For each, determine whether it is (only) injective, (only) surjective, bijective, or neither injective nor surjective.
+BEGIN_TEXT
+Consider the following functions \( f: \lbrace 1,2,3,4\rbrace \to \lbrace 1,2,3,4,5\rbrace\).  For each, determine whether it is (only) injective, (only) surjective, bijective, or neither injective nor surjective.
+$BR
+\{ $functions -> print_q \}
+END_TEXT
 
-a.  [`\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}f = \twoline{1 \amp 2 \amp 3 \amp 4}{1 \amp 2 \amp 5 \amp 4}\text{.}`] [_____]{$injective}
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
 
-
-a.  [`\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}f = \twoline{1 \amp 2 \amp 3 \amp 4}{1 \amp 2 \amp 3 \amp 2}\text{.}`] [_____]{$neither}
-
-
-a.  [`f(x)`] gives the number of letters in the English word for the number [`x\text{.}`]  For example, [`f(1) = 3`] since "one" contains three letters. [_____]{$neither}   
-
-
-
-END_PGML
-
-####################
-# Solution
-####################
-BEGIN_PGML_SOLUTION
-a.  This is injective (but not surjective).  No element in the codomain is the image of more than one element from the domain (although 3 is the image of NO element in the domain).
+ANS(str_cmp($functions->ra_correct_ans));
 
 
-a.  This is a neither injective nor surjective.  The element 2 is the image of more than one element from the domain, and the element 5 is not the image of any element in the domain.
-
-
-a.  This is neither injective nor surjective.  We can write the function in two line notation as [`\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}\newcommand{\amp}{&}f = \twoline{1 \amp 2 \amp 3 \amp 4}{3 \amp 3 \amp 5 \amp 4}\text{.}`]  No number is spelled with 1 letter, and "one" and "two" have three letters.   
-
-
-
-END_PGML_SOLUTION
 
 ####################
 # End Problem
