@@ -1,0 +1,88 @@
+#DESCRIPTION
+##  Graph theory: subgraphs
+##ENDDESCRIPTION
+
+## DBsubject(Graph Theory)
+## DBchapter(Terminology)
+## Date(1/26/2020)
+## Institution(UNCO)
+## Author(Oscar Levin)
+## MLT(groups)
+## MLTleader(1)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory', 'coloring', 'chromatic number')
+
+
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGcourse.pl", 
+  "PGML.pl",
+  "PGauxiliaryFunctions.pl",
+   "PGchoicemacros.pl"
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 1;
+
+# Create and use pop up lists 
+$tf = new_select_list();
+$tf->rf_print_q(~~&pop_up_list_print_q);
+
+# Specify choices presented to students
+$tf->ra_pop_up_list( 
+[ No_answer => "?", "T"=>"True", "F"=>"False"] );
+
+# some random numbers:
+$al3 = random(3,10,1);
+$al3_2 = random(3,7,1);
+$al5 = random(5,10,1);
+$am4 = random(3,4);
+$more = random(2,8);
+$v = $al3_2 + $more;
+$al3_2p1 = $al3_2+1;
+$al3_2m1 = $al3_2-1;
+
+
+# Questions and answers
+$tf -> qa ( 
+"Every graph has chromatic number 4 or less.", "F",
+"If a graph has a vertex of degree $am4, then the chromatic number must be at least $am4.", "F",
+"If every vertex of a graph has degree $al3 or less, then the chromatic number of the graph is at most $al3.", "F",
+"If the chromatic number of a graph is $al3, then the graph contains a subgraph isomorphic to \( K_{$al3} \).", "F",
+"If a graph contains a subgraph isomorphic to \( K_{$al3} \), then the chromatic number of the graph is $al3", "F",
+"If a graph contains a subgraph isomorphic to \( K_{$al3} \), then the chromatic number of the graph is at least $al3", "T",
+"If the vertices of a graph can be properly colored with $al3_2 colors, then the chromatic number is at least $al3_2.", "F",
+"If the chromatic number of a graph is at most 4, then the graph is planar.", "F",
+"If the chromatic number of a graph is $al5, then the graph is not planar.", "T",
+"If a graph with $v vertices has chromatic number $al3_2, then it has a proper vertex coloring using $al3_2p1 colors.", "T",
+"If a graph with $v vertices has chromatic number $al3_2, then it has a proper vertex coloring using $al3_2m1 colors.", "F",
+"If \(H\) is a subgraph of \(G\), then \(\chi(H) = \chi(G)\)", "F",
+"If \(H\) is a proper subgraph of \(G\), then \(\chi(H) < \chi(G)\)", "F",
+"If \(H\) is a subgraph of \(G\), then \(\chi(H) \le \chi(G)\)", "T",
+"If \(G\) is a tree with at least two vertices, then \(\chi(G) = 2\)", "T",
+"If \(\chi(G) = 2\), then \(G\) is a tree", "F"
+);
+
+# How many questions to use
+$tf->choose(5);
+
+
+BEGIN_TEXT
+Are the following statements true or false? 
+$BR
+\{ $tf-> print_q \}
+END_TEXT
+
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
+
+ANS(str_cmp($tf->ra_correct_ans));
+
+ENDDOCUMENT();
