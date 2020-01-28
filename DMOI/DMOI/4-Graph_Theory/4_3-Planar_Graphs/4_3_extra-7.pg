@@ -1,0 +1,70 @@
+#DESCRIPTION
+##  Combinatorics: Graph Theory
+##ENDDESCRIPTION
+
+
+## DBsubject(Graph theory)
+## Date(11/11/2015)
+## Institution(UNCO)
+## Author(Oscar Levin)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory', 'eulers formula')
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl"
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 0;
+TEXT(beginproblem());
+
+Context("Numeric");
+
+$v = random(6,15);
+$e = $v*($v-1)/2;
+$f = 2-$v + $e;
+
+#########################
+## Part 1 (given e and f, find v)
+$f1 = random(5,10);
+$e1 = random(ceil(3/2*$f1),3*$f1);
+$v1 = 2+$e1-$f1;
+#####################################################################
+
+
+
+Context()->texStrings;
+
+BEGIN_PGML
+
+Let's prove that [`K_{[$v]}`] is not planar:
+
+First, how many vertices and how many edges does [`K_{[$v]}`] have?
+
+[`v = `] [____________]{$v}  and [`e = `]  [____________]{$e}.
+
+If we assume that [`K_{[$v]}`] were planar, then how many faces _would_ it have?
+
+[`f = `] [_____________]{$f}.
+
+However, since every face is bounded by at least [_______]{3} edges, and every edge borders exactly [_______]{2} faces, we can get a bound on the number of faces.  What is the largest number of faces possible based on this line of reasoning?
+
+[`f \le `] [_____________]{Compute(2*$e/3)}
+
+This is a contradiction, so [`K_{[$v]}`] is not planar.  QED.
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

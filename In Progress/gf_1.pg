@@ -1,0 +1,39 @@
+DOCUMENT(); # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "MathObjects.pl",
+  "CofIdaho_macros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+######################################
+
+Context()->variables->are(x=>'Real');
+
+######################################
+#  Main text
+
+BEGIN_TEXT
+Find the generating function for the sequence 1,-2,4,-8,16,...
+$PAR
+Answer:  \{ ans_rule(30) \} 
+END_TEXT
+
+######################################
+#  Answer
+
+
+$answer = "-1/(1-x) + 2/(1-x)^2";
+
+ANS(RationalExpEvaluator($answer,["x"])); 
+
+
+$showPartialCorrectAnswers = 1;
+
+######################################
+
+ENDDOCUMENT();

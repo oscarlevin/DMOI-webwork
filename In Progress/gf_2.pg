@@ -1,0 +1,65 @@
+
+## DBsubject(Combinatorics)
+## DBchapter(sequences)
+## DBsection('Generating Functions')
+## Level()
+## KEYWORDS(discrete, sequences, generating functions)
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1(34)
+## AuthorText1(Oscar Levin)
+## Section1(5.1)
+## Problem1(2)
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
+## Language(en-US)
+
+DOCUMENT();
+
+####################
+# Load Macros
+####################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+
+####################
+# Header
+####################
+COMMENT('not randomized');
+TEXT(beginproblem());
+
+####################
+# PG Setup
+####################
+
+Context()->variables->add(n=>"Real");
+
+$genfunc = Formula("1/(1+x)^2");
+$coeff = Formula("(-1)^n*(n+1)");
+$coeff->{test_points} = [[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8]];
+
+####################
+# Body
+####################
+BEGIN_PGML
+What is the coefficient of [`x^n`] for the generating function [`[$genfunc]`]
+
+[_____]{$coeff}
+
+END_PGML
+
+####################
+# Solution
+####################
+BEGIN_PGML_SOLUTION
+This is the generating function for the sequence [`1, -2, 3, -4,\ldots`], so the coefficient of [`x^n`] is [`[$coeff]`].
+END_PGML_SOLUTION
+
+####################
+# End Problem
+####################
+ENDDOCUMENT();

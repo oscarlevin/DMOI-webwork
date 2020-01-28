@@ -1,0 +1,63 @@
+#DESCRIPTION
+##  Combinatorics: Graph Theory
+##ENDDESCRIPTION
+
+
+## DBsubject(Graph theory)
+## Date(11/11/2015)
+## Institution(NUI Galway)
+## Author(Niall Madden)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory', 'eulers formula')
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl"
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 0;
+TEXT(beginproblem());
+
+Context("Numeric");
+
+#########################
+## Part 3: Platonic solids
+$true = 'True';
+$false = 'False';
+$k3 = random(3,8);
+if ($k3 < 6) {$ans3 = $true;}
+else {$ans3 = $false};
+$radio3 = RadioButtons(
+[$true,$false], $ans3, # correct answer
+last => [$false], # can be a list
+);
+
+
+Context()->texStrings;
+
+
+
+BEGIN_PGML
+
+True or false: There is a regular convex polyhedron with triangular faces and with all vertices of degree [$k3].
+
+END_PGML
+
+BEGIN_TEXT
+$PAR
+\{ $radio3->buttons() \}
+END_TEXT
+ANS( $radio3->cmp() );
+
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

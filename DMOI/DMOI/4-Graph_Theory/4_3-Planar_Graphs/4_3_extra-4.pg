@@ -1,0 +1,70 @@
+#DESCRIPTION
+##  Combinatorics: Graph Theory
+##ENDDESCRIPTION
+
+
+## DBsubject(Graph theory)
+## Date(11/11/2015)
+## Institution(NUI Galway)
+## Author(Niall Madden)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory', 'eulers formula')
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl"
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 0;
+TEXT(beginproblem());
+
+Context("Numeric");
+
+
+#########################
+## Part 2: can this graph be planar?
+$v2 = random(6,10);
+$k2 = random(2,3);
+$r2 = random(0,1); # 0 false, 1 true
+if (  1 == ($v2)*($k2)%2 )
+{
+  $k2=$k2-1;
+}
+$e2 = ($k2*$v2)/2;
+$f2 = 1+$r2+$e2+$v2;
+$true = 'True';
+$false = 'False';
+if ($r1 == 0) {$ans = $false;}
+else {$ans = $true};
+$radio = RadioButtons(
+[$true,$false],
+$ans, # correct answer
+last => [$false], # can be a list
+);
+
+
+Context()->texStrings;
+
+BEGIN_PGML
+
+True or false: There is a connected planar graph [`G`] iwith [$e2] edges, [$f2] faces, and [$v2] vertices.
+END_PGML
+
+BEGIN_TEXT
+$PAR
+\{ $radio->buttons() \}
+END_TEXT
+ANS( $radio->cmp() );
+
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
