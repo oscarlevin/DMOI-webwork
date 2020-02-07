@@ -176,7 +176,7 @@ if ($q == 0){
     );
 } elsif ($q == 9){
     $a = "\neg Q";
-    $b = "\neg Q \rightarrow R";
+    $b = "R \rightarrow \neg Q";
     $statement = "P \vee (R \rightarrow \neg Q)";
     @ans = qw(
         F F T
@@ -190,7 +190,7 @@ if ($q == 0){
     );
 } elsif ($q == 10){
     $a = "\neg Q";
-    $b = "\neg Q \rightarrow R";
+    $b = "R \rightarrow \neg Q";
     $statement = "P \wedge (R \rightarrow \neg Q)";
     @ans = qw(
         F F F 
