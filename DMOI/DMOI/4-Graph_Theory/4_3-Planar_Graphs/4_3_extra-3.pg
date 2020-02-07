@@ -1,0 +1,54 @@
+#DESCRIPTION
+##  Combinatorics: Graph Theory
+##ENDDESCRIPTION
+
+
+## DBsubject(Graph theory)
+## Date(11/11/2015)
+## Institution(NUI Galway)
+## Author(Niall Madden)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory', 'eulers formula')
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl"
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 0;
+TEXT(beginproblem());
+
+Context("Numeric");
+
+#########################
+## Part 1 (given e and f, find v)
+$f1 = random(5,10);
+$e1 = random(ceil(3/2*$f1),3*$f1);
+$v1 = 2+$e1-$f1;
+#####################################################################
+
+
+
+Context()->texStrings;
+
+BEGIN_PGML
+
+The graph [`G`] is a planar connected graph. It has [$e1] edges, and [$v1] vertices. How many faces does [`G`]  have (when drawn in the plane without edges crossing)?
+
+[____________]{Compute("$v1")}
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

@@ -1,0 +1,50 @@
+#DESCRIPTION
+##  Combinatorics: Graph Theory
+##ENDDESCRIPTION
+
+
+## DBsubject(Graph theory)
+## Date(11/11/2015)
+## Institution(NUI Galway)
+## Author(Niall Madden)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory', 'eulers formula')
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl"
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 0;
+TEXT(beginproblem());
+
+Context("Numeric");
+
+
+
+#########################
+## Part 4: Unconnected planar graphs
+$C4 = random(2,5);
+
+Context()->texStrings;
+
+
+BEGIN_PGML
+
+Suppose the graph is planar but not connected, and has [$C4] components. Derive a variant of Euler's formula for this case.
+
+[`v-e+f=`]  [____________]{Compute("1+$C4")}
+
+END_PGML
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.

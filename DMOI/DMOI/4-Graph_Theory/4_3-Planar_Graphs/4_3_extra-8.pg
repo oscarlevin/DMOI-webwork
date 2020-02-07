@@ -1,0 +1,68 @@
+#DESCRIPTION
+##  Combinatorics: Graph Theory
+##ENDDESCRIPTION
+
+
+## DBsubject(Graph theory)
+## Date(11/11/2015)
+## Institution(NUI Galway)
+## Author(Niall Madden)
+## Level(3)
+## MO(1)
+## KEYWORDS('graph theory', 'eulers formula')
+
+#####################################################################
+DOCUMENT();        # This should be the first executable line in the problem.
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl"
+);
+
+#####################################################################
+
+$showPartialCorrectAnswers = 0;
+TEXT(beginproblem());
+
+Context("Numeric");
+
+
+$m = random(3,10);
+$n = random(4,10);
+
+$v = $m+$n;
+$e = $m*$n;
+$f = 2-$v + $e;
+
+$g = 4;
+
+
+Context()->texStrings;
+
+BEGIN_PGML
+
+Let's prove that [`K_{[$m],[$n]}`] is not planar:
+
+First, how many vertices and how many edges does [`K_{[$m],[$n]}`] have?
+
+[`v = `] [____________]{$v}  and [`e = `]  [____________]{$e}.
+
+Suppose, for the sake of contradiction, that [`K_{[$m],[$n]}`] is planar.  Then how many faces _would_ it have?
+
+[`f = `] [_____________]{$f}.
+
+However, since every face is bounded by at least [_______]{$g} edges, and every edge borders exactly [_______]{2} faces, we can get a bound on the number of faces.  What is the largest number of faces possible based on this line of reasoning?
+
+[`f \le `] [_____________]{Compute(2*$e/$g)}
+
+This is a contradiction, so [`K_{[$m],[$n]}`] is not planar.  QED.
+
+
+
+END_PGML
+
+
+ENDDOCUMENT();        # This should be the last executable line in the problem.
