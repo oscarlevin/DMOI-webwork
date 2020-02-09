@@ -21,71 +21,53 @@ loadMacros(
 TEXT(beginproblem());
 
 Context("Numeric");
-$statement = "For any numbers \(a\) and \(b\), if \(a+b\) is odd, then either \(a\) or \(b\) is odd.";
+
+$odd = random(3,19,2);
+
+$statement = "For all integers \(n\), if \($odd n\) is even, then \(n\) is odd.";
 
 $sourcelabel = "${BBOLD}Statements to choose from:${EBOLD}";
-$targetlabel  =  "${BBOLD}Your Proof:${EBOLD} Put chosen statements in order in this column.";
+$targetlabel  =  "${BBOLD}Your Proof:${EBOLD} Put chosen statements in order in this column and press the Submit Answers button.";
 
 
-$Proof1 = DraggableProof([
-"Let \(a\) and \(b\) be integers and assume both are even.",
-"The sum of two even integers must also be even.",
-"Therefore \(a+b\) is even.",
+$Proof = DraggableProof([
+"Let \(n\) be an arbitrary integer and assume \(n\) is odd.",
+"Since $odd is odd and the product of odd numbers is odd, ",
+"\($odd n\) must be odd.",
 ],
 
 # Other statements
 [
-"Let \(a\) and \(b\) be integers and assume \(a+b\) is odd.",
-"But then \(a+b\) is both even and odd, a contradiction.",
-"Let \(a\) and \(b\) be integers and assume that \(a+b\) is odd but \(a\) and \(b\) are both even.",
-"Let \(a\) and \(b\) be integers and assume that if \(a+b\) is odd, then either \(a\) or \(b\) is odd."
+"Let \(n\) be an arbitrary integer and assume \(n\) is even.",
+"Let \(n\) be an arbitrary integer and assume \($odd n\) is even.",
+"Since $odd is odd and the product of an odd number and an even number is even,",
+"Since an even number divided by $odd must be even,",
+"\(n\) must be even",
+"\($odd n\) must be even"
 ],
 
-SourceLabel => $sourcelabel,
-TargetLabel =>  $targetlabel,
-);
-
-$Proof2 = DraggableProof([
-"Let \(a\) and \(b\) be integers and assume that \(a+b\) is odd but \(a\) and \(b\) are both even.",
-"The sum of two even integers must also be even.",
-"But then \(a+b\) is both even and odd, a contradiction.",
-],
-
-# Other statements
-[
-"Let \(a\) and \(b\) be integers and assume \(a+b\) is odd.",
-"Let \(a\) and \(b\) be integers and assume both are even.",
-"Therefore \(a+b\) is even.",
-"Let \(a\) and \(b\) be integers and assume that if \(a+b\) is odd, then either \(a\) or \(b\) is odd."
-],
 
 SourceLabel => $sourcelabel,
 TargetLabel =>  $targetlabel,
 );
 
 
-$length1 = $Proof1->numNeeded;
-$length2 = $Proof2->numNeeded;
+$length = $Proof->numNeeded;
 
 
 
 BEGIN_PGML
 
-Consider the statement:
+By dragging statements from the left column
+to the right column below, construct a valide proof of the statement:
     
 [$statement]
 
-First, give a valid proof of the statement using proof by contrapositive.  Drag [$length1] of the statements below to the right column.
+The correct proof will use [$length] of the statements below.
 
-[@ $Proof1->Print @]***
-
-Now prove the statement using a proof by contradiction.
-
-[@ $Proof2->Print @]***
-
+[@ $Proof->Print @]***
 END_PGML
 
-ANS($Proof1->cmp);
-ANS($Proof2->cmp);
+ANS($Proof->cmp);
 
 ENDDOCUMENT();
