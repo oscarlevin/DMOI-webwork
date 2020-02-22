@@ -44,7 +44,7 @@ BEGIN_PGML
 
 The graph [`G`] is a planar connected graph. It has [$e1] edges, and [$v1] vertices. How many faces does [`G`]  have (when drawn in the plane without edges crossing)?
 
-[____________]{Compute("$v1")}
+[____________]{Compute("$f1")}
 
 
 
