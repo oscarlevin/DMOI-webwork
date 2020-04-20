@@ -47,6 +47,7 @@ do {$r = random(4,9);} until ($r != 5) and ($r !=3);
 do {$b = random(4,9);} until ($b !=$r);
 $t = $r + $b;
 $j = $t-1;
+$j = 3+2-1; #remove when part d gets randomized!
 $tb = Compute("2^$b-1");
 $tr = Compute("2^$r-1");
 $ans1 = Compute("2^$t");

@@ -66,9 +66,9 @@ $ansd = Compute("$n^$t");
 $next = 0;
 for ($j=1; $j <=$n; $j++)
 {
-$next = Compute("$next + (-1)^($j+1)*C($n,$j)*($n-$j)^$t");
+$next = $next + (-1)**($j+1)*C($n,$j)*($n-$j)**$t;
 }
-$anse = Compute("$ansd - $next");
+$anse = $ansd - $next;
 
 
 ####################

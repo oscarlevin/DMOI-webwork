@@ -51,7 +51,7 @@ $n1= $n-1;
 $b = ceil($n/2);
 
 $ans1 = Compute("$s^$n");
-$ans2 = Compute("$n1^$s*$half");
+$ans2 = Compute("$s^$n1*$half");
 
 $ev = 0;
 for ($j = $b; $j <=$n; $j++)

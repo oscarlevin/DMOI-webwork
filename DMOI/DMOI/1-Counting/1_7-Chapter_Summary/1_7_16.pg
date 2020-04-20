@@ -52,7 +52,7 @@ $tk = $t-$k; #total number of stars and bars if each gets 1 to start
 $s = $n -$k; #number of stars left if each gets 1 to start
 
 #part a (each gets at least one)
-$ans1 = Compute("C($tk,$b)");
+$ans1 = Compute("C($tk,$s)");
 #$ans1 = Compute("C(19,15)");
 
 #part b (some may get no dollars)
@@ -63,12 +63,11 @@ $c = random(6,9);
 $next = 0;
 for ($j = 1; $j<=($n/$c); $j++)
 {
-$next = Compute("$next + (-1)^($j+1)*C($k, $j)*C(($tk-$c*$j+$j),$b)")
+$next = $next + (-1)**($j+1)*C($k, $j)*C(($tk-$c*$j),$b)
 }
 $ans3 = Compute("$ans1-$next");
 #$ans3 = Compute("C(19,15) - (C(5,1)*C(12,8) - C(5,2)*C(5,1))");
-$showHint = 0;
-$showSolution = 3;
+
 
 ####################
 # Body
@@ -107,9 +106,9 @@ END_PGML_HINT
 # Solution
 ####################
 BEGIN_PGML_SOLUTION
-a.  [`{[$tk] \choose [$b]}=[$ans1]`] ways.
+a.  [`{[$tk] \choose [$s]}=[$ans1]`] ways.
 a.  [`{[$t] \choose [$n]}=[$ans2]`] ways.
-a.  [`{[$tk] \choose [$b]} - \left[{[$k] \choose 1}{[$t-1*$c-($k-1)] \choose [$b]} - {[$k] \choose 2}{[$t-2*$c-($k-2)] \choose [$b]} \dots \right]=[$ans3]`] ways.   
+a.  [`{[$tk] \choose [$s]} - \left[{[$k] \choose 1}{[$t-1*$c-($k-1)] \choose [$b]} - {[$k] \choose 2}{[$t-2*$c-($k-2)] \choose [$b]} \dots \right]=[$ans3]`] ways.   
 
 
 

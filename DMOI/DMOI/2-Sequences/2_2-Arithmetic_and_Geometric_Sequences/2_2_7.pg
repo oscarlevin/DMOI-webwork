@@ -50,7 +50,7 @@ $b2 = $b**2;
 $sum = $a + $b;
 $n1 = $n + 1;
 
-$ans = Compute("[1 + (-1)**$n1*($a/$b)**$n1]/($sum/$b)");
+$ans = Compute("[1 - (-1)**$n1*($a/$b)**$n1]/($sum/$b)");
 
 ####################
 # Body
@@ -67,7 +67,7 @@ END_PGML
 # Solution
 ####################
 BEGIN_PGML_SOLUTION
-[`\frac{1 + (-1)^{[$n1]} \frac{[$a]^{[$n1]}}{[$b]^{[$n1]}}}{[$sum]/[$b]}\text{.}`]  This time compute [`S + \frac{[$a]}{[$b]}S\text{.}`]
+[`\frac{1 + (-1)^{[$n1]} \frac{[$a]^{[$n1]}}{[$b]^{[$n1]}}}{[$sum]/[$b]}\text{.}`]  Compute [`S + \frac{[$a]}{[$b]}S\text{.}`]
 
 
 END_PGML_SOLUTION
