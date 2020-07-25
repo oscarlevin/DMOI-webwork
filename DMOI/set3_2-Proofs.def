@@ -1,0 +1,33 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/3_2-Proofs.pg
+screenHeaderFile  = DMOI/header/3_2-Proofs.pg
+description       = Proofs
+problemListV2
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_2-Proofs/3_2_1.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_2-Proofs/3_2_2.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_2-Proofs/3_2_3.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_2-Proofs/3_2_4.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/3-Symbolic_Logic_and_Proofs/3_2-Proofs/3_2_5.pg
+problem_id = 5
+max_attempts = 5
+problem_end
+
