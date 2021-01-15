@@ -26,7 +26,7 @@ problem_id = 4
 max_attempts = 5
 problem_end
 problem_start
-source_file = DMOI/2-Sequences/2_6-Chapter_Summary/2_6_8.pg
+source_file = DMOI/2-Sequences/2_6-Chapter_Summary/2_6_8-nr.pg
 problem_id = 5
 max_attempts = 5
 problem_end

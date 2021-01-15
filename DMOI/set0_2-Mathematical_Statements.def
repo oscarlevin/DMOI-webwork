@@ -56,12 +56,12 @@ problem_id = 10
 max_attempts = 5 
 problem_end
 problem_start
-source_file = DMOI/0-Introduction_and_Preliminaries/0_2-Mathematical_Statements/0_2_14.pg
+source_file = DMOI/0-Introduction_and_Preliminaries/0_2-Mathematical_Statements/0_2_14-nr.pg
 problem_id = 11
 max_attempts = 5 
 problem_end
 problem_start
-source_file = DMOI/0-Introduction_and_Preliminaries/0_2-Mathematical_Statements/0_2_14.pg
+source_file = DMOI/0-Introduction_and_Preliminaries/0_2-Mathematical_Statements/0_2_15.pg
 problem_id = 12
 max_attempts = 5 
 problem_end

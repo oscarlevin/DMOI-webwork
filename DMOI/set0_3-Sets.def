@@ -66,27 +66,17 @@ problem_id = 12
 max_attempts = 5
 problem_end
 problem_start
-source_file = DMOI/0-Introduction_and_Preliminaries/0_3-Sets/0_3_extra-2.pg
+source_file = DMOI/0-Introduction_and_Preliminaries/0_3-Sets/0_3_extra-3.pg
 problem_id = 13
 max_attempts = 5
 problem_end
 problem_start
-source_file = DMOI/0-Introduction_and_Preliminaries/0_3-Sets/0_3_extra-3.pg
+source_file = DMOI/0-Introduction_and_Preliminaries/0_3-Sets/0_3_extra-5.pg
 problem_id = 14
 max_attempts = 5
 problem_end
 problem_start
-source_file = DMOI/0-Introduction_and_Preliminaries/0_3-Sets/0_3_extra-4.pg
-problem_id = 15
-max_attempts = 5
-problem_end
-problem_start
-source_file = DMOI/0-Introduction_and_Preliminaries/0_3-Sets/0_3_extra-5.pg
-problem_id = 16
-max_attempts = 5
-problem_end
-problem_start
 source_file = DMOI/0-Introduction_and_Preliminaries/0_3-Sets/0_3_extra-6.pg
-problem_id = 17
+problem_id = 15
 max_attempts = 5
 problem_end
