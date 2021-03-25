@@ -55,7 +55,7 @@ $n = $mft + $mfnt + $mnft + $nmft + $mnfnt + $nmfnt + $nmnft + $none;
 #each set/intersection:
 $m = $mft + $mfnt + $mnft + $mnfnt;
 $f = $mft + $mfnt + $nmft + $nmfnt;
-$t = $mft + $mnft + $mnft + $nmnft;
+$t = $mft + $mnft + $nmft + $nmnft;
 $mf = $mft + $mfnt;
 $mt = $mft + $mnft;
 $ft = $mft + $nmft;

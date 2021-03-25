@@ -87,7 +87,7 @@ Find the solution to the recurrence relation [`a_n = [$ra]a_{n-1} + [$rb]a_{n-2}
 
 Find the solution to the recurrence relation [`b_n = [$ra]b_{n-1} + [$rb]b_{n-2}`] with initial terms [`b_0 = [$b0]`] and [`b_1 = [$b1]\text{.}`]
 
-[`b_n = `] [__________________________]{$closed1}
+[`b_n = `] [__________________________]{$closed2}
 
 
 END_PGML

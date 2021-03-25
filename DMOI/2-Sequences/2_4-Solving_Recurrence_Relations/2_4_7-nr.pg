@@ -1,22 +1,22 @@
 #######################################
 ###    Generated from PreTeXt source   
-###    on 2018-05-17T08:45:04-06:00    
+###    on 2018-05-17T08:45:05-06:00    
 ###                                    
 ###   http://mathbook.pugetsound.edu   
 ###                                    
 #######################################
 ## DBsubject(Combinatorics)
-## DBchapter(Counting)
-## DBsection(Multiple techniques)
+## DBchapter(Recurrence relations)
+## DBsection(Solving homogeneous)
 ## Level()
-## KEYWORDS()
+## KEYWORDS(discrete, characteristic roots, recurrence relations)
 ## TitleText1(Discrete Mathematics: an Open Introduction)
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)
-## Section1(1.7)
-## Problem1(18)
-## Author()
-## Institution()
+## Section1(2.4)
+## Problem1(7)
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
 ## Language(en-US)
 
 DOCUMENT();
@@ -29,7 +29,6 @@ loadMacros(
   "MathObjects.pl",
   "PGML.pl",
   "AnswerFormatHelp.pl",
-  "contextIntegerFunctions.pl",
   "PGcourse.pl",
 );
 
@@ -42,30 +41,17 @@ TEXT(beginproblem());
 ####################
 # PG Setup
 ####################
-Context("IntegerFunctions");
-#Change the problem so that f maps a numeric set to a numeric (rather than alphabetic) set
-
-$a = random(1,10);
-do {$b = random(3,7); } until ($b <$a) and ($b !=4);
-
-
-$A = Set(1..$a);
-$B = Set(1..$b);
-$next = 0;
-for ($j = 1; $j < $b; $j++)
-{
-$next = Compute(" $next + (-1)^($j+1)C($b,$j)*($b-$j)^$a ");
-}
-$ans1 = Compute("$b^$a - $next");
-
+Context()->variables->are(n => "Real");
+$ans = Formula("(19/7)*(-2)^n + (9/7)*5^n");
+$ans->{test_points} = [[0],[1],[2],[3],[4],[5]];
 
 ####################
 # Body
 ####################
 BEGIN_PGML
-How many functions map [`[$A]`] _onto_ [`[$B]`] (i.e., how many _surjections_ are there)?
+Solve the recurrence relation [`a_n = 3a_{n-1} + 10a_{n-2}`] with initial terms [`a_0 = 4`] and [`a_1 = 1\text{.}`]
 
-[__]{$ans1}{width => 15}
+[__________]{$ans}
 
 
 END_PGML
@@ -74,7 +60,7 @@ END_PGML
 # Solution
 ####################
 BEGIN_PGML_SOLUTION
-[`4^6 - \left[{4 \choose 1}3^6 - {4 \choose 2}2^6 + {4 \choose 3} 1^6 \right]\text{.}`]
+[`a_n = \frac{19}{7}(-2)^n + \frac{9}{7}5^n\text{.}`]
 
 
 END_PGML_SOLUTION

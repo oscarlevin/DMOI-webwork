@@ -61,7 +61,7 @@ BEGIN_PGML
 You break your piggy-bank to discover lots of pennies and nickels. You start arranging these in rows of [$n] coins. 
 a.  You find yourself making rows containing an equal number of pennies and nickels.  For fun, you decide to lay out every possible such row.  How many coins will you need?
 
-    [_____]{$ans1}
+    [_____]{$total1}
 
 
 a.  How many coins would you need to make all possible rows of [$n] coins (not necessarily with equal number of pennies and nickels)?

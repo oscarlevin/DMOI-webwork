@@ -80,7 +80,7 @@ a.  Either start with [`011`] or end with [`01`] (or both)?
 
 a.  Have weight [$w] and either start with [`011`] or end with [`01`] (or both)? 
 
-    [_____]{51}   
+    [_____]{$ans4}   
 
 
 
