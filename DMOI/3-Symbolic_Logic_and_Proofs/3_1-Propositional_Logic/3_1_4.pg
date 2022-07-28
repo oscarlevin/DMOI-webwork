@@ -1,15 +1,8 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2019-03-11T13:50:36-06:00    
-###                                    
-###      https://pretextbook.org       
-###                                    
-#######################################
 ## DBsubject('Set theory and logic')
 ## DBchapter('Propositional logic')
 ## DBsection('Truth tables')
-## Level()
-## KEYWORDS()
+## Level(2)
+## KEYWORDS('proposition','truth table','connectives')
 ## TitleText1('Discrete Mathematics: an Open Introduction')
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)

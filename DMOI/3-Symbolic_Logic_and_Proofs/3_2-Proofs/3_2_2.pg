@@ -1,13 +1,15 @@
 ## DBsubject(Set theory and logic)
 ## DBchapter(First order logic)
 ## DBsection(Proofs)
+## Level(6)
+## KEYWORDS('number theory','parity','odd/even','proof techniques','proof')
 ## Institution(Northern Colorado)
 ## Author(Oscar Levin)
 ## TitleText1('Discrete Mathematics: an Open Introduction')
-## AuthorText1('Levin')
+## AuthorText1(Oscar Levin)
 ## EditionText1(3)
-## Section1('3.2')
-## Problem1('')
+## Section1(3.2)
+## Problem1(2)
 
 DOCUMENT();
 
