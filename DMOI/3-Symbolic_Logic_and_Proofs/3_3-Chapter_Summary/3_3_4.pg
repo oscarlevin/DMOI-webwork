@@ -1,22 +1,15 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2019-03-11T13:50:36-06:00    
-###                                    
-###      https://pretextbook.org       
-###                                    
-#######################################
 ## DBsubject('Set theory and logic')
 ## DBchapter('Propositional logic')
 ## DBsection('Truth tables')
 ## Level()
 ## KEYWORDS()
 ## TitleText1('Discrete Mathematics: an Open Introduction')
-## EditionText1('3')
-## AuthorText1('Oscar Levin')
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
 ## Section1(3.3)
 ## Problem1(4)
-## Author('Oscar Levin')
-## Institution('University of Northern Colorado')
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
 ## Language(en-US)
 
 DOCUMENT();

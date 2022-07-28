@@ -5,11 +5,11 @@
 ## KEYWORDS()
 ## TitleText1('Discrete Mathematics: an Open Introduction')
 ## EditionText1(3)
-## AuthorText1('Oscar Levin')
+## AuthorText1(Oscar Levin)
 ## Section1(0.3)
 ## Problem1(11)
-## Author('Oscar Levin')
-## Institution('University of Northern Colorado')
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
 ## Language(en-US)
 
 DOCUMENT();

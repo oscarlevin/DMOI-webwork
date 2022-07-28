@@ -1,22 +1,15 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2019-03-11T13:50:30-06:00    
-###                                    
-###      https://pretextbook.org       
-###                                    
-#######################################
 ## DBsubject('Set theory and logic')
 ## DBchapter('Operations on sets')
 ## DBsection('Cardinality')
-## Level()
-## KEYWORDS()
+## Level(4)
+## KEYWORDS('set','cardinality','intersection', 'union')
 ## TitleText1('Discrete Mathematics: an Open Introduction')
 ## EditionText1(3)
-## AuthorText1('Oscar Levin')
+## AuthorText1(Oscar Levin)
 ## Section1(0.3)
 ## Problem1(23)
-## Author('Oscar Levin')
-## Institution('University of Northern Colorado')
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
 ## Language(en-US)
 
 DOCUMENT();

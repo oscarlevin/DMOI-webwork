@@ -1,16 +1,15 @@
-
 ## DBsubject('Set theory and logic')
 ## DBchapter('First order logic')
 ## DBsection('Predicates')
-## Level()
-## KEYWORDS()
+## Level(3)
+## KEYWORDS('predicates','statement','truth-value','implication','quantifier')
 ## TitleText1('Discrete Mathematics: an Open Introduction')
-## EditionText1('3')
-## AuthorText1('Oscar Levin')
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
 ## Section1(0.2)
 ## Problem1(15)
-## Author('Oscar Levin')
-## Institution('University of Northern Colorado')
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
 ## Language(en-US)
 
 DOCUMENT();
@@ -61,10 +60,10 @@ $PAR
 \{
 DataTable(
   [
-    [[' ', headerrow =>1,midrule => 1],'1','2','3','4'],
+    [[' ', headerrow =>1,midrule => 1],'1','2',3,'4'],
     ['1','T','F','F','F'],
     ['2','F','T','T','F'],
-    ['3','T','T','T','T'],
+    [3,'T','T','T','T'],
     ['4','F','F','F','F']
   ], 
   align => 'r | c c c c',

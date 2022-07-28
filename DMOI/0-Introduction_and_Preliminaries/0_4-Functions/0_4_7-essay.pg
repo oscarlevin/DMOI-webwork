@@ -15,8 +15,8 @@
 ## AuthorText1(Oscar Levin)
 ## Section1(not reported)
 ## Problem1(1.4.4.7)
-## Author()
-## Institution()
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
 ## Language(en-US)
 
 DOCUMENT();
@@ -61,14 +61,14 @@ Consider the function [`f:\{1,2,3,4,5\} \to \{1,2,3,4\}`] given by the table bel
       cellcss => 'border-right: 1px solid; ',],
      [PGML('1'),],
      [PGML('2'),],
-     [PGML('3'),],
+     [PGML(3),],
      [PGML('4'),],
      [PGML('5'),],
     ],
     [[PGML('[`f(x)`]'),
       halign  => 'c|',
       cellcss => 'border-right: 1px solid; ',],
-     PGML('3'),
+     PGML(3),
      PGML('2'),
      PGML('4'),
      PGML('1'),
