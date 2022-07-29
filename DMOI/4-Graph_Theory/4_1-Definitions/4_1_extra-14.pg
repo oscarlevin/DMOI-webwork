@@ -3,15 +3,19 @@
 ##ENDDESCRIPTION
 
 
-## DBsubject(Combinatorics)
-## DBchapter(Graph Theory)
-## DBsection(Definitions)
+## DBsubject(Graph Theory)
+## DBchapter(Terminology)
+## Level(4)
 ## Date(11/11/2018)
-## Institution(UNCO)
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
+## Section1(4.1)
+## Problem1()
 ## Author(Oscar Levin)
-## Level(3)
-## MO(1)
-## KEYWORDS('graph theory')
+## Institution(University of Northern Colorado)
+## Language(en-US)
+## KEYWORDS('graph theory', 'subgraph')
 
 
 

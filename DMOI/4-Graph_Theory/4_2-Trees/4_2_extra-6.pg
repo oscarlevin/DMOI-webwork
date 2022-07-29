@@ -1,20 +1,17 @@
 
-## DESCRIPTION
-##
-## ENDDESCRIPTION
-
-## DBsubject('')
-## DBchapter('')
+## DBsubject(Graph theory)
+## DBchapter(Trees)
 ## DBsection('')
-## Date('')
-## Author('')
-## Institution('')
-## TitleText1('')
-## EditionText1('1')
-## AuthorText1('')
-## Section1('')
-## Problem1('')
-## KEYWORDS('', '')
+## Level(4)
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
+## Section1(4.2)
+## Problem1()
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
+## Language(en-US)
+## KEYWORDS('graph theory', 'trees','forest','exploration')
 
 ##############################################################
 #  Initialization

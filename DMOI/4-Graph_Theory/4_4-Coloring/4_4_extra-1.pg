@@ -1,3 +1,17 @@
+## DBsubject(Graph theory)
+## DBchapter(Coloring)
+## DBsection('')
+## Level(4)
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
+## Section1(4.4)
+## Problem1()
+## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
+## Language(en-US)
+## KEYWORDS('graph theory', 'coloring','chromatic number')
+
 DOCUMENT();
 
 ####################

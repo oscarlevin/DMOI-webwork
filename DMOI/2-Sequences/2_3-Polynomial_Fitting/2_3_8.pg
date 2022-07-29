@@ -1,9 +1,9 @@
 
 ## DBsubject(Algebra)
 ## DBchapter('Finite sequences and series')
-## DBsection('differences')
-## Level()
-## KEYWORDS(discrete, sequences, arithmetics, summation, sum)
+## DBsection(Summation formulas)
+## Level(3)
+## KEYWORDS('discrete', 'sequences', 'arithmetics', 'summation', 'sum','polynomial fitting','finite differences')
 ## TitleText1(Discrete Mathematics: an Open Introduction)
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)

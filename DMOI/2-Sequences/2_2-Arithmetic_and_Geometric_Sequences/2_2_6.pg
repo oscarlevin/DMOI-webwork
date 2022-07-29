@@ -1,15 +1,8 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2018-05-17T08:45:05-06:00    
-###                                    
-###   http://mathbook.pugetsound.edu   
-###                                    
-#######################################
 ## DBsubject(Algebra)
 ## DBchapter(Finite sequences and series)
 ## DBsection(Summation formulas)
-## Level()
-## KEYWORDS(discrete, sequences, geometric, summation, series)
+## Level(3)
+## KEYWORDS('discrete', 'sequences', 'geometric', 'summation', 'sum','series')
 ## TitleText1(Discrete Mathematics: an Open Introduction)
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)

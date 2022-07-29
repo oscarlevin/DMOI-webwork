@@ -1,15 +1,16 @@
-#DESCRIPTION
-##  Discrete Mathematics: Graph Theory
-##ENDDESCRIPTION
-
-
-## DBsubject(Discrete Mathematics)
-## DBchapter(Graph Theory)
-## DBsection(Euler trails)
-## Date(1/10/2020)
-## Institution(UNC)
+## DBsubject(Graph theory)
+## DBchapter(Walks)
+## DBsection(Eulerian)
+## Level(4)
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
+## Section1(4.5)
+## Problem1()
 ## Author(Oscar Levin)
-## KEYWORDS('combinatorics', 'graph theory', 'trees')
+## Institution(University of Northern Colorado)
+## Language(en-US)
+## KEYWORDS('graph theory', 'walks','euler','true/false')
 
 #####################################################################
 DOCUMENT();        # This should be the first executable line in the problem.

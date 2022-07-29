@@ -1,15 +1,8 @@
-#######################################
-###    Generated from PreTeXt source
-###    on 2018-05-17T08:45:05-06:00
-###
-###   http://mathbook.pugetsound.edu
-###
-#######################################
 ## DBsubject(Combinatorics)
 ## DBchapter(Recurrence relations)
 ## DBsection(Solving nonhomogeneous)
-## Level()
-## KEYWORDS(discrete, telescoping, iteration, recurrence relations)
+## Level(3)
+## KEYWORDS('discrete', 'telescoping', 'iteration', 'recurrence relations')
 ## TitleText1(Discrete Mathematics: an Open Introduction)
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)

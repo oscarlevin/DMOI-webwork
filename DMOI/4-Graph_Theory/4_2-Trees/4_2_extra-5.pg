@@ -3,12 +3,17 @@
 ##ENDDESCRIPTION
 
 
-## DBsubject(Discrete Mathematics)
-## DBchapter(Graph Theory)
-## DBsection(Trees)
+## DBsubject(Graph Theory)
+## DBchapter(Trees)
 ## Date(1/10/2020)
-## Institution(UNC)
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
+## Section1(4.2)
+## Problem1()
 ## Author(Oscar Levin)
+## Institution(University of Northern Colorado)
+## Language(en-US)
 ## KEYWORDS('combinatorics', 'graph theory', 'trees')
 
 #####################################################################

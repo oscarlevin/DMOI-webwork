@@ -1,17 +1,16 @@
-#DESCRIPTION
-##  Graph theory: subgraphs
-##ENDDESCRIPTION
-
-## DBsubject(Graph Theory)
-## DBchapter(Terminology)
-## Date(1/26/2020)
-## Institution(UNCO)
+## DBsubject(Graph theory)
+## DBchapter(Coloring)
+## DBsection('')
+## Level(4)
+## TitleText1(Discrete Mathematics: an Open Introduction)
+## EditionText1(3)
+## AuthorText1(Oscar Levin)
+## Section1(4.4)
+## Problem1()
 ## Author(Oscar Levin)
-## MLT(groups)
-## MLTleader(1)
-## Level(3)
-## MO(1)
-## KEYWORDS('graph theory', 'coloring', 'chromatic number')
+## Institution(University of Northern Colorado)
+## Language(en-US)
+## KEYWORDS('graph theory', 'coloring','chromatic number','chromatic index')
 
 
 
