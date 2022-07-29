@@ -1,15 +1,8 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2018-05-17T08:45:03-06:00    
-###                                    
-###   http://mathbook.pugetsound.edu   
-###                                    
-#######################################
 ## DBsubject(Combinatorics)
 ## DBchapter(Counting)
 ## DBsection(Combinations)
-## Level()
-## KEYWORDS()
+## Level(4)
+## KEYWORDS('counting','combinations', 'words')
 ## TitleText1(Discrete Mathematics: an Open Introduction)
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)

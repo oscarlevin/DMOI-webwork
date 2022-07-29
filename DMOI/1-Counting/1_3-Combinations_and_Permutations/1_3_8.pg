@@ -1,15 +1,8 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2018-05-17T08:45:03-06:00    
-###                                    
-###   http://mathbook.pugetsound.edu   
-###                                    
-#######################################
 ## DBsubject(Combinatorics)
 ## DBchapter(Counting)
 ## DBsection(Combinations)
-## Level()
-## KEYWORDS()
+## Level(4)
+## KEYWORDS('counting','combinations','multiple techniques')
 ## TitleText1(Discrete Mathematics: an Open Introduction)
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)
@@ -46,7 +39,7 @@ Context("IntegerFunctions");
 Context("IntegerFunctions");
 #Context()->texStrings;
 @bank = ("seeded", "voodoo", "assess", "allele", "assesses");
-$tag = random(0,4,1); #there are only 4 words in the bank (all that I could think of with only 3 distinct letters and interesting length; add more if possible
+$tag = random(0,4,1); #there are only 5 words in the bank (all that I could think of with only 3 distinct letters and interesting length; add more if possible
 
 $word = $bank[$tag];
 if ($tag ==0) 

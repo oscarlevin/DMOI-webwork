@@ -1,15 +1,8 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2019-03-11T13:50:32-06:00    
-###                                    
-###      https://pretextbook.org       
-###                                    
-#######################################
 ## DBsubject(Combinatorics)
 ## DBchapter(Counting)
 ## DBsection(Combinations)
-## Level()
-## KEYWORDS()
+## Level(5)
+## KEYWORDS('counting','combinations', 'paths', 'binomial coefficients')
 ## TitleText1(Discrete Mathematics: an Open Introduction)
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)

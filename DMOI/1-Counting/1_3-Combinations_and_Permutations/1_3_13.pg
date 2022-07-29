@@ -8,8 +8,8 @@
 ## DBsubject(Combinatorics)
 ## DBchapter(Counting)
 ## DBsection(Multiple techniques)
-## Level()
-## KEYWORDS()
+## Level(4)
+## KEYWORDS('counting','combinations', 'permutations','multiple techniques','functions','increasing')
 ## TitleText1(Discrete Mathematics: an Open Introduction)
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)
@@ -69,7 +69,7 @@ a.  How many functions are injective?
     [_____]{$ans2}
 
 
-a.  How many of the injective functions are                 _increasing_? To be increasing means that if [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}a \lt b`] then [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}f(a) \lt f(b)\text{,}`] or in other words, the outputs get larger as the inputs get larger.
+a.  How many of the injective functions are _increasing_? To be increasing means that if [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}a \lt b`] then [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}f(a) \lt f(b)\text{,}`] or in other words, the outputs get larger as the inputs get larger.
 
     [_____]{$ans3}   
 

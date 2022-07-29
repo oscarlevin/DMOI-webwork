@@ -1,15 +1,8 @@
-#######################################
-###    Generated from PreTeXt source   
-###    on 2018-05-17T08:45:04-06:00    
-###                                    
-###   http://mathbook.pugetsound.edu   
-###                                    
-#######################################
 ## DBsubject(Combinatorics)
 ## DBchapter(Counting)
 ## DBsection(Multiple techniques)
-## Level()
-## KEYWORDS()
+## Level(5)
+## KEYWORDS('counting','combinations', 'stars and bars','multiple techniques')
 ## TitleText1(Discrete Mathematics: an Open Introduction)
 ## EditionText1(3)
 ## AuthorText1(Oscar Levin)
