@@ -1,0 +1,32 @@
+openDate          = 08/01/2019 at 12:00am
+dueDate           = 12/31/2019 at 10:00pm
+answerDate        = 12/31/2019 at 10:00pm
+paperHeaderFile   = DMOI/header/2_5-Induction.pg
+screenHeaderFile  = DMOI/header/2_5-Induction.pg
+description       = Induction
+problemListV2
+problem_start
+source_file = DMOI/1-Counting/2_5-Induction/2_5_extra-01.pg
+problem_id = 1
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/2_5-Induction/2_5_extra-02.pg
+problem_id = 2
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/2_5-Induction/2_5_extra-03.pg
+problem_id = 3
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/2_5-Induction/2_5_extra-04.pg
+problem_id = 4
+max_attempts = 5
+problem_end
+problem_start
+source_file = DMOI/1-Counting/2_5-Induction/2_5_extra-05.pg
+problem_id = 5
+max_attempts = 5
+problem_end
