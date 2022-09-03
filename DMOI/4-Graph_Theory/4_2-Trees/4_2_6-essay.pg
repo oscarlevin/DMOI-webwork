@@ -49,7 +49,7 @@ Context('Numeric');
 ############################################################
 
 BEGIN_PGML
-If a graph [`G`] with [`v`] vertices and [`e`] edges is connected and has [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}v \lt e+1\text{,}`] must it contain a cycle? Prove your answer.
+If a graph [`G`] with [`v`] vertices and [`e`] edges is connected and has [`\renewcommand{\v}{\vtx{above}{}}v < e+1\text{,}`] must it contain a cycle? Prove your answer.
 
 [@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
 

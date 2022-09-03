@@ -60,7 +60,7 @@ END_PGML
 ############################################################
 
 BEGIN_PGML_SOLUTION
-[`K_{n,n}`] has [`n^2`] edges. The graph will have an Euler circuit when [`n`] is even. The graph will be planar only when [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}n \lt 3\text{.}`]
+[`K_{n,n}`] has [`n^2`] edges. The graph will have an Euler circuit when [`n`] is even. The graph will be planar only when [`\renewcommand{\v}{\vtx{above}{}}n < 3\text{.}`]
 
 END_PGML_SOLUTION
 

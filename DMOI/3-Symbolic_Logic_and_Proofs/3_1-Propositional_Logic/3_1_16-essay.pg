@@ -51,7 +51,7 @@ Context('Numeric');
 BEGIN_PGML
 We can also simplify statements in predicate logic using our rules for passing negations over quantifiers, and then applying propositional logical equivalence to the "inside" propositional part. Simplify the statements below (so negation appears only directly next to predicates).
 a.  [`\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}`]
-a.  [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\neg \forall x \neg \forall y \neg(x \lt y \wedge \exists z (x \lt z \vee y \lt z))\text{.}`]
+a.  [`\renewcommand{\v}{\vtx{above}{}}\neg \forall x \neg \forall y \neg(x < y \wedge \exists z (x < z \vee y < z))\text{.}`]
 a.  There is a number [`n`] for which no other number is either less [`n`] than or equal to [`n\text{.}`]
 
 a.  It is false that for every number [`n`] there are two other numbers which [`n`] is between.

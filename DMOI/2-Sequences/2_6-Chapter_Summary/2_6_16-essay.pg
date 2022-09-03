@@ -61,7 +61,7 @@ END_PGML
 #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
 
 BEGIN_PGML_HINT
-There are two base cases [`P(0)`] and [`P(1)\text{.}`] Then, for the inductive case, assume [`P(k)`] is true for all [`k \lt n\text{.}`] This allows you to assume [`a_{n-1} = 1`] and [`a_{n-2} = 1\text{.}`] Apply the recurrence relation.
+There are two base cases [`P(0)`] and [`P(1)\text{.}`] Then, for the inductive case, assume [`P(k)`] is true for all [`k < n\text{.}`] This allows you to assume [`a_{n-1} = 1`] and [`a_{n-2} = 1\text{.}`] Apply the recurrence relation.
 
 END_PGML_HINT
 

@@ -54,7 +54,7 @@ a.  The set [`V = \{1,2, \ldots, 9\}`] and the relationship [`x \sim y`] when [`
 
 a.  The set [`V = \{1,2, \ldots, 9\}`] and the relationship [`x \sim y`] when [`y`] is a multiple of [`x\text{.}`]
 
-a.  The set [`V = \{1,2,\ldots, 9\}`] and the relationship [`x \sim y`] when [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}0 \lt |x-y| \lt 3\text{.}`]
+a.  The set [`V = \{1,2,\ldots, 9\}`] and the relationship [`x \sim y`] when [`\renewcommand{\v}{\vtx{above}{}}0 < |x-y| < 3\text{.}`]
 
 [@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
 

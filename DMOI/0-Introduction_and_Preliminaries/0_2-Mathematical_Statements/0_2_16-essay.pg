@@ -72,8 +72,8 @@ BEGIN_PGML_SOLUTION
 a.  [`\neg \exists x (E(x) \wedge O(x))\text{.}`]
 a.  [`\newcommand{\imp}{\rightarrow}\forall x (E(x) \imp O(x+1))\text{.}`]
 a.  [`\exists x(P(x) \wedge E(x))`] (where [`P(x)`] means "[`x`] is prime").
-a.  [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\forall x \forall y \exists z(x \lt z \lt y \vee y \lt z \lt x)\text{.}`]
-a.  [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\forall x \neg \exists y (x \lt y \lt x+1)\text{.}`]   
+a.  [`\renewcommand{\v}{\vtx{above}{}}\forall x \forall y \exists z(x < z < y \vee y < z < x)\text{.}`]
+a.  [`\renewcommand{\v}{\vtx{above}{}}\forall x \neg \exists y (x < y < x+1)\text{.}`]   
 
 END_PGML_SOLUTION
 

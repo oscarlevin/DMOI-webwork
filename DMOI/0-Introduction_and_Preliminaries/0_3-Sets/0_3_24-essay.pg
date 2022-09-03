@@ -49,7 +49,7 @@ Context('Numeric');
 ############################################################
 
 BEGIN_PGML
-Let [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}\newcommand{\st}{:}\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}X = \{n \in \N \st 10 \le n \lt 20\}\text{.}`] Find examples of sets with the properties below and very briefly explain why your examples work.
+Let [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}\newcommand{\st}{:}\renewcommand{\v}{\vtx{above}{}}X = \{n \in \N \st 10 \le n < 20\}\text{.}`] Find examples of sets with the properties below and very briefly explain why your examples work.
 a.  A set [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}A \subseteq \N`] with [`|A| = 10`] such that [`X \setminus A = \{10, 12, 14\}\text{.}`]
 
 a.  A set [`\newcommand{\pow}{\mathcal P}B \in \pow(X)`] with [`|B| = 5\text{.}`]

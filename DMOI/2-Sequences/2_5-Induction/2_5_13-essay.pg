@@ -49,7 +49,7 @@ Context('Numeric');
 ############################################################
 
 BEGIN_PGML
-The proof in the previous problem does not work. But if we modify the "fact," we can get a working proof. Prove that [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}n + 3 \lt n + 7`] for all values of [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}n \in \N\text{.}`] You can do this proof with algebra (without induction), but the goal of this exercise is to write out a valid induction proof.
+The proof in the previous problem does not work. But if we modify the "fact," we can get a working proof. Prove that [`\renewcommand{\v}{\vtx{above}{}}n + 3 < n + 7`] for all values of [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}n \in \N\text{.}`] You can do this proof with algebra (without induction), but the goal of this exercise is to write out a valid induction proof.
 
 [@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
 
@@ -60,7 +60,7 @@ END_PGML
 ############################################################
 
 BEGIN_PGML_SOLUTION
-Let [`P(n)`] be the statement that [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}n + 3 \lt n + 7\text{.}`] We will prove that [`P(n)`] is true for all [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}n \in \N\text{.}`] First, note that the base case holds: [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}0+3 \lt 0+7\text{.}`] Now assume for induction that [`P(k)`] is true. That is, [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}k+3 \lt k+7\text{.}`] We must show that [`P(k+1)`] is true. Now since [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}k + 3 \lt k + 7\text{,}`] add 1 to both sides. This gives [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}k + 3 + 1 \lt k + 7 + 1\text{.}`] Regrouping [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}(k+1) + 3 \lt (k+1) + 7\text{.}`] But this is simply [`P(k+1)\text{.}`] Thus by the principle of mathematical induction [`P(n)`] is true for all [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}n \in \N\text{.}`]
+Let [`P(n)`] be the statement that [`\renewcommand{\v}{\vtx{above}{}}n + 3 < n + 7\text{.}`] We will prove that [`P(n)`] is true for all [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}n \in \N\text{.}`] First, note that the base case holds: [`\renewcommand{\v}{\vtx{above}{}}0+3 < 0+7\text{.}`] Now assume for induction that [`P(k)`] is true. That is, [`\renewcommand{\v}{\vtx{above}{}}k+3 < k+7\text{.}`] We must show that [`P(k+1)`] is true. Now since [`\renewcommand{\v}{\vtx{above}{}}k + 3 < k + 7\text{,}`] add 1 to both sides. This gives [`\renewcommand{\v}{\vtx{above}{}}k + 3 + 1 < k + 7 + 1\text{.}`] Regrouping [`\renewcommand{\v}{\vtx{above}{}}(k+1) + 3 < (k+1) + 7\text{.}`] But this is simply [`P(k+1)\text{.}`] Thus by the principle of mathematical induction [`P(n)`] is true for all [`\renewcommand{\d}{\displaystyle}\newcommand{\N}{\mathbb N}n \in \N\text{.}`]
 
 END_PGML_SOLUTION
 

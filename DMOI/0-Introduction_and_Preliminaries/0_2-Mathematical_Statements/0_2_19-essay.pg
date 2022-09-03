@@ -51,8 +51,8 @@ Context('Numeric');
 BEGIN_PGML
 For each of the statements below, give a domain of discourse for which the statement is true, and a domain for which the statement is false.
 a.  [`\forall x \exists y (y^2 = x)\text{.}`]
-a.  [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\forall x \forall y (x \lt y \imp \exists z (x \lt z \lt y))\text{.}`]
-a.  [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\exists x \forall y \forall z (y \lt z \imp y \le x \le z)\text{.}`]   
+a.  [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\forall x \forall y (x < y \imp \exists z (x < z < y))\text{.}`]
+a.  [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\exists x \forall y \forall z (y < z \imp y \le x \le z)\text{.}`]   
 
 [@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
 

@@ -54,7 +54,7 @@ a.  If the power goes off, then the food will spoil.
 
 a.  If the door is closed, then the light is off.
 
-a.  [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\forall x (x \lt 1 \imp x^2 \lt 1)\text{.}`]
+a.  [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\forall x (x < 1 \imp x^2 < 1)\text{.}`]
 a.  For all natural numbers [`n\text{,}`] if [`n`] is prime, then [`n`] is solitary.
 
 a.  For all functions [`f\text{,}`] if [`f`] is differentiable, then [`f`] is continuous.
@@ -88,9 +88,9 @@ a.  Negation: The door is closed and the light is on.
 
     Contrapositive: If the light is on then the door is open.
 
-a.  Negation: [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\exists x (x \lt 1 \wedge x^2 \ge 1)`]
+a.  Negation: [`\renewcommand{\v}{\vtx{above}{}}\exists x (x < 1 \wedge x^2 \ge 1)`]
 
-    Converse: [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\forall x( x^2 \lt 1 \imp x \lt 1)`]
+    Converse: [`\newcommand{\imp}{\rightarrow}\renewcommand{\v}{\vtx{above}{}}\forall x( x^2 < 1 \imp x < 1)`]
 
     Contrapositive: [`\newcommand{\imp}{\rightarrow}\forall x (x^2 \ge 1 \imp x \ge 1)\text{.}`]
 

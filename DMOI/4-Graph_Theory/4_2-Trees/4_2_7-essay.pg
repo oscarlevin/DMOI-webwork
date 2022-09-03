@@ -54,7 +54,7 @@ a.  Explain why this is a good name. That is, explain why a forest is a union of
 
 a.  Suppose [`F`] is a forest consisting of [`m`] trees and [`v`] vertices. How many edges does [`F`] have? Explain.
 
-a.  Prove that any graph [`G`] with [`v`] vertices and [`e`] edges that satisfies [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}v \lt e+1`] must contain a cycle (i.e., not be a forest).
+a.  Prove that any graph [`G`] with [`v`] vertices and [`e`] edges that satisfies [`\renewcommand{\v}{\vtx{above}{}}v < e+1`] must contain a cycle (i.e., not be a forest).
 
 [@ANS(essay_cmp); essay_box(6,76)@]* [@essay_help()@]*
 

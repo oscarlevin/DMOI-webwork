@@ -50,7 +50,7 @@ Context('Numeric');
 
 BEGIN_PGML
 Simplify the statements below to the point that negation symbols occur only directly next to predicates.
-a.  [`\renewcommand{\v}{\vtx{above}{}}\newcommand{\lt}{<}\neg \forall x \forall y (x \lt y \vee y \lt x)\text{.}`]
+a.  [`\renewcommand{\v}{\vtx{above}{}}\neg \forall x \forall y (x < y \vee y < x)\text{.}`]
 
 a.  [`\newcommand{\imp}{\rightarrow}\neg(\exists x P(x) \imp \forall y P(y))\text{.}`]
 
