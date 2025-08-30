@@ -24,10 +24,10 @@ TEXT(beginproblem());
 
 Context("Numeric");
 
-do {$n = random(3,20);} until ($n != 6 and $n != 7);
-$n_1 = $n-1;
+do {14 = random(3,20);} until (14 != 6 and 14 != 7);
+13 = 14-1;
 
-$statement = "For all \(n \ge 1\), the number \($n^n - 1\) is a multiple of \($n_1\).";
+$statement = "For all \(n \ge 1\), the number \(14^n - 1\) is a multiple of \(13\).";
 
 
 $sourcelabel = "${BBOLD}Statements to choose from:${EBOLD}";
@@ -35,23 +35,23 @@ $targetlabel  =  "${BBOLD}Your Proof:${EBOLD} Put chosen statements in order in 
 
 
 $Proof = DraggableProof([
-  "Let \(P(n)\) be the statement, $LQ\($n^n - 1\) is a multiple of \($n_1\)$RQ.",
-  "Note that \($n - 1 = $n_1\), so definitely a multiple of \($n_1\).", 
+  "Let \(P(n)\) be the statement, $LQ\(14^n - 1\) is a multiple of \(13\)$RQ.",
+  "Note that \(14 - 1 = 13\), so definitely a multiple of \(13\).", 
   "Now assume that \(P(k)\) is true for an arbitrary integer \(k\ge 2\).",
-  "Then \($n^k - 1 = $n_1\cdot j\) for some integer \(j\).",
-  "We have \($n^{k+1}-1 = $n($n^k - 1) + $n-1\)",
-  "So \($n^{k+1} - 1 = $n($n_1\cdot j) + $n_1\), which is a multiple of $n_1.",
+  "Then \(14^k - 1 = 13\cdot j\) for some integer \(j\).",
+  "We have \(14^{k+1}-1 = 14(14^k - 1) + 14-1\)",
+  "So \(14^{k+1} - 1 = 14(13\cdot j) + 13\), which is a multiple of 13.",
   "Thus \(P(k+1)\) is true.",
   "Therefore, by the Principle of Mathematical Induction, \(P(n)\) is true for all \(n \ge 1\)."
 ],
 
 # Other statements
 [
-  "Note that \($n^2 - 1 = ($n-1)($n+1)\) which is definitely a multiple of \($n_1\).",
+  "Note that \(14^2 - 1 = (14-1)(14+1)\) which is definitely a multiple of \(13\).",
   "Now assume that \(P(n)\) is true for all \(n\ge 1\).",
   "Now assume that \(P(k+1)\) is true for all \($k\).",
-  "Then \($n^{k+1} = $n_1\cdot j+1\) for some integer \(j\)",
-  "Thus \($n^k = \frac{$n_1\cdot j + 1}{$n}\), which is a multiple of \($n_1\).",
+  "Then \(14^{k+1} = 13\cdot j+1\) for some integer \(j\)",
+  "Thus \(14^k = \frac{13\cdot j + 1}{14}\), which is a multiple of \(13\).",
   "Thus \(P(k)\) is true for all \(k\)."
 ],
 

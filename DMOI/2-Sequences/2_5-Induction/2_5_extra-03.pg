@@ -24,10 +24,10 @@ TEXT(beginproblem());
 
 Context("Numeric");
 
-$n = random(3,10);
-$n_1 = $n-1;
+5 = random(3,10);
+4 = 5-1;
 
-$statement = "\(a_n = $n^n - 1\) is a solution to the recurrence relation \(a_n = $n a_{n-1} + $n_1\) with \(a_0 = 0\).";
+$statement = "\(a_n = 5^n - 1\) is a solution to the recurrence relation \(a_n = 5 a_{n-1} + 4\) with \(a_0 = 0\).";
 
 
 $sourcelabel = "${BBOLD}Statements to choose from:${EBOLD}";
@@ -35,24 +35,24 @@ $targetlabel  =  "${BBOLD}Your Proof:${EBOLD} Put chosen statements in order in 
 
 
 $Proof = DraggableProof([
-  "Let \(P(n)\) be the statement, $LQ\(a_n = $n^n - 1\)$RQ.",
-  "Note that \(a_0 = $n^0 - 1 = 1-1 =0\), as required.", 
+  "Let \(P(n)\) be the statement, $LQ\(a_n = 5^n - 1\)$RQ.",
+  "Note that \(a_0 = 5^0 - 1 = 1-1 =0\), as required.", 
   "Now assume that \(P(k)\) is true for an arbitrary integer \(k\ge 1\).",
-  "Then \($a_{k} = $n^{k} - 1\).",
-  "By the recurrence relation, we have \(a_{k+1} = $n a_k + $n_1 = $n ($n^k -1) + $n_1\)",
-  "This simplifies to \(a_{k+1} = $n^{k+1} - $n + $n_1 = $n^{k+1} - 1\)",
+  "Then \($a_{k} = 5^{k} - 1\).",
+  "By the recurrence relation, we have \(a_{k+1} = 5 a_k + 4 = 5 (5^k -1) + 4\)",
+  "This simplifies to \(a_{k+1} = 5^{k+1} - 5 + 4 = 5^{k+1} - 1\)",
   "Thus \(P(k+1)\) is true.",
   "Therefore, by the Principle of Mathematical Induction, \(P(n)\) is true for all \(n \ge 1\)."
 ],
 
 # Other statements
 [
-  "Let \(P(n)\) be the statement, $LQ\(a_n = $n^n - 1\) is a solution to the recurrence relation \(a_n = $n a_{n-1} + $n_1\) with \(a_0 = 0\).$RQ",
-  "Note that \(a_1 =  $n a_0 + $n_1\).",
+  "Let \(P(n)\) be the statement, $LQ\(a_n = 5^n - 1\) is a solution to the recurrence relation \(a_n = 5 a_{n-1} + 4\) with \(a_0 = 0\).$RQ",
+  "Note that \(a_1 =  5 a_0 + 4\).",
   "Now assume that \(P(n)\) is true for all \(n\ge 0\).",
   "Now assume that \(P(k+1)\) is true.",
-  "Then \(a_{k+1} = $n a_k + $n_1\), so \(P(k+1)\) is true.",
-  "Then \($n^{k+1}-1 = $n ($n^{k}-1) + $n_1\), which is true.",
+  "Then \(a_{k+1} = 5 a_k + 4\), so \(P(k+1)\) is true.",
+  "Then \(5^{k+1}-1 = 5 (5^{k}-1) + 4\), which is true.",
   "Thus \(P(k)\) is true for all \(k\)."
 ],
 
